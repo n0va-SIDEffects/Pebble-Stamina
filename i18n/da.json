@@ -161,5 +161,6 @@
   "P_AUTO_FROM": "Autostart fra",
   "P_AUTO_TO": "Autostart til",
   "AUTO_ALWAYS": "hele dagen",
-  "HOUR_UNIT": "h"
+  "HOUR_UNIT": "h",
+  "HINT_WRIST": "Uret på den aktive hånd\nfor bedst genkendelse"
 }

@@ -161,5 +161,6 @@
   "P_AUTO_FROM": "Auto-start vanaf",
   "P_AUTO_TO": "Auto-start tot",
   "AUTO_ALWAYS": "hele dag",
-  "HOUR_UNIT": "uur"
+  "HOUR_UNIT": "uur",
+  "HINT_WRIST": "Horloge om de actieve hand\nvoor betere herkenning"
 }

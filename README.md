@@ -1,9 +1,13 @@
 # Stamina – Pebble Time 2
 
+**Version 0.6 (Beta)**
+
 Diskret benannte Watchapp, die Masturbation und Sex wie ein Workout trackt.
 Alle Daten bleiben **nur auf der Uhr**. Es gibt keinen Upload, weder aufs Handy noch in eine Cloud.
 
-☕ [Buy me a coffee](https://buymeacoffee.com/SIDEffects)
+☕ [Buy me a coffee](https://buymeacoffee.com/SIDEffects) · [Datenschutz](store/privacy.md)
+
+> **Tipp:** Trag die Uhr an der Hand, die die Bewegung ausführt. Nur dort sieht der Bewegungssensor den Rhythmus zuverlässig. Die App erinnert in den ersten drei Sessions daran.
 
 ## Funktionen
 
@@ -93,7 +97,8 @@ Zielplattformen: `emery` (Pebble Time 2, 200×228, Touch), `flint` (Pebble 2 Duo
 wsl -d Pebble -u root -e bash -c "STAMINA_DEMO=1 bash build.sh"
 ```
 
-Store-Texte (Englisch/Deutsch) und Screenshots liegen in `store/`.
+Store-Texte (Englisch/Deutsch), Datenschutzerklärung, Screenshots, Icons und Banner liegen in `store/`.
+Icons, Banner und das Menü-Icon der Uhr erzeugt `python tools/make_store_assets.py` (Pillow, Schrift Montserrat unter SIL OFL in `store/fonts/`).
 
 ### Testen im Emulator
 

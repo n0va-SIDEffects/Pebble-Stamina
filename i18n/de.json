@@ -161,5 +161,6 @@
   "P_AUTO_FROM": "Auto-Start ab",
   "P_AUTO_TO": "Auto-Start bis",
   "AUTO_ALWAYS": "ganztägig",
-  "HOUR_UNIT": "Uhr"
+  "HOUR_UNIT": "Uhr",
+  "HINT_WRIST": "Uhr an die aktive Hand\nfür beste Erkennung"
 }

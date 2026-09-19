@@ -161,5 +161,6 @@
   "P_AUTO_FROM": "Início auto a partir",
   "P_AUTO_TO": "Início auto até",
   "AUTO_ALWAYS": "o dia todo",
-  "HOUR_UNIT": "h"
+  "HOUR_UNIT": "h",
+  "HINT_WRIST": "Relógio na mão ativa\npara detetar melhor"
 }

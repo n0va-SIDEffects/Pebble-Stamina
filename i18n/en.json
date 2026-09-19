@@ -161,5 +161,6 @@
   "P_AUTO_FROM": "Auto start from",
   "P_AUTO_TO": "Auto start until",
   "AUTO_ALWAYS": "all day",
-  "HOUR_UNIT": "h"
+  "HOUR_UNIT": "h",
+  "HINT_WRIST": "Watch on the moving hand\nfor best detection"
 }

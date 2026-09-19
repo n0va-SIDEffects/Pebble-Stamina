@@ -161,5 +161,6 @@
   "P_AUTO_FROM": "Automatický start od",
   "P_AUTO_TO": "Automatický start do",
   "AUTO_ALWAYS": "celý den",
-  "HOUR_UNIT": "h"
+  "HOUR_UNIT": "h",
+  "HINT_WRIST": "Hodinky na aktivní ruku\npro lepší rozpoznání"
 }

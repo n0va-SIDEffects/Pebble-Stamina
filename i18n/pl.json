@@ -161,5 +161,6 @@
   "P_AUTO_FROM": "Autostart od",
   "P_AUTO_TO": "Autostart do",
   "AUTO_ALWAYS": "cały dzień",
-  "HOUR_UNIT": "godz."
+  "HOUR_UNIT": "godz.",
+  "HINT_WRIST": "Zegarek na aktywnej dłoni\ndla lepszego wykrywania"
 }

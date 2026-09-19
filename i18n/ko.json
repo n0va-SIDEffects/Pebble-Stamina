@@ -161,5 +161,6 @@
   "P_AUTO_FROM": "자동 시작 시작",
   "P_AUTO_TO": "자동 시작 종료",
   "AUTO_ALWAYS": "종일",
-  "HOUR_UNIT": "시"
+  "HOUR_UNIT": "시",
+  "HINT_WRIST": "움직이는 손에 워치를 착용\n하면 감지가 더 정확해요"
 }

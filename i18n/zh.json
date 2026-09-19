@@ -161,5 +161,6 @@
   "P_AUTO_FROM": "自动开始起",
   "P_AUTO_TO": "自动开始止",
   "AUTO_ALWAYS": "全天",
-  "HOUR_UNIT": "点"
+  "HOUR_UNIT": "点",
+  "HINT_WRIST": "把手表戴在活动的手上\n识别更准确"
 }

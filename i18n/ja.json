@@ -161,5 +161,6 @@
   "P_AUTO_FROM": "自動スタート開始",
   "P_AUTO_TO": "自動スタート終了",
   "AUTO_ALWAYS": "終日",
-  "HOUR_UNIT": "時"
+  "HOUR_UNIT": "時",
+  "HINT_WRIST": "動かす手にウォッチを\n着けると検知が正確に"
 }

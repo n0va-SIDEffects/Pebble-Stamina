@@ -161,5 +161,6 @@
   "P_AUTO_FROM": "Otomatik başlat",
   "P_AUTO_TO": "Otomatik bitiş",
   "AUTO_ALWAYS": "tüm gün",
-  "HOUR_UNIT": "sa"
+  "HOUR_UNIT": "sa",
+  "HINT_WRIST": "Saati aktif ele tak,\ndaha iyi algılama için"
 }

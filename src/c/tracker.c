@@ -36,6 +36,12 @@ static bool s_finishing;
 #define PULSE_VIBE_MS 40
 static AppTimer *s_flash_timer;
 
+// In den ersten Sessions kurz erinnern, die Uhr an der aktiven Hand zu tragen
+#define WRIST_HINT_SESSIONS 3
+#define WRIST_HINT_MS 8000
+static AppTimer *s_wrist_timer;
+static const char *s_hint_text;
+
 // Stellungserkennung (nur Partner-Modus mit angelernten Stellungen)
 static bool s_pos_enabled;
 static PosAcc s_pos_acc;
@@ -325,6 +331,11 @@ static void click_config(void *ctx) {
   window_single_click_subscribe(BUTTON_ID_DOWN, down_click);
 }
 
+static void wrist_hint_end(void *ctx) {
+  s_wrist_timer = NULL;
+  text_layer_set_text(s_hint_layer, s_hint_text);
+}
+
 static TextLayer *make_text(Layer *root, GRect frame, const char *font, GColor color,
                             GTextAlignment align) {
   TextLayer *t = text_layer_create(frame);
@@ -384,7 +395,13 @@ static void window_load(Window *window) {
     hint = tr(S_HINT_TOUCH);
   }
 #endif
-  text_layer_set_text(s_hint_layer, hint);
+  s_hint_text = hint;
+  if (storage_count() < WRIST_HINT_SESSIONS) {
+    text_layer_set_text(s_hint_layer, tr(S_HINT_WRIST));
+    s_wrist_timer = app_timer_register(WRIST_HINT_MS, wrist_hint_end, NULL);
+  } else {
+    text_layer_set_text(s_hint_layer, hint);
+  }
 
   if (storage_profile()->light == LIGHT_ON) light_enable(true);
   update_ui();
@@ -397,6 +414,10 @@ static void window_unload(Window *window) {
     s_flash_timer = NULL;
   }
   light_enable(false);  // zurück zur automatischen Beleuchtung
+  if (s_wrist_timer) {
+    app_timer_cancel(s_wrist_timer);
+    s_wrist_timer = NULL;
+  }
   accel_data_service_unsubscribe();
   tick_timer_service_unsubscribe();
 #if defined(PBL_HEALTH)

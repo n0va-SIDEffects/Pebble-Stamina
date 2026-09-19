@@ -1,65 +1,76 @@
-# Store-Eintrag: Stamina
+# Store-Eintrag: Stamina 0.6 (Beta)
 
-Texte zum Einfügen in das Pebble-Entwicklerportal. Englisch ist die Hauptsprache, darunter die deutsche Fassung.
+Texte zum Einfügen in das Pebble-Entwicklerportal. Die Beschreibung darf höchstens **1600 Zeichen** haben; beide Fassungen liegen darunter (Zeichenzahl siehe unten).
+
+Wortwahl bewusst sachlich: Die Pebble Developer Program Policies verbieten „sexually explicit or erotic content, icons, titles, or descriptions“. Stamina wird deshalb als Gesundheits- und Wellness-Tracker beschrieben, ohne explizite Begriffe.
 
 ## Stammdaten
 
 | Feld | Wert |
 |---|---|
 | Name | Stamina |
+| Version | 0.6 (Beta) |
 | Typ | Watchapp |
 | Kategorie | Health & Fitness |
 | Plattformen | Pebble Time 2 (emery), Pebble 2 Duo (flint), Pebble Time (basalt), Pebble 2 (diorite) |
-| Quellcode | https://github.com/n0va-SIDEffects/Pebble-Stamina |
+| Website / Quellcode | https://github.com/n0va-SIDEffects/Pebble-Stamina |
+| Datenschutz | https://github.com/n0va-SIDEffects/Pebble-Stamina/blob/main/store/privacy.md |
 | Unterstützen | https://buymeacoffee.com/SIDEffects |
-| Tags | health, fitness, tracker, heart rate, sleep, private, 18+ |
+| Tags | health, wellness, heart rate, sleep, tracker, private |
+
+## Grafiken
+
+| Datei | Größe | Verwendung |
+|---|---|---|
+| `store/icon_large.png` | 144 × 144 | großes App-Icon |
+| `store/icon_small.png` | 48 × 48 | kleines App-Icon |
+| `store/banner.png` | 720 × 320 | Banner über den Screenshots |
+| `store/screenshots/emery/01–05` | 200 × 228 | Screenshots Pebble Time 2 (max. 5 pro Plattform) |
 
 ---
 
 ## English
 
-### Tagline (short description)
+### Tagline
 
-Your private rhythm tracker. Track intimate sessions like a workout – 100 % on your wrist.
+Your private rhythm tracker for intimate wellness. 100 % on your wrist. (Beta)
 
 ### Description
 
-Stamina treats your intimate life like any other workout. It counts your rhythm, logs your heart rate, estimates the calories burned and shows how a session affects your sleep and the start of your day. Solo or with a partner.
+Stamina is a private wellness tracker for your intimate life, solo or with a partner. It measures rhythm, heart rate and estimated calories, and shows how a session affects your sleep and the start of your day.
 
 All data stays on your watch. No account, no cloud, no upload.
 
-**Track**
-• Motion detection that counts every stroke or movement and shows your rhythm per minute
-• Solo styles for stroking, rubbing (small circular movements) and toys
-• Heart rate every second during a session: average, minimum, maximum
-• Calorie estimate from movement and heart rate, capped to realistic values
-• Mark the climax with one button press or a swipe
+TRACK
+• Motion detection counts movements and shows your rhythm per minute
+• Heart rate every second: average, min, max
+• Calorie estimate from movement and heart rate
+• Mark the peak moment with a button press or swipe
 
-**Understand**
-• Sleep afterwards: time to fall asleep, sleep duration, deep sleep, and how it compares to your normal night
-• Start of the day: after a morning session, compares your steps, active minutes and heart rate over the next 4 hours with your usual values, plus a quick mood check-in
-• Statistics: averages, weekly count, favorite position, sessions per partner
+UNDERSTAND
+• Sleep afterwards: time to fall asleep, duration, deep sleep, compared with your normal nights
+• Start of the day: steps, activity and heart rate in the 4 hours after a morning session, plus a short mood check-in
+• Statistics with averages, weekly count and trends
 
-**Partner mode**
-• Teach the watch your own positions. Name them by voice or pick a suggestion, then record 20 seconds
-• Live position detection during a session, with time share per position afterwards
-• Optional partner initials to see who you were with
+PARTNER MODE
+• Teach the watch your own positions (name them by voice), with live detection and time share per position
+• Optional partner initials
 
-**Smart and discreet**
-• Auto start: notices ongoing rhythmic movement and asks whether to start a session, backdated to the actual start. Limit it to a time window, e.g. 8 pm to 2 am
-• Calibrate: record 15 seconds of your typical movement and the detection adapts to you
-• Display light: normal, always on, or a red pulse with a short vibration on every stroke
-• Touch controls on Pebble Time 2, with swipe gestures that ignore accidental skin contact
-• Neutral name and neutral wording on the watch
-• 19 languages
+SMART AND DISCREET
+• Auto start with optional time window
+• Calibration adapts detection to you
+• Display light options, touch controls on Pebble Time 2
+• Neutral wording on the watch, 19 languages
 
-Stamina is an estimate, not a medical device. Adults only (18+).
+TIP: Wear the watch on the hand that does the movement. Detection works best there.
 
-Enjoying Stamina? Support development: buymeacoffee.com/SIDEffects
+This is a beta (0.6). Values are estimates, not medical advice. Adults only (18+).
 
-### Release notes (1.0)
+Support development: buymeacoffee.com/SIDEffects
 
-First release: motion and heart rate tracking, calories, sleep and start-of-day analysis, partner mode with position learning and partner initials, auto start with time window, calibration, touch controls, 19 languages.
+### Release notes (0.6 Beta)
+
+First public beta. Motion and heart rate tracking, calorie estimate, sleep and start-of-day analysis, partner mode with position learning and partner initials, auto start with time window, calibration, touch controls, 19 languages. Feedback welcome on GitHub.
 
 ---
 
@@ -67,64 +78,58 @@ First release: motion and heart rate tracking, calories, sleep and start-of-day 
 
 ### Kurzbeschreibung
 
-Dein privater Rhythmus-Tracker. Intime Sessions tracken wie ein Workout, komplett auf deinem Handgelenk.
+Dein privater Rhythmus-Tracker für intimes Wohlbefinden. Komplett auf deinem Handgelenk. (Beta)
 
 ### Beschreibung
 
-Stamina behandelt dein Liebesleben wie jedes andere Workout. Die App zählt deinen Rhythmus, zeichnet deinen Puls auf, schätzt die verbrannten Kalorien und zeigt, wie eine Session deinen Schlaf und den Start in den Tag beeinflusst. Solo oder mit Partner.
+Stamina ist ein privater Wellness-Tracker für dein Liebesleben, solo oder zu zweit. Die App misst Rhythmus, Puls und geschätzte Kalorien und zeigt, wie eine Session deinen Schlaf und den Start in den Tag beeinflusst.
 
 Alle Daten bleiben auf deiner Uhr. Kein Konto, keine Cloud, kein Upload.
 
-**Tracken**
-• Bewegungserkennung, die jeden Zug oder jede Bewegung zählt und den Rhythmus pro Minute zeigt
-• Solo-Stile für Streichen, Reiben (kleine kreisende Bewegungen) und Toys
-• Puls im Sekundentakt während der Session: Durchschnitt, Minimum, Maximum
-• Kalorienschätzung aus Bewegung und Puls, auf realistische Werte begrenzt
+TRACKEN
+• Bewegungserkennung zählt Bewegungen und zeigt den Rhythmus pro Minute
+• Puls im Sekundentakt: Durchschnitt, Minimum, Maximum
+• Kalorienschätzung aus Bewegung und Puls
 • Höhepunkt per Tastendruck oder Wischen markieren
 
-**Verstehen**
-• Schlaf danach: Einschlafzeit, Schlafdauer, Tiefschlaf und der Vergleich mit deiner normalen Nacht
-• Start in den Tag: Nach einer Morgen-Session werden Schritte, aktive Minuten und Puls der nächsten 4 Stunden mit deinen üblichen Werten verglichen, dazu eine kurze Stimmungsabfrage
-• Statistik: Durchschnittswerte, Wochenzähler, Lieblingsstellung, Sessions je Partner
+VERSTEHEN
+• Schlaf danach: Einschlafzeit, Dauer, Tiefschlaf, im Vergleich zu deinen normalen Nächten
+• Start in den Tag: Schritte, Aktivität und Puls in den 4 Stunden nach einer Morgen-Session, dazu eine kurze Stimmungsabfrage
+• Statistik mit Durchschnittswerten, Wochenzähler und Trends
 
-**Partner-Modus**
-• Bring der Uhr deine eigenen Stellungen bei. Namen per Sprache diktieren oder einen Vorschlag wählen, dann 20 Sekunden aufnehmen
-• Stellungserkennung live während der Session, danach die Zeitanteile je Stellung
-• Optionale Partner-Kürzel, damit du siehst, mit wem
+PARTNER-MODUS
+• Bring der Uhr eigene Stellungen bei (Namen per Sprache), mit Live-Erkennung und Zeitanteil je Stellung
+• Optionale Partner-Kürzel
 
-**Clever und diskret**
-• Auto-Start: erkennt anhaltende rhythmische Bewegung und fragt, ob eine Session starten soll, rückdatiert auf den tatsächlichen Beginn. Auf ein Zeitfenster begrenzbar, z. B. 20 bis 2 Uhr
-• Anlernen: 15 Sekunden deiner typischen Bewegung aufnehmen, und die Erkennung passt sich an dich an
-• Display-Licht: normal, immer an oder roter Puls mit kurzer Vibration bei jedem Zug
-• Touch-Bedienung auf der Pebble Time 2, mit Wischgesten, die versehentlichen Hautkontakt ignorieren
-• Neutraler Name und neutrale Texte auf der Uhr
-• 19 Sprachen
+CLEVER UND DISKRET
+• Auto-Start mit optionalem Zeitfenster
+• Anlernen passt die Erkennung an dich an
+• Optionen fürs Display-Licht, Touch-Bedienung auf der Pebble Time 2
+• Neutrale Texte auf der Uhr, 19 Sprachen
 
-Stamina liefert Schätzwerte und ist kein Medizinprodukt. Nur für Erwachsene (18+).
+TIPP: Trag die Uhr an der Hand, die die Bewegung ausführt. Dort funktioniert die Erkennung am besten.
 
-Gefällt dir Stamina? Unterstütze die Entwicklung: buymeacoffee.com/SIDEffects
+Dies ist eine Beta (0.6). Alle Werte sind Schätzungen und keine medizinische Beratung. Nur für Erwachsene (18+).
 
-### Versionshinweise (1.0)
+Entwicklung unterstützen: buymeacoffee.com/SIDEffects
 
-Erste Version: Bewegungs- und Pulstracking, Kalorien, Auswertung von Schlaf und Start in den Tag, Partner-Modus mit Stellungen anlernen und Partner-Kürzeln, Auto-Start mit Zeitfenster, Anlernen, Touch-Bedienung, 19 Sprachen.
+### Versionshinweise (0.6 Beta)
+
+Erste öffentliche Beta. Bewegungs- und Pulstracking, Kalorienschätzung, Auswertung von Schlaf und Start in den Tag, Partner-Modus mit Stellungen anlernen und Partner-Kürzeln, Auto-Start mit Zeitfenster, Anlernen, Touch-Bedienung, 19 Sprachen. Feedback gerne auf GitHub.
 
 ---
 
 ## Screenshots (Pebble Time 2, 200 × 228)
 
-Liegen in `store/screenshots/emery/`. Für den Store die ersten fünf in dieser Reihenfolge:
+Liegen in `store/screenshots/emery/`. Für den Store die ersten fünf, in dieser Reihenfolge. Alle zeigen neutrale Begriffe (eigene Stellungsnamen wie „Top“, „Classic“, „Side“):
 
 | Datei | Zeigt |
 |---|---|
-| 01_solo_session.png | Laufende Solo-Session: Zeit, Züge, Puls, kcal, Rhythmus |
-| 02_partner_position.png | Partner-Session mit erkannter Stellung |
-| 03_session_detail.png | Auswertung einer Session |
+| 01_session.png | Laufende Partner-Session: Zeit, Bewegungen, Puls, kcal |
+| 02_session_detail.png | Auswertung einer Session |
+| 03_positions_start_of_day.png | Stellungsanteile und Start in den Tag |
 | 04_stats_sleep.png | Statistik mit Partnern und Schlaf danach |
-| 05_auto_start.png | Auto-Start fragt nach |
-| 06_main_menu.png | Hauptmenü |
-| 07_history.png | Verlauf |
-| 08_start_of_day.png | Stellungen und Start in den Tag in der Auswertung |
-| 09_positions.png | Eigene Stellungen |
-| 10_who_with.png | Partnerauswahl „Who with?“ |
+| 05_who_with.png | Partnerauswahl „Who with?“ |
+| 06–10 | Hauptmenü, Verlauf, Stellungen, Solo-Session, Auto-Start (nicht für den Store vorgesehen, da teils Solo-Begriffe) |
 
-Die Screenshots stammen aus dem Emulator mit Beispieldaten (Demo-Build, siehe README).
+Aufgenommen im Emulator mit Beispieldaten (Demo-Build, siehe README).

@@ -26,11 +26,11 @@ void demo_seed(void) {
   const int16_t riding[POS_FEATURES] = {0, -150, -980, 100, 0, 0, 283, 120};
   const int16_t missionary[POS_FEATURES] = {80, 950, -150, 0, 0, 100, 212, 90};
   const int16_t spooning[POS_FEATURES] = {900, 0, -400, 5, 80, 15, 150, 70};
-  pos_set_name(0, "Riding (top)");
+  pos_set_name(0, "Top");
   pos_set_template(0, riding, 3);
-  pos_set_name(1, "Missionary (top)");
+  pos_set_name(1, "Classic");
   pos_set_template(1, missionary, 2);
-  pos_set_name(2, "Spooning");
+  pos_set_name(2, "Side");
   pos_set_template(2, spooning, 1);
 
   add((Session){.start = at(6, 22, 10), .duration_s = 11 * 60 + 5, .active_s = 600, .strokes = 842,

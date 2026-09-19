@@ -1,7 +1,7 @@
 {
   "name": "stamina",
   "author": "Mike",
-  "version": "1.2.0",
+  "version": "0.6.0",
   "keywords": ["pebble-app"],
   "private": true,
   "dependencies": {},
@@ -21,6 +21,7 @@
                     "POS_NAME_1", "POS_NAME_2", "POS_NAME_3", "POS_NAME_4", "POS_NAME_5", "POS_NAME_6", "POS_NAME_7", "POS_NAME_8"],
     "resources": {
       "media": [
+        {"type": "bitmap", "name": "MENU_ICON", "file": "images/menu_icon.png", "menuIcon": true},
         {"type": "raw", "name": "LANG_EN", "file": "lang/en.bin"},
         {"type": "raw", "name": "LANG_DE", "file": "lang/de.bin"},
         {"type": "raw", "name": "LANG_FR", "file": "lang/fr.bin"},

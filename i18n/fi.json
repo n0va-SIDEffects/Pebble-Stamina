@@ -161,5 +161,6 @@
   "P_AUTO_FROM": "Autom. aloitus alkaen",
   "P_AUTO_TO": "Autom. aloitus asti",
   "AUTO_ALWAYS": "koko päivän",
-  "HOUR_UNIT": "h"
+  "HOUR_UNIT": "h",
+  "HINT_WRIST": "Kello aktiiviseen käteen\nparempaa tunnistusta varten"
 }
