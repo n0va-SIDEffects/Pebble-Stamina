@@ -157,5 +157,9 @@
   "P_ASK_PARTNER": "Partner vragen",
   "D_PARTNER_FMT": "Partner: %s",
   "STATS_PARTNER_HDR": "\nPARTNERS\n",
-  "STATS_PARTNER_FMT": "%s %dx"
+  "STATS_PARTNER_FMT": "%s %dx",
+  "P_AUTO_FROM": "Auto-start vanaf",
+  "P_AUTO_TO": "Auto-start tot",
+  "AUTO_ALWAYS": "hele dag",
+  "HOUR_UNIT": "uur"
 }

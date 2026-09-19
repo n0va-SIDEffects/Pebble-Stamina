@@ -157,5 +157,9 @@
   "P_ASK_PARTNER": "Ptát se na partnera",
   "D_PARTNER_FMT": "Partner: %s",
   "STATS_PARTNER_HDR": "\nPARTNEŘI\n",
-  "STATS_PARTNER_FMT": "%s %dx"
+  "STATS_PARTNER_FMT": "%s %dx",
+  "P_AUTO_FROM": "Automatický start od",
+  "P_AUTO_TO": "Automatický start do",
+  "AUTO_ALWAYS": "celý den",
+  "HOUR_UNIT": "h"
 }

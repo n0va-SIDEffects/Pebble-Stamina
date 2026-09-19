@@ -131,6 +131,8 @@ enum {
   ROW_TOUCH,
   ROW_CHECKIN,
   ROW_AUTO,
+  ROW_AUTO_FROM,
+  ROW_AUTO_TO,
   ROW_LIGHT,
   ROW_ASK_PARTNER,
   ROW_LANG,
@@ -154,6 +156,16 @@ static void profile_changed(void) {
 
 static void set_age(int v) {
   storage_profile()->age = v;
+  profile_changed();
+}
+
+static void set_auto_from(int v) {
+  storage_profile()->auto_from = v;
+  profile_changed();
+}
+
+static void set_auto_to(int v) {
+  storage_profile()->auto_to = v;
   profile_changed();
 }
 
@@ -224,6 +236,17 @@ static void menu_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ct
         value = tr(S_OFF);
       }
       break;
+    case ROW_AUTO_FROM:
+    case ROW_AUTO_TO: {
+      bool from = row_for(index->row) == ROW_AUTO_FROM;
+      title = tr(from ? S_P_AUTO_FROM : S_P_AUTO_TO);
+      if (p->auto_from == p->auto_to) {
+        value = tr(S_AUTO_ALWAYS);
+      } else {
+        snprintf(sub, sizeof(sub), "%02d:00", from ? p->auto_from : p->auto_to);
+      }
+      break;
+    }
     case ROW_LIGHT:
       title = tr(S_P_LIGHT);
       value = tr(p->light == LIGHT_ON ? S_LIGHT_ON : p->light == LIGHT_PULSE ? S_LIGHT_PULSE
@@ -265,6 +288,12 @@ static void menu_select(MenuLayer *m, MenuIndex *index, void *ctx) {
       return;
     case ROW_WEIGHT:
       number_window_push(tr(S_P_WEIGHT), p->weight_kg, 35, 250, "kg", set_weight);
+      return;
+    case ROW_AUTO_FROM:
+      number_window_push(tr(S_P_AUTO_FROM), p->auto_from, 0, 23, tr(S_HOUR_UNIT), set_auto_from);
+      return;
+    case ROW_AUTO_TO:
+      number_window_push(tr(S_P_AUTO_TO), p->auto_to, 0, 23, tr(S_HOUR_UNIT), set_auto_to);
       return;
     default:
       return;

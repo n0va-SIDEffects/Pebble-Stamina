@@ -157,5 +157,9 @@
   "P_ASK_PARTNER": "Demander le partenaire",
   "D_PARTNER_FMT": "Partenaire : %s",
   "STATS_PARTNER_HDR": "\nPARTENAIRES\n",
-  "STATS_PARTNER_FMT": "%s %dx"
+  "STATS_PARTNER_FMT": "%s %dx",
+  "P_AUTO_FROM": "Démarrage auto dès",
+  "P_AUTO_TO": "Démarrage auto jusqu'à",
+  "AUTO_ALWAYS": "toute la journée",
+  "HOUR_UNIT": "h"
 }

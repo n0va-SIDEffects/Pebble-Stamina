@@ -80,6 +80,8 @@ Pebble.addEventListener('appmessage', function (e) {
   settings.AUTO_START = String(p.AUTO_START);
   settings.LIGHT = String(p.LIGHT);
   settings.ASK_PARTNER = !!p.ASK_PARTNER;
+  settings.AUTO_FROM = String(p.AUTO_FROM);
+  settings.AUTO_TO = String(p.AUTO_TO);
   for (var k = 1; k <= 8; k++) settings['PARTNER_' + k] = p['PARTNER_' + k] || '';
   for (var n = 1; n <= 8; n++) settings['POS_NAME_' + n] = p['POS_NAME_' + n] || '';
   localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));

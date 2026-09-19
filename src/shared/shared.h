@@ -41,6 +41,8 @@ typedef struct __attribute__((packed)) {
   uint8_t auto_start;     // 0 = aus, sonst Minuten bis zur Nachfrage
   uint8_t light;          // LightMode während der Session
   uint8_t ask_partner;    // beim Start einer Partner-Session nach dem Partner fragen
+  uint8_t auto_from;      // Auto-Start nur von ... (volle Stunde, 0-23)
+  uint8_t auto_to;        // ... bis (exklusiv); gleich = ganztägig
 } Profile;
 
 // Angelernte Erkennung je Bewegungsart
@@ -97,4 +99,5 @@ void detector_init(Detector *d, const DetectorParams *p);
 bool detector_process(Detector *d, int16_t x, int16_t y, int16_t z);  // true = neuer Zyklus
 int32_t isqrt32(int32_t v);
 int calib_index(SessionMode mode);  // -1 = kein Anlernen für diesen Modus
+bool auto_window_contains(const Profile *p, int hour);  // Stunde im Auto-Start-Zeitfenster?
 SessionMode solo_mode_for(const Profile *p);

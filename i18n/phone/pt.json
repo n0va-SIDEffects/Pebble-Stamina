@@ -34,5 +34,8 @@
   "partners_desc": "Iniciais dos teus parceiros (máx. 4 caracteres). Também podes adicioná-los no relógio ao iniciar uma sessão a dois.",
   "partner_n": "Parceiro {n}",
   "ask_partner": "Perguntar parceiro",
-  "ask_partner_desc": "Ao iniciar uma sessão a dois, o relógio pergunta com quem."
+  "ask_partner_desc": "Ao iniciar uma sessão a dois, o relógio pergunta com quem.",
+  "auto_from": "Ativo a partir de",
+  "auto_to": "Ativo até",
+  "auto_window_desc": "O início automático só está atento neste intervalo (ex.: 20:00 às 02:00). Mesma hora = o dia todo. Fora do intervalo não gasta bateria extra."
 }

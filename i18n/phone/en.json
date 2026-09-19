@@ -34,5 +34,8 @@
   "partners_desc": "Initials of your partners (max. 4 characters). New partners can also be added on the watch when starting a partner session.",
   "partner_n": "Partner {n}",
   "ask_partner": "Ask for partner",
-  "ask_partner_desc": "When a partner session starts, the watch asks who it is with."
+  "ask_partner_desc": "When a partner session starts, the watch asks who it is with.",
+  "auto_from": "Active from",
+  "auto_to": "Active until",
+  "auto_window_desc": "Auto start only listens within this time window (e.g. 20:00 to 02:00). Same time for both = all day. Outside the window it uses no extra battery."
 }

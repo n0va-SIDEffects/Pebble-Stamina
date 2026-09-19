@@ -157,5 +157,9 @@
   "P_ASK_PARTNER": "Питати партнера",
   "D_PARTNER_FMT": "Партнер: %s",
   "STATS_PARTNER_HDR": "\nПАРТНЕРИ\n",
-  "STATS_PARTNER_FMT": "%s %d×"
+  "STATS_PARTNER_FMT": "%s %d×",
+  "P_AUTO_FROM": "Автостарт з",
+  "P_AUTO_TO": "Автостарт до",
+  "AUTO_ALWAYS": "увесь день",
+  "HOUR_UNIT": "год"
 }

@@ -34,5 +34,8 @@
   "partners_desc": "Initialer på dine partnere (maks. 4 tegn). Nye partnere kan også oprettes på uret, når en partnersession starter.",
   "partner_n": "Partner {n}",
   "ask_partner": "Spørg om partner",
-  "ask_partner_desc": "Når en partnersession starter, spørger uret med hvem."
+  "ask_partner_desc": "Når en partnersession starter, spørger uret med hvem.",
+  "auto_from": "Aktiv fra",
+  "auto_to": "Aktiv til",
+  "auto_window_desc": "Autostart lytter kun i dette tidsrum (f.eks. 20:00–02:00). Samme tid = hele dagen. Uden for tidsrummet bruger den ikke ekstra batteri."
 }

@@ -34,5 +34,8 @@
   "partners_desc": "Initialer for partnerne dine (maks. 4 tegn). Nye partnere kan også legges til på klokken når en partnerøkt starter.",
   "partner_n": "Partner {n}",
   "ask_partner": "Spør om partner",
-  "ask_partner_desc": "Når en partnerøkt starter, spør klokken med hvem."
+  "ask_partner_desc": "Når en partnerøkt starter, spør klokken med hvem.",
+  "auto_from": "Aktiv fra",
+  "auto_to": "Aktiv til",
+  "auto_window_desc": "Autostart lytter bare i dette tidsrommet (f.eks. 20:00–02:00). Samme tid = hele dagen. Utenfor bruker den ikke ekstra batteri."
 }

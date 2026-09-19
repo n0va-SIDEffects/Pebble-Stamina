@@ -59,7 +59,10 @@ module.exports = {
     "partners_desc": "Initials of your partners (max. 4 characters). New partners can also be added on the watch when starting a partner session.",
     "partner_n": "Partner {n}",
     "ask_partner": "Ask for partner",
-    "ask_partner_desc": "When a partner session starts, the watch asks who it is with."
+    "ask_partner_desc": "When a partner session starts, the watch asks who it is with.",
+    "auto_from": "Active from",
+    "auto_to": "Active until",
+    "auto_window_desc": "Auto start only listens within this time window (e.g. 20:00 to 02:00). Same time for both = all day. Outside the window it uses no extra battery."
   },
   "de": {
     "title": "Stamina Einstellungen",
@@ -119,7 +122,10 @@ module.exports = {
     "partners_desc": "Kürzel deiner Partner (max. 4 Zeichen). Neue Partner kannst du auch beim Start einer Partner-Session auf der Uhr anlegen.",
     "partner_n": "Partner {n}",
     "ask_partner": "Partner abfragen",
-    "ask_partner_desc": "Beim Start einer Partner-Session fragt die Uhr, mit wem."
+    "ask_partner_desc": "Beim Start einer Partner-Session fragt die Uhr, mit wem.",
+    "auto_from": "Aktiv ab",
+    "auto_to": "Aktiv bis",
+    "auto_window_desc": "Auto-Start achtet nur in diesem Zeitfenster auf Bewegung (z. B. 20:00 bis 02:00). Gleiche Uhrzeit = ganztägig. Außerhalb kostet es keinen zusätzlichen Akku."
   },
   "fr": {
     "title": "Réglages Stamina",
@@ -179,7 +185,10 @@ module.exports = {
     "partners_desc": "Initiales de tes partenaires (4 caractères max.). Tu peux aussi en ajouter sur la montre au début d'une session à deux.",
     "partner_n": "Partenaire {n}",
     "ask_partner": "Demander le partenaire",
-    "ask_partner_desc": "Au début d'une session à deux, la montre demande avec qui."
+    "ask_partner_desc": "Au début d'une session à deux, la montre demande avec qui.",
+    "auto_from": "Actif dès",
+    "auto_to": "Actif jusqu'à",
+    "auto_window_desc": "Le démarrage auto n'écoute que dans cette plage horaire (p. ex. 20:00 à 02:00). Même heure = toute la journée. En dehors, aucune batterie supplémentaire."
   },
   "es": {
     "title": "Ajustes de Stamina",
@@ -239,7 +248,10 @@ module.exports = {
     "partners_desc": "Iniciales de tus parejas (máx. 4 caracteres). También puedes añadirlas en el reloj al iniciar una sesión en pareja.",
     "partner_n": "Pareja {n}",
     "ask_partner": "Preguntar pareja",
-    "ask_partner_desc": "Al iniciar una sesión en pareja, el reloj pregunta con quién."
+    "ask_partner_desc": "Al iniciar una sesión en pareja, el reloj pregunta con quién.",
+    "auto_from": "Activo desde",
+    "auto_to": "Activo hasta",
+    "auto_window_desc": "El inicio automático solo escucha en esta franja horaria (p. ej. 20:00 a 02:00). Misma hora = todo el día. Fuera de ella no gasta batería extra."
   },
   "it": {
     "title": "Impostazioni Stamina",
@@ -299,7 +311,10 @@ module.exports = {
     "partners_desc": "Iniziali dei tuoi partner (max. 4 caratteri). Puoi aggiungerli anche sull'orologio all'avvio di una sessione in coppia.",
     "partner_n": "Partner {n}",
     "ask_partner": "Chiedi il partner",
-    "ask_partner_desc": "All'avvio di una sessione in coppia, l'orologio chiede con chi."
+    "ask_partner_desc": "All'avvio di una sessione in coppia, l'orologio chiede con chi.",
+    "auto_from": "Attivo dalle",
+    "auto_to": "Attivo fino alle",
+    "auto_window_desc": "L'avvio automatico ascolta solo in questa fascia oraria (ad es. 20:00-02:00). Stessa ora = tutto il giorno. Fuori dalla fascia non consuma batteria in più."
   },
   "pt": {
     "title": "Configurações do Stamina",
@@ -359,7 +374,10 @@ module.exports = {
     "partners_desc": "Iniciais dos teus parceiros (máx. 4 caracteres). Também podes adicioná-los no relógio ao iniciar uma sessão a dois.",
     "partner_n": "Parceiro {n}",
     "ask_partner": "Perguntar parceiro",
-    "ask_partner_desc": "Ao iniciar uma sessão a dois, o relógio pergunta com quem."
+    "ask_partner_desc": "Ao iniciar uma sessão a dois, o relógio pergunta com quem.",
+    "auto_from": "Ativo a partir de",
+    "auto_to": "Ativo até",
+    "auto_window_desc": "O início automático só está atento neste intervalo (ex.: 20:00 às 02:00). Mesma hora = o dia todo. Fora do intervalo não gasta bateria extra."
   },
   "nl": {
     "title": "Stamina-instellingen",
@@ -419,7 +437,10 @@ module.exports = {
     "partners_desc": "Initialen van je partners (max. 4 tekens). Nieuwe partners kun je ook op het horloge toevoegen bij het starten van een partnersessie.",
     "partner_n": "Partner {n}",
     "ask_partner": "Partner vragen",
-    "ask_partner_desc": "Bij het starten van een partnersessie vraagt het horloge met wie."
+    "ask_partner_desc": "Bij het starten van een partnersessie vraagt het horloge met wie.",
+    "auto_from": "Actief vanaf",
+    "auto_to": "Actief tot",
+    "auto_window_desc": "Auto-start let alleen binnen dit tijdvak op beweging (bijv. 20:00 tot 02:00). Dezelfde tijd = hele dag. Daarbuiten kost het geen extra batterij."
   },
   "pl": {
     "title": "Ustawienia Stamina",
@@ -479,7 +500,10 @@ module.exports = {
     "partners_desc": "Inicjały partnerów (maks. 4 znaki). Nowych partnerów możesz też dodać na zegarku przy starcie sesji we dwoje.",
     "partner_n": "Partner {n}",
     "ask_partner": "Pytaj o partnera",
-    "ask_partner_desc": "Przy starcie sesji we dwoje zegarek pyta, z kim."
+    "ask_partner_desc": "Przy starcie sesji we dwoje zegarek pyta, z kim.",
+    "auto_from": "Aktywny od",
+    "auto_to": "Aktywny do",
+    "auto_window_desc": "Autostart nasłuchuje tylko w tym przedziale czasu (np. 20:00–02:00). Ta sama godzina = cały dzień. Poza nim nie zużywa dodatkowo baterii."
   },
   "cs": {
     "title": "Nastavení Stamina",
@@ -539,7 +563,10 @@ module.exports = {
     "partners_desc": "Iniciály tvých partnerů (max. 4 znaky). Nové partnery můžeš přidat i na hodinkách při spuštění relace s partnerem.",
     "partner_n": "Partner {n}",
     "ask_partner": "Ptát se na partnera",
-    "ask_partner_desc": "Při spuštění relace s partnerem se hodinky zeptají, s kým."
+    "ask_partner_desc": "Při spuštění relace s partnerem se hodinky zeptají, s kým.",
+    "auto_from": "Aktivní od",
+    "auto_to": "Aktivní do",
+    "auto_window_desc": "Automatický start sleduje pohyb jen v tomto časovém okně (např. 20:00–02:00). Stejný čas = celý den. Mimo okno nespotřebovává baterii navíc."
   },
   "sv": {
     "title": "Stamina-inställningar",
@@ -599,7 +626,10 @@ module.exports = {
     "partners_desc": "Initialer för dina partner (max 4 tecken). Nya partner kan också läggas till på klockan när en partnersession startar.",
     "partner_n": "Partner {n}",
     "ask_partner": "Fråga efter partner",
-    "ask_partner_desc": "När en partnersession startar frågar klockan med vem."
+    "ask_partner_desc": "När en partnersession startar frågar klockan med vem.",
+    "auto_from": "Aktiv från",
+    "auto_to": "Aktiv till",
+    "auto_window_desc": "Autostart lyssnar bara inom detta tidsfönster (t.ex. 20:00–02:00). Samma tid = hela dagen. Utanför fönstret drar den inget extra batteri."
   },
   "da": {
     "title": "Stamina-indstillinger",
@@ -659,7 +689,10 @@ module.exports = {
     "partners_desc": "Initialer på dine partnere (maks. 4 tegn). Nye partnere kan også oprettes på uret, når en partnersession starter.",
     "partner_n": "Partner {n}",
     "ask_partner": "Spørg om partner",
-    "ask_partner_desc": "Når en partnersession starter, spørger uret med hvem."
+    "ask_partner_desc": "Når en partnersession starter, spørger uret med hvem.",
+    "auto_from": "Aktiv fra",
+    "auto_to": "Aktiv til",
+    "auto_window_desc": "Autostart lytter kun i dette tidsrum (f.eks. 20:00–02:00). Samme tid = hele dagen. Uden for tidsrummet bruger den ikke ekstra batteri."
   },
   "nb": {
     "title": "Stamina-innstillinger",
@@ -719,7 +752,10 @@ module.exports = {
     "partners_desc": "Initialer for partnerne dine (maks. 4 tegn). Nye partnere kan også legges til på klokken når en partnerøkt starter.",
     "partner_n": "Partner {n}",
     "ask_partner": "Spør om partner",
-    "ask_partner_desc": "Når en partnerøkt starter, spør klokken med hvem."
+    "ask_partner_desc": "Når en partnerøkt starter, spør klokken med hvem.",
+    "auto_from": "Aktiv fra",
+    "auto_to": "Aktiv til",
+    "auto_window_desc": "Autostart lytter bare i dette tidsrommet (f.eks. 20:00–02:00). Samme tid = hele dagen. Utenfor bruker den ikke ekstra batteri."
   },
   "fi": {
     "title": "Stamina-asetukset",
@@ -779,7 +815,10 @@ module.exports = {
     "partners_desc": "Kumppaniesi nimikirjaimet (enint. 4 merkkiä). Uusia kumppaneita voi lisätä myös kellossa, kun kumppani-istunto alkaa.",
     "partner_n": "Kumppani {n}",
     "ask_partner": "Kysy kumppania",
-    "ask_partner_desc": "Kun kumppani-istunto alkaa, kello kysyy kenen kanssa."
+    "ask_partner_desc": "Kun kumppani-istunto alkaa, kello kysyy kenen kanssa.",
+    "auto_from": "Käytössä alkaen",
+    "auto_to": "Käytössä asti",
+    "auto_window_desc": "Automaattinen aloitus kuuntelee vain tällä aikavälillä (esim. 20:00–02:00). Sama aika = koko päivän. Aikavälin ulkopuolella se ei kuluta lisäakkua."
   },
   "ru": {
     "title": "Настройки Stamina",
@@ -839,7 +878,10 @@ module.exports = {
     "partners_desc": "Инициалы партнёров (до 4 символов). Новых партнёров можно добавить и на часах при старте парной сессии.",
     "partner_n": "Партнёр {n}",
     "ask_partner": "Спрашивать партнёра",
-    "ask_partner_desc": "При старте парной сессии часы спрашивают, с кем."
+    "ask_partner_desc": "При старте парной сессии часы спрашивают, с кем.",
+    "auto_from": "Активен с",
+    "auto_to": "Активен до",
+    "auto_window_desc": "Автостарт отслеживает движения только в этом интервале (например, 20:00–02:00). Одинаковое время = весь день. Вне интервала заряд не расходуется."
   },
   "uk": {
     "title": "Налаштування Stamina",
@@ -899,7 +941,10 @@ module.exports = {
     "partners_desc": "Ініціали партнерів (до 4 символів). Нових партнерів можна додати й на годиннику під час старту парної сесії.",
     "partner_n": "Партнер {n}",
     "ask_partner": "Питати партнера",
-    "ask_partner_desc": "Під час старту парної сесії годинник питає, з ким."
+    "ask_partner_desc": "Під час старту парної сесії годинник питає, з ким.",
+    "auto_from": "Активний з",
+    "auto_to": "Активний до",
+    "auto_window_desc": "Автостарт відстежує рухи лише в цьому проміжку (наприклад, 20:00–02:00). Однаковий час = увесь день. Поза проміжком заряд не витрачається."
   },
   "tr": {
     "title": "Stamina Ayarları",
@@ -959,7 +1004,10 @@ module.exports = {
     "partners_desc": "Partnerlerinin baş harfleri (en fazla 4 karakter). Yeni partnerleri partner seansı başlarken saatten de ekleyebilirsin.",
     "partner_n": "Partner {n}",
     "ask_partner": "Partneri sor",
-    "ask_partner_desc": "Partner seansı başlarken saat kiminle olduğunu sorar."
+    "ask_partner_desc": "Partner seansı başlarken saat kiminle olduğunu sorar.",
+    "auto_from": "Etkin başlangıç",
+    "auto_to": "Etkin bitiş",
+    "auto_window_desc": "Otomatik başlatma yalnızca bu zaman aralığında hareketi izler (ör. 20:00–02:00). Aynı saat = tüm gün. Aralık dışında ek pil kullanmaz."
   },
   "ja": {
     "title": "Stamina 設定",
@@ -1019,7 +1067,10 @@ module.exports = {
     "partners_desc": "パートナーのイニシャル（最大4文字）。パートナーセッション開始時にウォッチでも追加できます。",
     "partner_n": "パートナー {n}",
     "ask_partner": "パートナーを確認",
-    "ask_partner_desc": "パートナーセッション開始時に、誰とかをウォッチが尋ねます。"
+    "ask_partner_desc": "パートナーセッション開始時に、誰とかをウォッチが尋ねます。",
+    "auto_from": "有効開始",
+    "auto_to": "有効終了",
+    "auto_window_desc": "自動スタートはこの時間帯だけ動きを検知します（例：20:00〜02:00）。同じ時刻＝終日。時間外はバッテリーを余分に使いません。"
   },
   "zh": {
     "title": "Stamina 设置",
@@ -1079,7 +1130,10 @@ module.exports = {
     "partners_desc": "伴侣的缩写（最多 4 个字符）。开始双人记录时也可以在手表上添加新伴侣。",
     "partner_n": "伴侣 {n}",
     "ask_partner": "询问伴侣",
-    "ask_partner_desc": "开始双人记录时，手表会询问和谁。"
+    "ask_partner_desc": "开始双人记录时，手表会询问和谁。",
+    "auto_from": "生效开始",
+    "auto_to": "生效结束",
+    "auto_window_desc": "自动开始只在此时间段内检测动作（例如 20:00–02:00）。两者相同 = 全天。时间段外不额外耗电。"
   },
   "ko": {
     "title": "Stamina 설정",
@@ -1139,6 +1193,9 @@ module.exports = {
     "partners_desc": "파트너 이니셜(최대 4자). 파트너 세션을 시작할 때 워치에서도 새 파트너를 추가할 수 있습니다.",
     "partner_n": "파트너 {n}",
     "ask_partner": "파트너 묻기",
-    "ask_partner_desc": "파트너 세션을 시작하면 워치가 누구와인지 묻습니다."
+    "ask_partner_desc": "파트너 세션을 시작하면 워치가 누구와인지 묻습니다.",
+    "auto_from": "활성 시작",
+    "auto_to": "활성 종료",
+    "auto_window_desc": "자동 시작은 이 시간대에만 움직임을 감지합니다(예: 20:00~02:00). 같은 시각 = 종일. 시간대 밖에서는 배터리를 추가로 쓰지 않습니다."
   }
 };

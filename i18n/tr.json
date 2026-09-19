@@ -157,5 +157,9 @@
   "P_ASK_PARTNER": "Partneri sor",
   "D_PARTNER_FMT": "Partner: %s",
   "STATS_PARTNER_HDR": "\nPARTNERLER\n",
-  "STATS_PARTNER_FMT": "%s %dx"
+  "STATS_PARTNER_FMT": "%s %dx",
+  "P_AUTO_FROM": "Otomatik başlat",
+  "P_AUTO_TO": "Otomatik bitiş",
+  "AUTO_ALWAYS": "tüm gün",
+  "HOUR_UNIT": "sa"
 }

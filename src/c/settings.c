@@ -46,6 +46,8 @@ void settings_send_profile(void) {
   dict_write_int32(out, MESSAGE_KEY_AUTO_START, p->auto_start);
   dict_write_int32(out, MESSAGE_KEY_LIGHT, p->light);
   dict_write_int32(out, MESSAGE_KEY_ASK_PARTNER, p->ask_partner);
+  dict_write_int32(out, MESSAGE_KEY_AUTO_FROM, p->auto_from);
+  dict_write_int32(out, MESSAGE_KEY_AUTO_TO, p->auto_to);
   for (int i = 0; i < PARTNER_COUNT; i++) dict_write_cstring(out, partner_key(i), partner_name(i + 1));
   for (int i = 0; i < POS_COUNT; i++) dict_write_cstring(out, pos_name_key(i), pos_custom_name(i));
   app_message_outbox_send();
@@ -87,6 +89,14 @@ static void inbox_received(DictionaryIterator *it, void *context) {
   }
   if ((t = dict_find(it, MESSAGE_KEY_CHECKIN))) {
     p->checkin = tuple_int(t) ? 1 : 0;
+    changed = true;
+  }
+  if ((t = dict_find(it, MESSAGE_KEY_AUTO_FROM))) {
+    p->auto_from = clamp(tuple_int(t), 0, 23);
+    changed = true;
+  }
+  if ((t = dict_find(it, MESSAGE_KEY_AUTO_TO))) {
+    p->auto_to = clamp(tuple_int(t), 0, 23);
     changed = true;
   }
   if ((t = dict_find(it, MESSAGE_KEY_ASK_PARTNER))) {

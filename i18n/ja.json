@@ -157,5 +157,9 @@
   "P_ASK_PARTNER": "パートナーを確認",
   "D_PARTNER_FMT": "パートナー: %s",
   "STATS_PARTNER_HDR": "\nパートナー\n",
-  "STATS_PARTNER_FMT": "%s %d回"
+  "STATS_PARTNER_FMT": "%s %d回",
+  "P_AUTO_FROM": "自動スタート開始",
+  "P_AUTO_TO": "自動スタート終了",
+  "AUTO_ALWAYS": "終日",
+  "HOUR_UNIT": "時"
 }

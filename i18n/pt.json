@@ -157,5 +157,9 @@
   "P_ASK_PARTNER": "Perguntar parceiro",
   "D_PARTNER_FMT": "Parceiro: %s",
   "STATS_PARTNER_HDR": "\nPARCEIROS\n",
-  "STATS_PARTNER_FMT": "%s %dx"
+  "STATS_PARTNER_FMT": "%s %dx",
+  "P_AUTO_FROM": "Início auto a partir",
+  "P_AUTO_TO": "Início auto até",
+  "AUTO_ALWAYS": "o dia todo",
+  "HOUR_UNIT": "h"
 }

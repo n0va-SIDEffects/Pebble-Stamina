@@ -34,5 +34,8 @@
   "partners_desc": "Initiales de tes partenaires (4 caractères max.). Tu peux aussi en ajouter sur la montre au début d'une session à deux.",
   "partner_n": "Partenaire {n}",
   "ask_partner": "Demander le partenaire",
-  "ask_partner_desc": "Au début d'une session à deux, la montre demande avec qui."
+  "ask_partner_desc": "Au début d'une session à deux, la montre demande avec qui.",
+  "auto_from": "Actif dès",
+  "auto_to": "Actif jusqu'à",
+  "auto_window_desc": "Le démarrage auto n'écoute que dans cette plage horaire (p. ex. 20:00 à 02:00). Même heure = toute la journée. En dehors, aucune batterie supplémentaire."
 }

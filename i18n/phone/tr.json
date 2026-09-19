@@ -34,5 +34,8 @@
   "partners_desc": "Partnerlerinin baş harfleri (en fazla 4 karakter). Yeni partnerleri partner seansı başlarken saatten de ekleyebilirsin.",
   "partner_n": "Partner {n}",
   "ask_partner": "Partneri sor",
-  "ask_partner_desc": "Partner seansı başlarken saat kiminle olduğunu sorar."
+  "ask_partner_desc": "Partner seansı başlarken saat kiminle olduğunu sorar.",
+  "auto_from": "Etkin başlangıç",
+  "auto_to": "Etkin bitiş",
+  "auto_window_desc": "Otomatik başlatma yalnızca bu zaman aralığında hareketi izler (ör. 20:00–02:00). Aynı saat = tüm gün. Aralık dışında ek pil kullanmaz."
 }

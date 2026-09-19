@@ -38,6 +38,13 @@ SessionMode solo_mode_for(const Profile *p) {
   }
 }
 
+bool auto_window_contains(const Profile *p, int hour) {
+  int from = p->auto_from % 24, to = p->auto_to % 24;
+  if (from == to) return true;                   // ganztägig
+  if (from < to) return hour >= from && hour < to;
+  return hour >= from || hour < to;              // über Mitternacht, z. B. 20-2 Uhr
+}
+
 int32_t isqrt32(int32_t v) {
   if (v <= 0) return 0;
   int32_t r = v, x = (v + 1) / 2;

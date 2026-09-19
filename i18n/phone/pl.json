@@ -34,5 +34,8 @@
   "partners_desc": "Inicjały partnerów (maks. 4 znaki). Nowych partnerów możesz też dodać na zegarku przy starcie sesji we dwoje.",
   "partner_n": "Partner {n}",
   "ask_partner": "Pytaj o partnera",
-  "ask_partner_desc": "Przy starcie sesji we dwoje zegarek pyta, z kim."
+  "ask_partner_desc": "Przy starcie sesji we dwoje zegarek pyta, z kim.",
+  "auto_from": "Aktywny od",
+  "auto_to": "Aktywny do",
+  "auto_window_desc": "Autostart nasłuchuje tylko w tym przedziale czasu (np. 20:00–02:00). Ta sama godzina = cały dzień. Poza nim nie zużywa dodatkowo baterii."
 }

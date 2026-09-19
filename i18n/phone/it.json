@@ -34,5 +34,8 @@
   "partners_desc": "Iniziali dei tuoi partner (max. 4 caratteri). Puoi aggiungerli anche sull'orologio all'avvio di una sessione in coppia.",
   "partner_n": "Partner {n}",
   "ask_partner": "Chiedi il partner",
-  "ask_partner_desc": "All'avvio di una sessione in coppia, l'orologio chiede con chi."
+  "ask_partner_desc": "All'avvio di una sessione in coppia, l'orologio chiede con chi.",
+  "auto_from": "Attivo dalle",
+  "auto_to": "Attivo fino alle",
+  "auto_window_desc": "L'avvio automatico ascolta solo in questa fascia oraria (ad es. 20:00-02:00). Stessa ora = tutto il giorno. Fuori dalla fascia non consuma batteria in più."
 }

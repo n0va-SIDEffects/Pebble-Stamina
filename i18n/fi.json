@@ -157,5 +157,9 @@
   "P_ASK_PARTNER": "Kysy kumppania",
   "D_PARTNER_FMT": "Kumppani: %s",
   "STATS_PARTNER_HDR": "\nKUMPPANIT\n",
-  "STATS_PARTNER_FMT": "%s %dx"
+  "STATS_PARTNER_FMT": "%s %dx",
+  "P_AUTO_FROM": "Autom. aloitus alkaen",
+  "P_AUTO_TO": "Autom. aloitus asti",
+  "AUTO_ALWAYS": "koko päivän",
+  "HOUR_UNIT": "h"
 }

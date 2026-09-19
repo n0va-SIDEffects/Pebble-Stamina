@@ -157,5 +157,9 @@
   "P_ASK_PARTNER": "Preguntar pareja",
   "D_PARTNER_FMT": "Pareja: %s",
   "STATS_PARTNER_HDR": "\nPAREJAS\n",
-  "STATS_PARTNER_FMT": "%s %dx"
+  "STATS_PARTNER_FMT": "%s %dx",
+  "P_AUTO_FROM": "Inicio auto desde",
+  "P_AUTO_TO": "Inicio auto hasta",
+  "AUTO_ALWAYS": "todo el día",
+  "HOUR_UNIT": "h"
 }

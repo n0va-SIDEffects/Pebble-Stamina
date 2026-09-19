@@ -34,5 +34,8 @@
   "partners_desc": "Initialen van je partners (max. 4 tekens). Nieuwe partners kun je ook op het horloge toevoegen bij het starten van een partnersessie.",
   "partner_n": "Partner {n}",
   "ask_partner": "Partner vragen",
-  "ask_partner_desc": "Bij het starten van een partnersessie vraagt het horloge met wie."
+  "ask_partner_desc": "Bij het starten van een partnersessie vraagt het horloge met wie.",
+  "auto_from": "Actief vanaf",
+  "auto_to": "Actief tot",
+  "auto_window_desc": "Auto-start let alleen binnen dit tijdvak op beweging (bijv. 20:00 tot 02:00). Dezelfde tijd = hele dag. Daarbuiten kost het geen extra batterij."
 }

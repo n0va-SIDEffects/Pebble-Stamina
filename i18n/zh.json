@@ -157,5 +157,9 @@
   "P_ASK_PARTNER": "询问伴侣",
   "D_PARTNER_FMT": "伴侣：%s",
   "STATS_PARTNER_HDR": "\n伴侣\n",
-  "STATS_PARTNER_FMT": "%s %d次"
+  "STATS_PARTNER_FMT": "%s %d次",
+  "P_AUTO_FROM": "自动开始起",
+  "P_AUTO_TO": "自动开始止",
+  "AUTO_ALWAYS": "全天",
+  "HOUR_UNIT": "点"
 }

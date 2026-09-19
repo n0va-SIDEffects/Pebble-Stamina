@@ -157,5 +157,9 @@
   "P_ASK_PARTNER": "Spør om partner",
   "D_PARTNER_FMT": "Partner: %s",
   "STATS_PARTNER_HDR": "\nPARTNERE\n",
-  "STATS_PARTNER_FMT": "%s %dx"
+  "STATS_PARTNER_FMT": "%s %dx",
+  "P_AUTO_FROM": "Autostart fra",
+  "P_AUTO_TO": "Autostart til",
+  "AUTO_ALWAYS": "hele dagen",
+  "HOUR_UNIT": "t"
 }

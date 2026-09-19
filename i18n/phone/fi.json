@@ -34,5 +34,8 @@
   "partners_desc": "Kumppaniesi nimikirjaimet (enint. 4 merkkiä). Uusia kumppaneita voi lisätä myös kellossa, kun kumppani-istunto alkaa.",
   "partner_n": "Kumppani {n}",
   "ask_partner": "Kysy kumppania",
-  "ask_partner_desc": "Kun kumppani-istunto alkaa, kello kysyy kenen kanssa."
+  "ask_partner_desc": "Kun kumppani-istunto alkaa, kello kysyy kenen kanssa.",
+  "auto_from": "Käytössä alkaen",
+  "auto_to": "Käytössä asti",
+  "auto_window_desc": "Automaattinen aloitus kuuntelee vain tällä aikavälillä (esim. 20:00–02:00). Sama aika = koko päivän. Aikavälin ulkopuolella se ei kuluta lisäakkua."
 }

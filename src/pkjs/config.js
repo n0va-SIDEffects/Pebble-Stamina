@@ -64,6 +64,14 @@ module.exports = function (t, platform) {
     }))
   });
 
+  var hours = [];
+  for (var h = 0; h < 24; h++) hours.push({ label: (h < 10 ? '0' : '') + h + ':00', value: String(h) });
+  tracking.push({ type: 'select', messageKey: 'AUTO_FROM', label: t.auto_from, defaultValue: '0', options: hours });
+  tracking.push({
+    type: 'select', messageKey: 'AUTO_TO', label: t.auto_to, description: t.auto_window_desc,
+    defaultValue: '0', options: hours
+  });
+
   tracking.push({
     type: 'select',
     messageKey: 'LIGHT',

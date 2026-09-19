@@ -157,5 +157,9 @@
   "P_ASK_PARTNER": "파트너 묻기",
   "D_PARTNER_FMT": "파트너: %s",
   "STATS_PARTNER_HDR": "\n파트너\n",
-  "STATS_PARTNER_FMT": "%s %d회"
+  "STATS_PARTNER_FMT": "%s %d회",
+  "P_AUTO_FROM": "자동 시작 시작",
+  "P_AUTO_TO": "자동 시작 종료",
+  "AUTO_ALWAYS": "종일",
+  "HOUR_UNIT": "시"
 }

@@ -118,9 +118,16 @@ static void accel_handler(AccelData *data, uint32_t num) {
   per_second(now, cycles, s_det.moving > SAMPLE_HZ / 3);
 }
 
-// Beschleunigung nur abonnieren, wenn tatsächlich erkannt werden soll (Akku)
+static bool in_time_window(void) {
+  time_t now = time(NULL);
+  return auto_window_contains(&s_profile, localtime(&now)->tm_hour);
+}
+
+// Beschleunigung nur abonnieren, wenn tatsächlich erkannt werden soll (Akku):
+// eingeschaltet, keine laufende Session und innerhalb des Zeitfensters
 static void update_subscription(void) {
-  bool want = s_enabled && !s_session_active;
+  bool want = s_enabled && !s_session_active && in_time_window();
+  if (!want) reset_run();
   if (want && !s_subscribed) {
     accel_data_service_subscribe(SAMPLE_HZ, accel_handler);  // ein Aufruf pro Sekunde
     accel_service_set_sampling_rate(ACCEL_SAMPLING_25HZ);
@@ -165,8 +172,12 @@ static void app_message(uint16_t type, AppWorkerMessage *data) {
   update_subscription();
 }
 
+// Einmal pro Minute prüfen, ob das Zeitfenster begonnen oder geendet hat
+static void minute_handler(struct tm *t, TimeUnits changed) { update_subscription(); }
+
 int main(void) {
   app_worker_message_subscribe(app_message);
+  tick_timer_service_subscribe(MINUTE_UNIT, minute_handler);
   load_settings();
   worker_event_loop();
   accel_data_service_unsubscribe();
