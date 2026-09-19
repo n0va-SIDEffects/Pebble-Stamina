@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\n하루의 시작\n",
   "STATS_MORNING_FMT": "평가된 아침: %d\n걸음 평소 대비 %s%d%%\n심박수 평소 대비 %s%d bpm",
   "STATS_MOOD_FMT": "\n기분 평균 %d%s%d/5",
-  "STATS_MORNING_NONE": "아직 평가된 아침이 없습니다."
+  "STATS_MORNING_NONE": "아직 평가된 아침이 없습니다.",
+  "P_AUTO": "자동 시작",
+  "AUTO_AFTER_FMT": "%d분 후",
+  "AUTO_TITLE": "활동 감지됨",
+  "AUTO_Q_FMT": "%s째 진행 중.\n세션을 시작할까요?",
+  "AUTO_NO": "나중에"
 }

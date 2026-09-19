@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\n一日の始まり\n",
   "STATS_MORNING_FMT": "評価済みの朝: %d\n歩数 普段比 %s%d%%\n心拍 普段比 %s%d bpm",
   "STATS_MOOD_FMT": "\n気分 平均 %d%s%d/5",
-  "STATS_MORNING_NONE": "評価済みの朝はまだありません。"
+  "STATS_MORNING_NONE": "評価済みの朝はまだありません。",
+  "P_AUTO": "自動スタート",
+  "AUTO_AFTER_FMT": "%d分後",
+  "AUTO_TITLE": "アクティビティを検出",
+  "AUTO_Q_FMT": "%s 継続中。\nセッションを開始？",
+  "AUTO_NO": "今はしない"
 }

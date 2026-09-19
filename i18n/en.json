@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\nSTART OF THE DAY\n",
   "STATS_MORNING_FMT": "%d mornings evaluated\nSteps %s%d%% vs. usual\nHeart rate %s%d bpm vs. usual",
   "STATS_MOOD_FMT": "\nMood avg %d%s%d/5",
-  "STATS_MORNING_NONE": "No morning evaluated yet."
+  "STATS_MORNING_NONE": "No morning evaluated yet.",
+  "P_AUTO": "Auto start",
+  "AUTO_AFTER_FMT": "after %d min",
+  "AUTO_TITLE": "Activity detected",
+  "AUTO_Q_FMT": "Going on for %s.\nStart a session?",
+  "AUTO_NO": "Not now"
 }

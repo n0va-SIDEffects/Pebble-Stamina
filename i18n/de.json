@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\nSTART IN DEN TAG\n",
   "STATS_MORNING_FMT": "%d Morgen ausgewertet\nSchritte %s%d%% ggü. üblich\nPuls %s%d bpm ggü. üblich",
   "STATS_MOOD_FMT": "\nStimmung Ø %d%s%d/5",
-  "STATS_MORNING_NONE": "Noch kein Morgen ausgewertet."
+  "STATS_MORNING_NONE": "Noch kein Morgen ausgewertet.",
+  "P_AUTO": "Auto-Start",
+  "AUTO_AFTER_FMT": "nach %d min",
+  "AUTO_TITLE": "Aktivität erkannt",
+  "AUTO_Q_FMT": "Läuft seit %s.\nSession starten?",
+  "AUTO_NO": "Nicht jetzt"
 }

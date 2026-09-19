@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\nINICIO DEL DÍA\n",
   "STATS_MORNING_FMT": "%d mañanas evaluadas\nPasos %s%d%% vs. lo usual\nPulso %s%d bpm vs. lo usual",
   "STATS_MOOD_FMT": "\nÁnimo media %d%s%d/5",
-  "STATS_MORNING_NONE": "Aún no hay mañanas evaluadas."
+  "STATS_MORNING_NONE": "Aún no hay mañanas evaluadas.",
+  "P_AUTO": "Inicio auto",
+  "AUTO_AFTER_FMT": "tras %d min",
+  "AUTO_TITLE": "Actividad detectada",
+  "AUTO_Q_FMT": "En curso desde hace %s.\n¿Iniciar sesión?",
+  "AUTO_NO": "Ahora no"
 }

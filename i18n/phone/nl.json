@@ -9,5 +9,9 @@
   "lang_auto": "Automatisch",
   "lang_desc": "Sommige talen vereisen dat het bijbehorende taalpakket op het horloge is geïnstalleerd.",
   "checkin": "Ochtend-check-in",
-  "checkin_desc": "Na een ochtendsessie vraagt het horloge één keer hoe je dag gaat (3 u later)."
+  "checkin_desc": "Na een ochtendsessie vraagt het horloge één keer hoe je dag gaat (3 u later).",
+  "auto": "Automatisch sessie starten",
+  "auto_off": "Uit",
+  "auto_after": "Na {n} min",
+  "auto_desc": "Op de achtergrond let het horloge op aanhoudende ritmische beweging en vraagt of er een sessie moet starten. Kost iets meer batterij. Vergelijkbare bewegingen (bijv. tandenpoetsen) kunnen dit soms activeren; met een toy is de herkenning onbetrouwbaar."
 }

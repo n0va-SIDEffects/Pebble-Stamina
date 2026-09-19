@@ -9,5 +9,9 @@
   "lang_auto": "Automatica",
   "lang_desc": "Alcune lingue richiedono il relativo language pack installato sull'orologio.",
   "checkin": "Check-in mattutino",
-  "checkin_desc": "Dopo una sessione mattutina, l'orologio ti chiede una volta come va la giornata (3 h dopo)."
+  "checkin_desc": "Dopo una sessione mattutina, l'orologio ti chiede una volta come va la giornata (3 h dopo).",
+  "auto": "Avvio automatico della sessione",
+  "auto_off": "Disattivato",
+  "auto_after": "Dopo {n} min",
+  "auto_desc": "In background l'orologio rileva movimenti ritmici prolungati e chiede se avviare una sessione. Consuma un po' più di batteria. Movimenti simili (ad es. lavarsi i denti) possono a volte attivarlo; con un sex toy il rilevamento è poco affidabile."
 }

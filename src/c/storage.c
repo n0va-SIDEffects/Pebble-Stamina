@@ -1,10 +1,5 @@
 #include "app.h"
 
-#define KEY_VERSION 1
-#define KEY_PROFILE 2
-#define KEY_COUNT 3
-#define KEY_CALIB 4
-#define KEY_SESSION_BASE 100
 #define STORAGE_VERSION 1
 
 _Static_assert(sizeof(Session) <= PERSIST_DATA_MAX_LENGTH, "Session too large for persist");
@@ -38,7 +33,7 @@ void storage_init(void) {
   // Defaults zuerst, damit Felder fehlen dürfen, die ältere Versionen noch nicht gespeichert haben
   s_profile = (Profile){
       .sex = SEX_MALE, .age = 30, .weight_kg = 80, .sensitivity = SENS_NORMAL, .touch_session = 1,
-      .solo_style = STYLE_AUTO, .lang = 0, .checkin = 1};
+      .solo_style = STYLE_AUTO, .lang = 0, .checkin = 1, .auto_start = 0};
   if (persist_exists(KEY_PROFILE)) {
     persist_read_data(KEY_PROFILE, &s_profile, sizeof(Profile));
   }

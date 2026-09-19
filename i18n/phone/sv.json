@@ -9,5 +9,9 @@
   "lang_auto": "Automatiskt",
   "lang_desc": "Vissa språk kräver att motsvarande språkpaket är installerat på klockan.",
   "checkin": "Morgonincheckning",
-  "checkin_desc": "Efter en morgonsession frågar klockan en gång hur din dag går (3 h senare)."
+  "checkin_desc": "Efter en morgonsession frågar klockan en gång hur din dag går (3 h senare).",
+  "auto": "Automatisk sessionsstart",
+  "auto_off": "Av",
+  "auto_after": "Efter {n} min",
+  "auto_desc": "I bakgrunden håller klockan utkik efter ihållande rytmiska rörelser och frågar om en session ska startas. Drar lite mer batteri. Liknande rörelser (t.ex. tandborstning) kan ibland utlösa den; med leksak är igenkänningen opålitlig."
 }

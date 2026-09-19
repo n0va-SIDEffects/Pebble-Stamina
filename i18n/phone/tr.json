@@ -9,5 +9,9 @@
   "lang_auto": "Otomatik",
   "lang_desc": "Bazı diller için saatte ilgili dil paketinin yüklü olması gerekir.",
   "checkin": "Sabah check-in",
-  "checkin_desc": "Sabah seansından sonra saat, gününün nasıl geçtiğini bir kez sorar (3 saat sonra)."
+  "checkin_desc": "Sabah seansından sonra saat, gününün nasıl geçtiğini bir kez sorar (3 saat sonra).",
+  "auto": "Otomatik seans başlatma",
+  "auto_off": "Kapalı",
+  "auto_after": "{n} dk sonra",
+  "auto_desc": "Saat arka planda süren ritmik hareketleri izler ve seans başlatılsın mı diye sorar. Biraz daha fazla pil kullanır. Benzer hareketler (ör. diş fırçalama) bazen tetikleyebilir; oyuncakla algılama güvenilir değildir."
 }

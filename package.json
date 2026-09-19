@@ -16,7 +16,7 @@
       "watchface": false
     },
     "messageKeys": ["SEX", "AGE", "WEIGHT", "SENSITIVITY", "TOUCH_SESSION", "REQUEST_PROFILE",
-                    "SOLO_STYLE", "LANGUAGE", "CHECKIN"],
+                    "SOLO_STYLE", "LANGUAGE", "CHECKIN", "AUTO_START"],
     "resources": {
       "media": [
         {"type": "raw", "name": "LANG_EN", "file": "lang/en.bin"},

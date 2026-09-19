@@ -9,5 +9,9 @@
   "lang_auto": "Automatisch",
   "lang_desc": "Manche Sprachen brauchen das passende Sprachpaket auf der Uhr.",
   "checkin": "Morgen-Check-in",
-  "checkin_desc": "Nach einer Morgen-Session fragt die Uhr einmal, wie dein Tag läuft (3 h später)."
+  "checkin_desc": "Nach einer Morgen-Session fragt die Uhr einmal, wie dein Tag läuft (3 h später).",
+  "auto": "Automatischer Session-Start",
+  "auto_off": "Aus",
+  "auto_after": "Nach {n} min",
+  "auto_desc": "Die Uhr achtet im Hintergrund auf anhaltende rhythmische Bewegung und fragt, ob eine Session gestartet werden soll. Kostet etwas mehr Akku. Ähnliche Bewegungen (z. B. Zähneputzen) können gelegentlich auslösen; mit Toy ist die Erkennung unzuverlässig."
 }

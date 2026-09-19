@@ -90,8 +90,9 @@ static void wakeup_handler(WakeupId id, int32_t cookie) {
   if (idx >= 0 && storage_get(idx)->mood == 0) mood_window_push(idx);
 }
 
+void morning_init(void) { wakeup_service_subscribe(wakeup_handler); }
+
 bool morning_handle_launch(void) {
-  wakeup_service_subscribe(wakeup_handler);
   int idx = -1;
   if (launch_reason() == APP_LAUNCH_WAKEUP) {
     WakeupId id;

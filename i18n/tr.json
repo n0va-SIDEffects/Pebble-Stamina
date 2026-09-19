@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\nGÜNE BAŞLANGIÇ\n",
   "STATS_MORNING_FMT": "%d sabah değerlendirildi\nAdım normale göre %s%d%%\nNabız normale göre %s%d bpm",
   "STATS_MOOD_FMT": "\nRuh hali ort. %d%s%d/5",
-  "STATS_MORNING_NONE": "Henüz sabah değerlendirilmedi."
+  "STATS_MORNING_NONE": "Henüz sabah değerlendirilmedi.",
+  "P_AUTO": "Otomatik başlat",
+  "AUTO_AFTER_FMT": "%d dk sonra",
+  "AUTO_TITLE": "Aktivite algılandı",
+  "AUTO_Q_FMT": "%s süredir sürüyor.\nSeans başlatılsın mı?",
+  "AUTO_NO": "Şimdi değil"
 }

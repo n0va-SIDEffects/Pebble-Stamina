@@ -9,5 +9,9 @@
   "lang_auto": "Automaticky",
   "lang_desc": "Některé jazyky vyžadují, aby byl v hodinkách nainstalován odpovídající jazykový balíček.",
   "checkin": "Ranní check-in",
-  "checkin_desc": "Po ranní relaci se hodinky jednou zeptají, jak ti jde den (o 3 h později)."
+  "checkin_desc": "Po ranní relaci se hodinky jednou zeptají, jak ti jde den (o 3 h později).",
+  "auto": "Automatické spuštění relace",
+  "auto_off": "Vypnuto",
+  "auto_after": "Po {n} min",
+  "auto_desc": "Hodinky na pozadí sledují delší rytmický pohyb a zeptají se, zda spustit relaci. Spotřebují trochu víc baterie. Podobné pohyby (např. čištění zubů) ho mohou občas spustit; s hračkou je rozpoznání nespolehlivé."
 }

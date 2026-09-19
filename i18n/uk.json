@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\nПОЧАТОК ДНЯ\n",
   "STATS_MORNING_FMT": "Оцінено ранків: %d\nКроки %s%d%% від звичного\nПульс %s%d уд/хв від звичного",
   "STATS_MOOD_FMT": "\nНастрій сер. %d%s%d/5",
-  "STATS_MORNING_NONE": "Ще жодного ранку не оцінено."
+  "STATS_MORNING_NONE": "Ще жодного ранку не оцінено.",
+  "P_AUTO": "Автостарт",
+  "AUTO_AFTER_FMT": "через %d хв",
+  "AUTO_TITLE": "Виявлено активність",
+  "AUTO_Q_FMT": "Триває %s.\nПочати сесію?",
+  "AUTO_NO": "Не зараз"
 }

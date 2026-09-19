@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\n一天的开始\n",
   "STATS_MORNING_FMT": "已评估 %d 个早晨\n步数 比平常 %s%d%%\n心率 比平常 %s%d bpm",
   "STATS_MOOD_FMT": "\n心情 平均 %d%s%d/5",
-  "STATS_MORNING_NONE": "尚未评估任何早晨。"
+  "STATS_MORNING_NONE": "尚未评估任何早晨。",
+  "P_AUTO": "自动开始",
+  "AUTO_AFTER_FMT": "%d 分钟后",
+  "AUTO_TITLE": "检测到活动",
+  "AUTO_Q_FMT": "已持续 %s。\n开始记录？",
+  "AUTO_NO": "暂不"
 }

@@ -166,6 +166,7 @@ static void select_click(ClickRecognizerRef rec, void *ctx) {
     case CAL_RESULT:
       *storage_calib(s_which) = s_result;
       storage_save_calib();
+      autostart_settings_changed();  // Worker nutzt die neue Erkennung
       vibes_short_pulse();
       window_stack_pop(true);
       break;
@@ -259,6 +260,7 @@ static void menu_select_long(MenuLayer *m, MenuIndex *index, void *ctx) {
   if (!c->valid) return;
   *c = (Calib){0};
   storage_save_calib();
+  autostart_settings_changed();
   vibes_short_pulse();
   menu_layer_reload_data(m);
 }

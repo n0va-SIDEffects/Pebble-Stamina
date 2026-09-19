@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\nDAGENS START\n",
   "STATS_MORNING_FMT": "%d morgener evaluert\nSkritt %s%d%% mot vanlig\nPuls %s%d bpm mot vanlig",
   "STATS_MOOD_FMT": "\nHumør snitt %d%s%d/5",
-  "STATS_MORNING_NONE": "Ingen morgen evaluert ennå."
+  "STATS_MORNING_NONE": "Ingen morgen evaluert ennå.",
+  "P_AUTO": "Autostart",
+  "AUTO_AFTER_FMT": "etter %d min",
+  "AUTO_TITLE": "Aktivitet oppdaget",
+  "AUTO_Q_FMT": "Pågått i %s.\nStarte økt?",
+  "AUTO_NO": "Ikke nå"
 }

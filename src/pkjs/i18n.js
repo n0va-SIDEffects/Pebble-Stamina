@@ -34,7 +34,11 @@ module.exports = {
     "lang_auto": "Automatic",
     "lang_desc": "Some languages need the matching language pack installed on the watch.",
     "checkin": "Morning check-in",
-    "checkin_desc": "After a morning session, the watch asks once how your day is going (3 h later)."
+    "checkin_desc": "After a morning session, the watch asks once how your day is going (3 h later).",
+    "auto": "Automatic session start",
+    "auto_off": "Off",
+    "auto_after": "After {n} min",
+    "auto_desc": "In the background the watch looks for ongoing rhythmic movement and asks whether to start a session. Uses some extra battery. Similar movements (e.g. brushing teeth) can occasionally trigger it; with a toy, detection is unreliable."
   },
   "de": {
     "title": "Stamina Einstellungen",
@@ -69,7 +73,11 @@ module.exports = {
     "lang_auto": "Automatisch",
     "lang_desc": "Manche Sprachen brauchen das passende Sprachpaket auf der Uhr.",
     "checkin": "Morgen-Check-in",
-    "checkin_desc": "Nach einer Morgen-Session fragt die Uhr einmal, wie dein Tag läuft (3 h später)."
+    "checkin_desc": "Nach einer Morgen-Session fragt die Uhr einmal, wie dein Tag läuft (3 h später).",
+    "auto": "Automatischer Session-Start",
+    "auto_off": "Aus",
+    "auto_after": "Nach {n} min",
+    "auto_desc": "Die Uhr achtet im Hintergrund auf anhaltende rhythmische Bewegung und fragt, ob eine Session gestartet werden soll. Kostet etwas mehr Akku. Ähnliche Bewegungen (z. B. Zähneputzen) können gelegentlich auslösen; mit Toy ist die Erkennung unzuverlässig."
   },
   "fr": {
     "title": "Réglages Stamina",
@@ -104,7 +112,11 @@ module.exports = {
     "lang_auto": "Automatique",
     "lang_desc": "Certaines langues nécessitent le pack de langue correspondant sur la montre.",
     "checkin": "Bilan du matin",
-    "checkin_desc": "Après une session le matin, la montre te demande une fois comment se passe ta journée (3 h plus tard)."
+    "checkin_desc": "Après une session le matin, la montre te demande une fois comment se passe ta journée (3 h plus tard).",
+    "auto": "Démarrage automatique de session",
+    "auto_off": "Désactivé",
+    "auto_after": "Après {n} min",
+    "auto_desc": "En arrière-plan, la montre repère un mouvement rythmique prolongé et te demande s'il faut démarrer une session. Consomme un peu plus de batterie. Des mouvements similaires (p. ex. se brosser les dents) peuvent parfois la déclencher ; avec un sextoy, la détection est peu fiable."
   },
   "es": {
     "title": "Ajustes de Stamina",
@@ -139,7 +151,11 @@ module.exports = {
     "lang_auto": "Automático",
     "lang_desc": "Algunos idiomas requieren instalar en el reloj el paquete de idioma correspondiente.",
     "checkin": "Check-in matutino",
-    "checkin_desc": "Tras una sesión por la mañana, el reloj te pregunta una vez qué tal va tu día (3 h después)."
+    "checkin_desc": "Tras una sesión por la mañana, el reloj te pregunta una vez qué tal va tu día (3 h después).",
+    "auto": "Inicio automático de sesión",
+    "auto_off": "Desactivado",
+    "auto_after": "Tras {n} min",
+    "auto_desc": "En segundo plano, el reloj detecta movimientos rítmicos continuos y te pregunta si quieres iniciar una sesión. Gasta algo más de batería. Movimientos parecidos (p. ej. cepillarse los dientes) pueden activarlo a veces; con un juguete la detección es poco fiable."
   },
   "it": {
     "title": "Impostazioni Stamina",
@@ -174,7 +190,11 @@ module.exports = {
     "lang_auto": "Automatica",
     "lang_desc": "Alcune lingue richiedono il relativo language pack installato sull'orologio.",
     "checkin": "Check-in mattutino",
-    "checkin_desc": "Dopo una sessione mattutina, l'orologio ti chiede una volta come va la giornata (3 h dopo)."
+    "checkin_desc": "Dopo una sessione mattutina, l'orologio ti chiede una volta come va la giornata (3 h dopo).",
+    "auto": "Avvio automatico della sessione",
+    "auto_off": "Disattivato",
+    "auto_after": "Dopo {n} min",
+    "auto_desc": "In background l'orologio rileva movimenti ritmici prolungati e chiede se avviare una sessione. Consuma un po' più di batteria. Movimenti simili (ad es. lavarsi i denti) possono a volte attivarlo; con un sex toy il rilevamento è poco affidabile."
   },
   "pt": {
     "title": "Configurações do Stamina",
@@ -209,7 +229,11 @@ module.exports = {
     "lang_auto": "Automático",
     "lang_desc": "Alguns idiomas precisam do pacote de idioma correspondente instalado no relógio.",
     "checkin": "Check-in matinal",
-    "checkin_desc": "Após uma sessão de manhã, o relógio pergunta uma vez como está a correr o teu dia (3 h depois)."
+    "checkin_desc": "Após uma sessão de manhã, o relógio pergunta uma vez como está a correr o teu dia (3 h depois).",
+    "auto": "Início automático de sessão",
+    "auto_off": "Desligado",
+    "auto_after": "Após {n} min",
+    "auto_desc": "Em segundo plano, o relógio detecta movimentos rítmicos contínuos e pergunta se deve iniciar uma sessão. Gasta um pouco mais de bateria. Movimentos parecidos (ex.: escovar os dentes) podem disparar de vez em quando; com um brinquedo a detecção é pouco confiável."
   },
   "nl": {
     "title": "Stamina-instellingen",
@@ -244,7 +268,11 @@ module.exports = {
     "lang_auto": "Automatisch",
     "lang_desc": "Sommige talen vereisen dat het bijbehorende taalpakket op het horloge is geïnstalleerd.",
     "checkin": "Ochtend-check-in",
-    "checkin_desc": "Na een ochtendsessie vraagt het horloge één keer hoe je dag gaat (3 u later)."
+    "checkin_desc": "Na een ochtendsessie vraagt het horloge één keer hoe je dag gaat (3 u later).",
+    "auto": "Automatisch sessie starten",
+    "auto_off": "Uit",
+    "auto_after": "Na {n} min",
+    "auto_desc": "Op de achtergrond let het horloge op aanhoudende ritmische beweging en vraagt of er een sessie moet starten. Kost iets meer batterij. Vergelijkbare bewegingen (bijv. tandenpoetsen) kunnen dit soms activeren; met een toy is de herkenning onbetrouwbaar."
   },
   "pl": {
     "title": "Ustawienia Stamina",
@@ -279,7 +307,11 @@ module.exports = {
     "lang_auto": "Automatycznie",
     "lang_desc": "Niektóre języki wymagają zainstalowania na zegarku odpowiedniego pakietu językowego.",
     "checkin": "Poranny check-in",
-    "checkin_desc": "Po porannej sesji zegarek raz zapyta, jak mija ci dzień (3 h później)."
+    "checkin_desc": "Po porannej sesji zegarek raz zapyta, jak mija ci dzień (3 h później).",
+    "auto": "Automatyczny start sesji",
+    "auto_off": "Wył.",
+    "auto_after": "Po {n} min",
+    "auto_desc": "Zegarek w tle wykrywa dłuższy rytmiczny ruch i pyta, czy rozpocząć sesję. Zużywa trochę więcej baterii. Podobne ruchy (np. mycie zębów) mogą czasem go wywołać; z gadżetem wykrywanie jest zawodne."
   },
   "cs": {
     "title": "Nastavení Stamina",
@@ -314,7 +346,11 @@ module.exports = {
     "lang_auto": "Automaticky",
     "lang_desc": "Některé jazyky vyžadují, aby byl v hodinkách nainstalován odpovídající jazykový balíček.",
     "checkin": "Ranní check-in",
-    "checkin_desc": "Po ranní relaci se hodinky jednou zeptají, jak ti jde den (o 3 h později)."
+    "checkin_desc": "Po ranní relaci se hodinky jednou zeptají, jak ti jde den (o 3 h později).",
+    "auto": "Automatické spuštění relace",
+    "auto_off": "Vypnuto",
+    "auto_after": "Po {n} min",
+    "auto_desc": "Hodinky na pozadí sledují delší rytmický pohyb a zeptají se, zda spustit relaci. Spotřebují trochu víc baterie. Podobné pohyby (např. čištění zubů) ho mohou občas spustit; s hračkou je rozpoznání nespolehlivé."
   },
   "sv": {
     "title": "Stamina-inställningar",
@@ -349,7 +385,11 @@ module.exports = {
     "lang_auto": "Automatiskt",
     "lang_desc": "Vissa språk kräver att motsvarande språkpaket är installerat på klockan.",
     "checkin": "Morgonincheckning",
-    "checkin_desc": "Efter en morgonsession frågar klockan en gång hur din dag går (3 h senare)."
+    "checkin_desc": "Efter en morgonsession frågar klockan en gång hur din dag går (3 h senare).",
+    "auto": "Automatisk sessionsstart",
+    "auto_off": "Av",
+    "auto_after": "Efter {n} min",
+    "auto_desc": "I bakgrunden håller klockan utkik efter ihållande rytmiska rörelser och frågar om en session ska startas. Drar lite mer batteri. Liknande rörelser (t.ex. tandborstning) kan ibland utlösa den; med leksak är igenkänningen opålitlig."
   },
   "da": {
     "title": "Stamina-indstillinger",
@@ -384,7 +424,11 @@ module.exports = {
     "lang_auto": "Automatisk",
     "lang_desc": "Nogle sprog kræver, at den tilsvarende sprogpakke er installeret på uret.",
     "checkin": "Morgen-check-in",
-    "checkin_desc": "Efter en morgensession spørger uret én gang, hvordan din dag går (3 timer senere)."
+    "checkin_desc": "Efter en morgensession spørger uret én gang, hvordan din dag går (3 timer senere).",
+    "auto": "Automatisk sessionsstart",
+    "auto_off": "Fra",
+    "auto_after": "Efter {n} min",
+    "auto_desc": "I baggrunden holder uret øje med vedvarende rytmiske bevægelser og spørger, om en session skal startes. Bruger lidt mere batteri. Lignende bevægelser (f.eks. tandbørstning) kan af og til udløse den; med legetøj er genkendelsen upålidelig."
   },
   "nb": {
     "title": "Stamina-innstillinger",
@@ -419,7 +463,11 @@ module.exports = {
     "lang_auto": "Automatisk",
     "lang_desc": "Noen språk krever at riktig språkpakke er installert på klokken.",
     "checkin": "Morgensjekk",
-    "checkin_desc": "Etter en morgenøkt spør klokken én gang hvordan dagen din går (3 timer senere)."
+    "checkin_desc": "Etter en morgenøkt spør klokken én gang hvordan dagen din går (3 timer senere).",
+    "auto": "Automatisk øktstart",
+    "auto_off": "Av",
+    "auto_after": "Etter {n} min",
+    "auto_desc": "I bakgrunnen ser klokken etter vedvarende rytmiske bevegelser og spør om en økt skal startes. Bruker litt mer batteri. Lignende bevegelser (f.eks. tannpuss) kan av og til utløse den; med leketøy er gjenkjenningen upålitelig."
   },
   "fi": {
     "title": "Stamina-asetukset",
@@ -454,7 +502,11 @@ module.exports = {
     "lang_auto": "Automaattinen",
     "lang_desc": "Jotkin kielet vaativat, että kelloon on asennettu vastaava kielipaketti.",
     "checkin": "Aamun check-in",
-    "checkin_desc": "Aamusession jälkeen kello kysyy kerran, miten päiväsi sujuu (3 tuntia myöhemmin)."
+    "checkin_desc": "Aamusession jälkeen kello kysyy kerran, miten päiväsi sujuu (3 tuntia myöhemmin).",
+    "auto": "Istunnon automaattinen aloitus",
+    "auto_off": "Pois",
+    "auto_after": "{n} min jälkeen",
+    "auto_desc": "Kello tarkkailee taustalla pitkään jatkuvaa rytmistä liikettä ja kysyy, aloitetaanko istunto. Kuluttaa hieman enemmän akkua. Samankaltaiset liikkeet (esim. hampaiden harjaus) voivat joskus laukaista sen; lelun kanssa tunnistus on epäluotettava."
   },
   "ru": {
     "title": "Настройки Stamina",
@@ -489,7 +541,11 @@ module.exports = {
     "lang_auto": "Автоматически",
     "lang_desc": "Для некоторых языков на часах должен быть установлен соответствующий языковой пакет.",
     "checkin": "Утренний опрос",
-    "checkin_desc": "После утренней сессии часы один раз спросят, как проходит ваш день (через 3 ч)."
+    "checkin_desc": "После утренней сессии часы один раз спросят, как проходит ваш день (через 3 ч).",
+    "auto": "Автоматический старт сессии",
+    "auto_off": "Выкл.",
+    "auto_after": "Через {n} мин",
+    "auto_desc": "В фоне часы отслеживают продолжительные ритмичные движения и спрашивают, начать ли сессию. Немного больше расходует заряд. Похожие движения (например, чистка зубов) иногда могут вызвать срабатывание; с игрушкой распознавание ненадёжно."
   },
   "uk": {
     "title": "Налаштування Stamina",
@@ -524,7 +580,11 @@ module.exports = {
     "lang_auto": "Автоматично",
     "lang_desc": "Для деяких мов на годиннику має бути встановлений відповідний мовний пакет.",
     "checkin": "Ранкове опитування",
-    "checkin_desc": "Після ранкової сесії годинник один раз запитає, як минає ваш день (через 3 год)."
+    "checkin_desc": "Після ранкової сесії годинник один раз запитає, як минає ваш день (через 3 год).",
+    "auto": "Автоматичний старт сесії",
+    "auto_off": "Вимк.",
+    "auto_after": "Через {n} хв",
+    "auto_desc": "У фоні годинник відстежує тривалі ритмічні рухи й питає, чи почати сесію. Трохи більше витрачає заряд. Схожі рухи (наприклад, чищення зубів) іноді можуть спрацювати; з іграшкою розпізнавання ненадійне."
   },
   "tr": {
     "title": "Stamina Ayarları",
@@ -559,7 +619,11 @@ module.exports = {
     "lang_auto": "Otomatik",
     "lang_desc": "Bazı diller için saatte ilgili dil paketinin yüklü olması gerekir.",
     "checkin": "Sabah check-in",
-    "checkin_desc": "Sabah seansından sonra saat, gününün nasıl geçtiğini bir kez sorar (3 saat sonra)."
+    "checkin_desc": "Sabah seansından sonra saat, gününün nasıl geçtiğini bir kez sorar (3 saat sonra).",
+    "auto": "Otomatik seans başlatma",
+    "auto_off": "Kapalı",
+    "auto_after": "{n} dk sonra",
+    "auto_desc": "Saat arka planda süren ritmik hareketleri izler ve seans başlatılsın mı diye sorar. Biraz daha fazla pil kullanır. Benzer hareketler (ör. diş fırçalama) bazen tetikleyebilir; oyuncakla algılama güvenilir değildir."
   },
   "ja": {
     "title": "Stamina 設定",
@@ -594,7 +658,11 @@ module.exports = {
     "lang_auto": "自動",
     "lang_desc": "一部の言語では、対応する言語パックをウォッチにインストールする必要があります。",
     "checkin": "朝のチェックイン",
-    "checkin_desc": "朝のセッションの後、ウォッチが一度だけ一日の調子を尋ねます (3時間後)。"
+    "checkin_desc": "朝のセッションの後、ウォッチが一度だけ一日の調子を尋ねます (3時間後)。",
+    "auto": "セッションの自動開始",
+    "auto_off": "オフ",
+    "auto_after": "{n}分後",
+    "auto_desc": "ウォッチがバックグラウンドで続くリズミカルな動きを検知し、セッションを開始するか確認します。バッテリー消費が少し増えます。似た動き（歯みがきなど）で反応することがあります。トイ使用時は検知が不安定です。"
   },
   "zh": {
     "title": "Stamina 设置",
@@ -629,7 +697,11 @@ module.exports = {
     "lang_auto": "自动",
     "lang_desc": "部分语言需要在手表上安装相应的语言包。",
     "checkin": "晨间签到",
-    "checkin_desc": "早晨记录结束后,手表会询问一次你今天过得怎么样 (3 小时后)。"
+    "checkin_desc": "早晨记录结束后,手表会询问一次你今天过得怎么样 (3 小时后)。",
+    "auto": "自动开始记录",
+    "auto_off": "关闭",
+    "auto_after": "{n} 分钟后",
+    "auto_desc": "手表会在后台检测持续的节律性动作，并询问是否开始记录。会稍微增加耗电。类似动作（如刷牙）偶尔可能触发；使用玩具时检测不可靠。"
   },
   "ko": {
     "title": "Stamina 설정",
@@ -664,6 +736,10 @@ module.exports = {
     "lang_auto": "자동",
     "lang_desc": "일부 언어는 워치에 해당 언어 팩이 설치되어 있어야 합니다.",
     "checkin": "아침 체크인",
-    "checkin_desc": "아침 세션 후 워치가 하루가 어떤지 한 번 물어봅니다 (3시간 후)."
+    "checkin_desc": "아침 세션 후 워치가 하루가 어떤지 한 번 물어봅니다 (3시간 후).",
+    "auto": "세션 자동 시작",
+    "auto_off": "끔",
+    "auto_after": "{n}분 후",
+    "auto_desc": "워치가 백그라운드에서 지속되는 리드미컬한 움직임을 감지하고 세션을 시작할지 묻습니다. 배터리를 조금 더 사용합니다. 비슷한 움직임(예: 양치질)에 가끔 반응할 수 있으며, 토이 사용 시에는 감지가 불안정합니다."
   }
 };

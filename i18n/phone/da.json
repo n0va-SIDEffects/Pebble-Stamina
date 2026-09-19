@@ -9,5 +9,9 @@
   "lang_auto": "Automatisk",
   "lang_desc": "Nogle sprog kræver, at den tilsvarende sprogpakke er installeret på uret.",
   "checkin": "Morgen-check-in",
-  "checkin_desc": "Efter en morgensession spørger uret én gang, hvordan din dag går (3 timer senere)."
+  "checkin_desc": "Efter en morgensession spørger uret én gang, hvordan din dag går (3 timer senere).",
+  "auto": "Automatisk sessionsstart",
+  "auto_off": "Fra",
+  "auto_after": "Efter {n} min",
+  "auto_desc": "I baggrunden holder uret øje med vedvarende rytmiske bevægelser og spørger, om en session skal startes. Bruger lidt mere batteri. Lignende bevægelser (f.eks. tandbørstning) kan af og til udløse den; med legetøj er genkendelsen upålidelig."
 }

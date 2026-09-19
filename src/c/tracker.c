@@ -31,15 +31,7 @@ static uint8_t s_buckets[SPM_WINDOW];
 static int s_bucket_idx, s_bucket_filled;
 static bool s_finishing;
 
-SessionMode solo_mode(void) {
-  Profile *p = storage_profile();
-  switch (p->solo_style) {
-    case STYLE_STROKE: return MODE_SOLO;
-    case STYLE_RUB: return MODE_SOLO_RUB;
-    case STYLE_TOY: return MODE_SOLO_TOY;
-    default: return p->sex == SEX_FEMALE ? MODE_SOLO_RUB : MODE_SOLO;
-  }
-}
+SessionMode solo_mode(void) { return solo_mode_for(storage_profile()); }
 
 static bool counts_cycles(void) { return s_mode != MODE_SOLO_TOY; }
 
@@ -334,6 +326,7 @@ static void window_load(Window *window) {
 }
 
 static void window_unload(Window *window) {
+  autostart_session_active(false);
   accel_data_service_unsubscribe();
   tick_timer_service_unsubscribe();
 #if defined(PBL_HEALTH)
@@ -351,10 +344,12 @@ static void window_unload(Window *window) {
   s_window = NULL;
 }
 
-void tracker_window_push(SessionMode mode) {
+void tracker_window_push(SessionMode mode) { tracker_window_push_at(mode, time(NULL), 0); }
+
+void tracker_window_push_at(SessionMode mode, time_t start, uint16_t cycles) {
   s_mode = mode;
   s_sess = (Session){0};
-  s_sess.start = time(NULL);
+  s_sess.start = start;
   s_sess.mode = mode;
   s_paused = false;
   s_finishing = false;
@@ -374,6 +369,21 @@ void tracker_window_push(SessionMode mode) {
   detector_params_for(mode, &params);
   detector_init(&s_det, &params);
 
+  // Rückdatiert (automatisch erkannt): bisherige Zeit und Zyklen übernehmen
+  int elapsed = time(NULL) - start;
+  if (elapsed > 0) {
+    s_sess.duration_s = elapsed;
+    s_sess.active_s = elapsed;
+    s_sess.strokes = cycles;
+    int spm = cycles * 60 / elapsed;
+    s_kcal = kcal_per_min(0, spm, true) * elapsed / 60.0f;
+    if (spm > 0) {
+      s_spm_sum = (uint32_t)spm * elapsed;
+      s_spm_n = elapsed;
+      s_sess.spm_max = spm > 255 ? 255 : spm;
+    }
+  }
+
   s_window = window_create();
   window_set_click_config_provider(s_window, click_config);
   window_set_window_handlers(s_window, (WindowHandlers){
@@ -381,6 +391,7 @@ void tracker_window_push(SessionMode mode) {
                                            .unload = window_unload,
                                        });
   window_stack_push(s_window, true);
+  autostart_session_active(true);
 
 #if defined(PBL_HEALTH)
   health_service_set_heart_rate_sample_period(1);

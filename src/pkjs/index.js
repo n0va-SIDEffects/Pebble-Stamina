@@ -77,6 +77,7 @@ Pebble.addEventListener('appmessage', function (e) {
   settings.SOLO_STYLE = String(p.SOLO_STYLE);
   settings.LANGUAGE = String(p.LANGUAGE);
   settings.CHECKIN = !!p.CHECKIN;
+  settings.AUTO_START = String(p.AUTO_START);
   localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
   console.log('Profil von der Uhr übernommen: ' + JSON.stringify(settings));
 });

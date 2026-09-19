@@ -9,5 +9,9 @@
   "lang_auto": "Automatisk",
   "lang_desc": "Noen språk krever at riktig språkpakke er installert på klokken.",
   "checkin": "Morgensjekk",
-  "checkin_desc": "Etter en morgenøkt spør klokken én gang hvordan dagen din går (3 timer senere)."
+  "checkin_desc": "Etter en morgenøkt spør klokken én gang hvordan dagen din går (3 timer senere).",
+  "auto": "Automatisk øktstart",
+  "auto_off": "Av",
+  "auto_after": "Etter {n} min",
+  "auto_desc": "I bakgrunnen ser klokken etter vedvarende rytmiske bevegelser og spør om en økt skal startes. Bruker litt mer batteri. Lignende bevegelser (f.eks. tannpuss) kan av og til utløse den; med leketøy er gjenkjenningen upålitelig."
 }

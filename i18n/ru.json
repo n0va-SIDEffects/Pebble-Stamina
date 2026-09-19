@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\nНАЧАЛО ДНЯ\n",
   "STATS_MORNING_FMT": "Оценено утр: %d\nШаги %s%d%% от обычного\nПульс %s%d уд/мин от обычного",
   "STATS_MOOD_FMT": "\nНастроение ср. %d%s%d/5",
-  "STATS_MORNING_NONE": "Ещё ни одно утро не оценено."
+  "STATS_MORNING_NONE": "Ещё ни одно утро не оценено.",
+  "P_AUTO": "Автостарт",
+  "AUTO_AFTER_FMT": "через %d мин",
+  "AUTO_TITLE": "Активность обнаружена",
+  "AUTO_Q_FMT": "Длится %s.\nНачать сессию?",
+  "AUTO_NO": "Не сейчас"
 }

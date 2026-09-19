@@ -9,5 +9,9 @@
   "lang_auto": "Automatique",
   "lang_desc": "Certaines langues nécessitent le pack de langue correspondant sur la montre.",
   "checkin": "Bilan du matin",
-  "checkin_desc": "Après une session le matin, la montre te demande une fois comment se passe ta journée (3 h plus tard)."
+  "checkin_desc": "Après une session le matin, la montre te demande une fois comment se passe ta journée (3 h plus tard).",
+  "auto": "Démarrage automatique de session",
+  "auto_off": "Désactivé",
+  "auto_after": "Après {n} min",
+  "auto_desc": "En arrière-plan, la montre repère un mouvement rythmique prolongé et te demande s'il faut démarrer une session. Consomme un peu plus de batterie. Des mouvements similaires (p. ex. se brosser les dents) peuvent parfois la déclencher ; avec un sextoy, la détection est peu fiable."
 }

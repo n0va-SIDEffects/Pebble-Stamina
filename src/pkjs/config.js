@@ -54,6 +54,17 @@ module.exports = function (t, platform) {
   }
 
   tracking.push({
+    type: 'select',
+    messageKey: 'AUTO_START',
+    label: t.auto,
+    description: t.auto_desc,
+    defaultValue: '0',
+    options: [{ label: t.auto_off, value: '0' }].concat([1, 2, 3].map(function (n) {
+      return { label: t.auto_after.replace('{n}', n), value: String(n) };
+    }))
+  });
+
+  tracking.push({
     type: 'toggle',
     messageKey: 'CHECKIN',
     label: t.checkin,

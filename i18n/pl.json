@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\nPOCZĄTEK DNIA\n",
   "STATS_MORNING_FMT": "Ocenione poranki: %d\nKroki %s%d%% wzgl. normy\nTętno %s%d bpm wzgl. normy",
   "STATS_MOOD_FMT": "\nNastrój śr. %d%s%d/5",
-  "STATS_MORNING_NONE": "Brak ocenionych poranków."
+  "STATS_MORNING_NONE": "Brak ocenionych poranków.",
+  "P_AUTO": "Autostart",
+  "AUTO_AFTER_FMT": "po %d min",
+  "AUTO_TITLE": "Wykryto aktywność",
+  "AUTO_Q_FMT": "Trwa od %s.\nRozpocząć sesję?",
+  "AUTO_NO": "Nie teraz"
 }

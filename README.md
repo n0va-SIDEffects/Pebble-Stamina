@@ -12,6 +12,7 @@ Alle Daten bleiben **nur auf der Uhr**. Es gibt keinen Upload, weder aufs Handy 
 | **Bewegungserkennung** | 25 Hz Beschleunigung, Schwerkraft-Filter, dominante Achse, adaptiver Schmitt-Trigger. Zählt Bewegungszyklen und den Rhythmus pro Minute. |
 | **Solo-Stile** | **Streichen** (Penis: größere, lineare Unterarmbewegung, 1–4 Hz) · **Reiben** (Klitoris: kleine, schnelle, oft kreisende Bewegung, bis ~8 Hz) · **Toy** (Vibrator: nur aktive Zeit). „Automatisch“ wählt Reiben bei weiblich, sonst Streichen. |
 | **Anlernen** | 15 s typische Bewegung aufnehmen. Rhythmus und Stärke werden gemessen und die Erkennung je Stil darauf eingestellt. Zur Kontrolle läuft die neue Erkennung noch einmal über dieselbe Aufnahme. |
+| **Auto-Start** | Optional (aus / nach 1, 2 oder 3 min). Ein Hintergrund-Worker wertet einmal pro Sekunde die Bewegung mit derselben Erkennung aus. Bei anhaltender rhythmischer Bewegung (≥ 70 % der Sekunden, nicht beim Gehen oder Laufen) vibriert die Uhr und fragt „Aktivität erkannt, Session starten?“ (Solo / Partner / Nicht jetzt). Die Session wird auf den Beginn der Bewegung rückdatiert, die bis dahin gezählten Bewegungen werden übernommen. Mit erhöhtem Puls (≥ 10 bpm über dem Üblichen zu dieser Tageszeit) wird schon nach der halben Zeit gefragt. Ohne Antwort schließt sich die Frage nach 60 s. Danach 30 min Pause, nach einer Session 10 min. |
 | **Puls** | Pebble-HRM, während der Session im 1-s-Intervall; Ø / min / max |
 | **Kalorien** | Maximum aus bewegungsbasierter MET-Schätzung und pulsbasierter Formel (Keytel 2005), gedeckelt auf 3,5 MET (solo) bzw. 5,6–6 MET (Partner, nach Frappier 2013). Erregung hebt den Puls, ohne dass entsprechend Energie verbraucht wird. Deshalb der Deckel. |
 | **Höhepunkt** | Taste UNTEN (oder hochwischen) markiert den Zeitpunkt |
@@ -42,6 +43,9 @@ src/c/            Watch-App (C)
   settings.c      Abgleich mit der Einstellungsseite am Handy
   storage.c       Persistenz
   i18n.c          lädt die Texte der aktiven Sprache
+src/c/autostart.c Nachfrage beim automatischen Start, Worker ein/aus
+src/shared/       Bewegungserkennung + gemeinsame Typen/Schlüssel (App und Worker)
+worker_src/c/     Hintergrund-Worker für den Auto-Start
 src/pkjs/         Einstellungsseite (Clay 1.0.4 in vendor/, weil das npm-Paket flint nicht kennt)
 i18n/<lang>.json  Texte der Uhr, en.json ist die Vorlage
 i18n/phone/       neuere Texte der Einstellungsseite (in src/pkjs/i18n.js eingepflegt)
@@ -80,6 +84,7 @@ Zielplattformen: `emery` (Pebble Time 2, 200×228, Touch), `flint` (Pebble 2 Duo
 - `emu-heart-rate 110`: Puls einspielen
 - `emu-button click select` / `--duration 1200` für langes Drücken
 - `send-app-message --int 10000=1 ...`: Einstellungen wie vom Handy senden (IDs in `build/js/message_keys.json`)
+- Auto-Start: Auto-Start einschalten, App schließen, dann `stroke_a.txt` (250 Zeilen) mehrmals hintereinander einspielen
 - Nicht simulierbar: Touch, Schlafphasen, Schritte im Zeitfenster. `emu-set-time` wird beim App-Start zurückgesetzt, Wartezeiten zum Testen also kurz in `morning.c` herabsetzen.
 
 ## Stellungserkennung (für später)

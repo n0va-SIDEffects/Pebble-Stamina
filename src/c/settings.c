@@ -29,6 +29,7 @@ void settings_send_profile(void) {
   dict_write_int32(out, MESSAGE_KEY_SOLO_STYLE, p->solo_style);
   dict_write_int32(out, MESSAGE_KEY_LANGUAGE, p->lang);
   dict_write_int32(out, MESSAGE_KEY_CHECKIN, p->checkin);
+  dict_write_int32(out, MESSAGE_KEY_AUTO_START, p->auto_start);
   app_message_outbox_send();
 }
 
@@ -70,6 +71,10 @@ static void inbox_received(DictionaryIterator *it, void *context) {
     p->checkin = tuple_int(t) ? 1 : 0;
     changed = true;
   }
+  if ((t = dict_find(it, MESSAGE_KEY_AUTO_START))) {
+    p->auto_start = clamp(tuple_int(t), 0, 3);
+    changed = true;
+  }
   if ((t = dict_find(it, MESSAGE_KEY_LANGUAGE))) {
     p->lang = clamp(tuple_int(t), 0, LANG_COUNT);
     changed = true;
@@ -78,6 +83,7 @@ static void inbox_received(DictionaryIterator *it, void *context) {
 
   if (changed) {
     storage_save_profile();
+    autostart_settings_changed();
     vibes_short_pulse();
   }
 }

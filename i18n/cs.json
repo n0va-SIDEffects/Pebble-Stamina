@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\nSTART DNE\n",
   "STATS_MORNING_FMT": "%d rán vyhodnoceno\nKroky %s%d%% vs. obvykle\nTep %s%d bpm vs. obvykle",
   "STATS_MOOD_FMT": "\nNálada Ø %d%s%d/5",
-  "STATS_MORNING_NONE": "Zatím žádné vyhodnocené ráno."
+  "STATS_MORNING_NONE": "Zatím žádné vyhodnocené ráno.",
+  "P_AUTO": "Automatický start",
+  "AUTO_AFTER_FMT": "po %d min",
+  "AUTO_TITLE": "Zjištěna aktivita",
+  "AUTO_Q_FMT": "Probíhá %s.\nSpustit relaci?",
+  "AUTO_NO": "Teď ne"
 }

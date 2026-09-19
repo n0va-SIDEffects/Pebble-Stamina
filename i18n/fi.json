@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\nPÄIVÄN ALKU\n",
   "STATS_MORNING_FMT": "%d aamua arvioitu\nAskeleet %s%d%% vs. tavall.\nSyke %s%d bpm vs. tavall.",
   "STATS_MOOD_FMT": "\nMieliala ka. %d%s%d/5",
-  "STATS_MORNING_NONE": "Ei vielä arvioituja aamuja."
+  "STATS_MORNING_NONE": "Ei vielä arvioituja aamuja.",
+  "P_AUTO": "Automaattinen aloitus",
+  "AUTO_AFTER_FMT": "%d min jälkeen",
+  "AUTO_TITLE": "Aktiivisuus havaittu",
+  "AUTO_Q_FMT": "Jatkunut %s.\nAloitetaanko istunto?",
+  "AUTO_NO": "Ei nyt"
 }

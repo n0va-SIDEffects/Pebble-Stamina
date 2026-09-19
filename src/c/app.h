@@ -1,20 +1,11 @@
 #pragma once
 #include <pebble.h>
+#include "../shared/shared.h"
 #include "i18n.auto.h"
 
 #define MAX_SESSIONS 30
 
 #define ACCENT_COLOR PBL_IF_COLOR_ELSE(GColorFolly, GColorWhite)
-
-// Werte bleiben stabil, da sie in gespeicherten Sessions stehen
-typedef enum {
-  MODE_SOLO = 0,     // Solo, Streichen (Penis)
-  MODE_PARTNER = 1,
-  MODE_SOLO_RUB = 2, // Solo, Reiben (Klitoris, kleine kreisende Bewegungen)
-  MODE_SOLO_TOY = 3, // Solo mit Toy: nur aktive Zeit, keine Zyklen
-} SessionMode;
-
-typedef enum { STYLE_AUTO = 0, STYLE_STROKE = 1, STYLE_RUB = 2, STYLE_TOY = 3 } SoloStyle;
 
 typedef enum {
   SLEEP_PENDING = 0,     // Nacht noch nicht vorbei
@@ -29,8 +20,6 @@ typedef enum {
   DAY_DONE = 2,
   DAY_UNAVAILABLE = 3
 } DayState;
-
-typedef enum { SEX_MALE = 0, SEX_FEMALE = 1, SEX_OTHER = 2 } Sex;
 
 // Orientierung des Handgelenks (Schwerkraftachse), Basis für spätere Stellungserkennung
 enum { ORIENT_XP, ORIENT_XN, ORIENT_YP, ORIENT_YN, ORIENT_ZP, ORIENT_ZN, ORIENT_COUNT };
@@ -60,29 +49,6 @@ typedef struct __attribute__((packed)) {
   int8_t day_hr_delta;       // Puls ggü. üblich, bpm
   uint8_t day_active_min;
 } Session;
-
-typedef struct __attribute__((packed)) {
-  uint8_t sex;
-  uint8_t age;
-  uint16_t weight_kg;
-  uint8_t sensitivity;    // Sensitivity
-  uint8_t touch_session;  // Wischgesten während der Session (nur Touch-Uhren)
-  uint8_t solo_style;     // SoloStyle
-  uint8_t lang;           // 0 = automatisch, sonst 1 + Index in LANG_CODES
-  uint8_t checkin;        // Stimmung nach Morgen-Session abfragen
-} Profile;
-
-typedef enum { SENS_LOW = 0, SENS_NORMAL = 1, SENS_HIGH = 2 } Sensitivity;
-
-// Angelernte Erkennung je Bewegungsart
-enum { CALIB_STROKE, CALIB_RUB, CALIB_PARTNER, CALIB_COUNT };
-
-typedef struct __attribute__((packed)) {
-  uint8_t valid;
-  uint8_t spm;           // gemessener Rhythmus
-  uint16_t min_gap;      // Mindestabstand zweier Zyklen in Samples
-  int32_t energy;        // mittlere Bewegungsenergie (mg^2)
-} Calib;
 
 // i18n.c
 void i18n_load(void);
@@ -118,39 +84,24 @@ void sleep_evaluate_all(void);
 bool morning_is_morning(time_t t);
 bool morning_evaluate(Session *s);  // true = Eintrag wurde geändert
 void morning_schedule_checkin(const Session *s);
+void morning_init(void);
 bool morning_handle_launch(void);   // Check-in fällig? Dann Fenster öffnen
 void mood_window_push(int idx);
 
-// detector.c
-typedef struct {
-  int32_t min_energy;       // darunter gilt als Ruhe (mg^2)
-  int32_t min_threshold;    // mg
-  int32_t threshold_tenths; // Schwelle als Anteil der RMS-Amplitude
-  int32_t min_gap;          // Samples zwischen zwei Zyklen
-  bool count_cycles;
-} DetectorParams;
-
-typedef struct {
-  DetectorParams p;
-  bool first;
-  int32_t lp16[3];     // Schwerkraftschätzung * 16
-  int32_t energy[3];   // gleitende Varianz je Achse
-  int32_t smooth;
-  int phase;
-  int since_last;
-  int dom;
-  uint32_t moving;     // Samples mit Bewegung (vom Aufrufer zurücksetzbar)
-} Detector;
-
+// detector.c (App-Seite: Parameter aus Profil + Anlernen)
 void detector_params_for(SessionMode mode, DetectorParams *out);
-void detector_params_from_calib(SessionMode mode, const Calib *c, DetectorParams *out);
-void detector_init(Detector *d, const DetectorParams *p);
-bool detector_process(Detector *d, int16_t x, int16_t y, int16_t z);  // true = neuer Zyklus
-int32_t isqrt32(int32_t v);
+
+// autostart.c (automatischer Session-Start über den Hintergrund-Worker)
+void autostart_init(void);            // Worker passend zur Einstellung starten/stoppen
+void autostart_settings_changed(void);
+void autostart_session_active(bool active);
+bool autostart_handle_launch(void);   // Start durch den Worker? Dann Nachfrage zeigen
 
 // tracker.c
 SessionMode solo_mode(void);
 void tracker_window_push(SessionMode mode);
+// Session rückdatiert starten (automatische Erkennung)
+void tracker_window_push_at(SessionMode mode, time_t start, uint16_t cycles);
 
 // calibrate.c
 void calibrate_window_push(void);

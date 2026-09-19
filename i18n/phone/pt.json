@@ -9,5 +9,9 @@
   "lang_auto": "Automático",
   "lang_desc": "Alguns idiomas precisam do pacote de idioma correspondente instalado no relógio.",
   "checkin": "Check-in matinal",
-  "checkin_desc": "Após uma sessão de manhã, o relógio pergunta uma vez como está a correr o teu dia (3 h depois)."
+  "checkin_desc": "Após uma sessão de manhã, o relógio pergunta uma vez como está a correr o teu dia (3 h depois).",
+  "auto": "Início automático de sessão",
+  "auto_off": "Desligado",
+  "auto_after": "Após {n} min",
+  "auto_desc": "Em segundo plano, o relógio detecta movimentos rítmicos contínuos e pergunta se deve iniciar uma sessão. Gasta um pouco mais de bateria. Movimentos parecidos (ex.: escovar os dentes) podem disparar de vez em quando; com um brinquedo a detecção é pouco confiável."
 }

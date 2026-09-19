@@ -104,5 +104,10 @@
   "STATS_MORNING_HDR": "\n\nSTART VAN DE DAG\n",
   "STATS_MORNING_FMT": "%d ochtenden geëvalueerd\nStappen %s%d%% t.o.v. normaal\nHartslag %s%d bpm t.o.v. normaal",
   "STATS_MOOD_FMT": "\nStemming gem. %d%s%d/5",
-  "STATS_MORNING_NONE": "Nog geen ochtend geëvalueerd."
+  "STATS_MORNING_NONE": "Nog geen ochtend geëvalueerd.",
+  "P_AUTO": "Auto-start",
+  "AUTO_AFTER_FMT": "na %d min",
+  "AUTO_TITLE": "Activiteit herkend",
+  "AUTO_Q_FMT": "Bezig sinds %s.\nSessie starten?",
+  "AUTO_NO": "Niet nu"
 }

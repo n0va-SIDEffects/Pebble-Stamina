@@ -130,6 +130,7 @@ enum {
   ROW_SENS,
   ROW_TOUCH,
   ROW_CHECKIN,
+  ROW_AUTO,
   ROW_LANG,
   ROW_WIPE,
   ROW_COUNT
@@ -145,6 +146,7 @@ static const StrId SENS_STR[] = {S_SENS_LOW, S_SENS_NORMAL, S_SENS_HIGH};
 
 static void profile_changed(void) {
   storage_save_profile();
+  autostart_settings_changed();
   settings_send_profile();  // hält die Einstellungsseite am Handy aktuell
 }
 
@@ -212,6 +214,14 @@ static void menu_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ct
       title = tr(S_P_CHECKIN);
       value = tr(p->checkin ? S_ON : S_OFF);
       break;
+    case ROW_AUTO:
+      title = tr(S_P_AUTO);
+      if (p->auto_start) {
+        snprintf(sub, sizeof(sub), tr(S_AUTO_AFTER_FMT), p->auto_start);
+      } else {
+        value = tr(S_OFF);
+      }
+      break;
     case ROW_LANG:
       title = tr(S_P_LANG);
       value = p->lang ? lang_name(p->lang - 1) : tr(S_STYLE_AUTO);
@@ -232,6 +242,7 @@ static void menu_select(MenuLayer *m, MenuIndex *index, void *ctx) {
     case ROW_SENS: p->sensitivity = (p->sensitivity + 1) % 3; break;
     case ROW_TOUCH: p->touch_session = !p->touch_session; break;
     case ROW_CHECKIN: p->checkin = !p->checkin; break;
+    case ROW_AUTO: p->auto_start = (p->auto_start + 1) % 4; break;
     case ROW_LANG:
       p->lang = (p->lang + 1) % (LANG_COUNT + 1);
       i18n_load();

@@ -75,6 +75,8 @@ static void init(void) {
   storage_init();
   i18n_load();
   settings_init();
+  morning_init();
+  autostart_init();
 #if defined(PBL_TOUCH)
   // Wischen scrollt Menüs/Textansichten, Tippen wählt aus
   app_touch_navigation_enable(true);
@@ -86,8 +88,8 @@ static void init(void) {
                                            .unload = window_unload,
                                        });
   window_stack_push(s_window, true);
-  // Nach einer Morgen-Session: Stimmung abfragen (per Wakeup oder beim nächsten Öffnen)
-  morning_handle_launch();
+  // Vom Worker gestartet: Session-Nachfrage. Sonst ggf. Stimmung nach einer Morgen-Session
+  if (!autostart_handle_launch()) morning_handle_launch();
 }
 
 static void deinit(void) { window_destroy(s_window); }

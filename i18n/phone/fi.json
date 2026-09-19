@@ -9,5 +9,9 @@
   "lang_auto": "Automaattinen",
   "lang_desc": "Jotkin kielet vaativat, että kelloon on asennettu vastaava kielipaketti.",
   "checkin": "Aamun check-in",
-  "checkin_desc": "Aamusession jälkeen kello kysyy kerran, miten päiväsi sujuu (3 tuntia myöhemmin)."
+  "checkin_desc": "Aamusession jälkeen kello kysyy kerran, miten päiväsi sujuu (3 tuntia myöhemmin).",
+  "auto": "Istunnon automaattinen aloitus",
+  "auto_off": "Pois",
+  "auto_after": "{n} min jälkeen",
+  "auto_desc": "Kello tarkkailee taustalla pitkään jatkuvaa rytmistä liikettä ja kysyy, aloitetaanko istunto. Kuluttaa hieman enemmän akkua. Samankaltaiset liikkeet (esim. hampaiden harjaus) voivat joskus laukaista sen; lelun kanssa tunnistus on epäluotettava."
 }

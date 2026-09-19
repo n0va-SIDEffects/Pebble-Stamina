@@ -9,5 +9,9 @@
   "lang_auto": "Automatic",
   "lang_desc": "Some languages need the matching language pack installed on the watch.",
   "checkin": "Morning check-in",
-  "checkin_desc": "After a morning session, the watch asks once how your day is going (3 h later)."
+  "checkin_desc": "After a morning session, the watch asks once how your day is going (3 h later).",
+  "auto": "Automatic session start",
+  "auto_off": "Off",
+  "auto_after": "After {n} min",
+  "auto_desc": "In the background the watch looks for ongoing rhythmic movement and asks whether to start a session. Uses some extra battery. Similar movements (e.g. brushing teeth) can occasionally trigger it; with a toy, detection is unreliable."
 }
