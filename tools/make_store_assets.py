@@ -12,6 +12,7 @@ Ausgabe:
 Schrift: Montserrat (SIL Open Font License), liegt in store/fonts/.
 Motiv bewusst neutral (Herzschlag-Linie), siehe Pebble Program Policies.
 """
+import math
 import os
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -87,6 +88,38 @@ def menu_icon(color):
     return img
 
 
+def heart_layer(size, color, alpha, angle, outline=0):
+    """Herz (klassische Herzkurve) als RGBA-Bild, gedreht, weich gezeichnet."""
+    s = 4
+    big = size * s
+    pts = []
+    for i in range(240):
+        t = 2 * math.pi * i / 240
+        x = 16 * math.sin(t) ** 3
+        y = 13 * math.cos(t) - 5 * math.cos(2 * t) - 2 * math.cos(3 * t) - math.cos(4 * t)
+        pts.append((big / 2 + x * big / 36, big / 2 - y * big / 36 - big * 0.04))
+    img = Image.new('RGBA', (big, big), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.polygon(pts, fill=color + (alpha,))
+    if outline:
+        d.line(pts + [pts[0]], fill=color + (min(255, alpha * 3),), width=outline * s, joint='curve')
+    img = img.rotate(angle, resample=Image.BICUBIC, expand=True)
+    return img.resize((img.width // s, img.height // s), Image.LANCZOS)
+
+
+def hearts_background(img):
+    """Großes, verspieltes Herz hinter dem Schriftzug, dazu kleine verstreute Herzen."""
+    big = heart_layer(330, PINK, 52, 14, outline=3)
+    glow = big.filter(ImageFilter.GaussianBlur(18))
+    img.alpha_composite(glow, (150, -34))
+    img.alpha_composite(big, (150, -34))
+    # kleine Herzen: (x, y, Größe, Deckkraft, Drehung)
+    for x, y, size, alpha, angle in ((34, 20, 26, 120, -18), (318, 248, 34, 110, 20),
+                                     (408, 22, 22, 140, -8), (86, 272, 18, 150, 12),
+                                     (262, 128, 16, 120, -24), (452, 272, 20, 100, 30)):
+        img.alpha_composite(heart_layer(size, PINK_LIGHT, alpha, angle), (x, y))
+
+
 def font(size, weight):
     f = ImageFont.truetype(FONT, size)
     f.set_variation_by_name(weight)
@@ -113,6 +146,7 @@ def watch(screen):
 def banner():
     w, h = 720, 320
     img = gradient(w, h, BG_TOP, BG_BOTTOM).convert('RGBA')
+    hearts_background(img)
 
     # Herzschlag quer durchs Bild, dezent
     faint = Image.new('RGBA', (w, h), (0, 0, 0, 0))

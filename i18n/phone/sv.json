@@ -37,5 +37,10 @@
   "ask_partner_desc": "När en partnersession startar frågar klockan med vem.",
   "auto_from": "Aktiv från",
   "auto_to": "Aktiv till",
-  "auto_window_desc": "Autostart lyssnar bara inom detta tidsfönster (t.ex. 20:00–02:00). Samma tid = hela dagen. Utanför fönstret drar den inget extra batteri."
+  "auto_window_desc": "Autostart lyssnar bara inom detta tidsfönster (t.ex. 20:00–02:00). Samma tid = hela dagen. Utanför fönstret drar den inget extra batteri.",
+  "timeline": "Tidslinje-nålar",
+  "timeline_off": "Av",
+  "timeline_badges": "Bara prestationer",
+  "timeline_all": "Sessioner + prestationer",
+  "timeline_desc": "Lägger en nål i klockans tidslinje. Nålarna skickas via Rebbles tidslinjeserver (internet) och kan ta upp till 30 minuter. Sessionsnålar visar bara längd och kcal. Av som standard; allt annat stannar på klockan."
 }

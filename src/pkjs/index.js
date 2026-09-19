@@ -63,8 +63,41 @@ Pebble.addEventListener('ready', function () {
   Pebble.sendAppMessage({ REQUEST_PROFILE: 1 });
 });
 
+var TIMELINE_API = 'https://timeline-api.rebble.io/v1/user/pins/';
+
+// Pin an den Timeline-Server schicken (nur wenn in den Einstellungen eingeschaltet;
+// die Uhr schickt ohnehin nur dann Pins)
+function pushPin(p) {
+  if (!Pebble.getTimelineToken) return;
+  Pebble.getTimelineToken(function (token) {
+    var pin = {
+      id: p.PIN_ID,
+      time: new Date(p.PIN_TIME * 1000).toISOString(),
+      layout: {
+        type: 'genericPin',
+        title: 'Stamina',
+        subtitle: p.PIN_SUBTITLE,
+        body: p.PIN_BODY,
+        tinyIcon: 'system://images/TIMELINE_SPORTS'
+      }
+    };
+    var xhr = new XMLHttpRequest();
+    xhr.open('PUT', TIMELINE_API + encodeURIComponent(pin.id));
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('X-User-Token', token);
+    xhr.onload = function () { console.log('Timeline-Pin ' + pin.id + ': HTTP ' + xhr.status); };
+    xhr.send(JSON.stringify(pin));
+  }, function (err) {
+    console.log('Kein Timeline-Token: ' + err);
+  });
+}
+
 Pebble.addEventListener('appmessage', function (e) {
   var p = e.payload || {};
+  if (p.PIN_ID !== undefined) {
+    pushPin(p);
+    return;
+  }
   if (p.SEX === undefined) return;
 
   var settings = storedSettings();
@@ -82,6 +115,7 @@ Pebble.addEventListener('appmessage', function (e) {
   settings.ASK_PARTNER = !!p.ASK_PARTNER;
   settings.AUTO_FROM = String(p.AUTO_FROM);
   settings.AUTO_TO = String(p.AUTO_TO);
+  settings.TIMELINE = String(p.TIMELINE);
   for (var k = 1; k <= 8; k++) settings['PARTNER_' + k] = p['PARTNER_' + k] || '';
   for (var n = 1; n <= 8; n++) settings['POS_NAME_' + n] = p['POS_NAME_' + n] || '';
   localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));

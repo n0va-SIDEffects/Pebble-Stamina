@@ -37,5 +37,10 @@
   "ask_partner_desc": "Ao iniciar uma sessão a dois, o relógio pergunta com quem.",
   "auto_from": "Ativo a partir de",
   "auto_to": "Ativo até",
-  "auto_window_desc": "O início automático só está atento neste intervalo (ex.: 20:00 às 02:00). Mesma hora = o dia todo. Fora do intervalo não gasta bateria extra."
+  "auto_window_desc": "O início automático só está atento neste intervalo (ex.: 20:00 às 02:00). Mesma hora = o dia todo. Fora do intervalo não gasta bateria extra.",
+  "timeline": "Pins na timeline",
+  "timeline_off": "Desligado",
+  "timeline_badges": "Só conquistas",
+  "timeline_all": "Sessões + conquistas",
+  "timeline_desc": "Adiciona um pin à timeline do relógio. Os pins passam pelo servidor de timeline do Rebble (internet) e podem demorar até 30 minutos. Os pins de sessão só mostram duração e kcal. Desligado por padrão; tudo o resto fica no teu relógio."
 }

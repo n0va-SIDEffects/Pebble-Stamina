@@ -31,6 +31,12 @@ void fmt_date(char *buf, size_t n, time_t t) {
            tm->tm_min);
 }
 
+// Laufende Nummer des lokalen Kalendertags
+int32_t local_day_index(time_t t) {
+  struct tm *tm = localtime(&t);
+  return (int32_t)((t - tm->tm_hour * 3600 - tm->tm_min * 60 - tm->tm_sec) / SECONDS_PER_DAY);
+}
+
 void fmt_kcal(char *buf, size_t n, int kcal_x10) {
   snprintf(buf, n, "%d%s%d kcal", kcal_x10 / 10, tr(S_DECIMAL), kcal_x10 % 10);
 }

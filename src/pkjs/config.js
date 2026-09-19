@@ -86,6 +86,19 @@ module.exports = function (t, platform) {
   });
 
   tracking.push({
+    type: 'select',
+    messageKey: 'TIMELINE',
+    label: t.timeline,
+    description: t.timeline_desc,
+    defaultValue: '0',
+    options: [
+      { label: t.timeline_off, value: '0' },
+      { label: t.timeline_badges, value: '1' },
+      { label: t.timeline_all, value: '2' }
+    ]
+  });
+
+  tracking.push({
     type: 'toggle',
     messageKey: 'CHECKIN',
     label: t.checkin,

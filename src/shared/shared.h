@@ -14,6 +14,9 @@
 #define KEY_POS_TEMPLATES 6 // angelernte Stellungen
 #define KEY_POS_NAMES 7     // eigene Namen der Stellungen
 #define KEY_PARTNERS 8      // Partner-Kürzel
+#define KEY_BADGES 9        // freigeschaltete Erfolge
+#define KEY_TOTALS 10       // Summen für Erfolge (unabhängig vom begrenzten Verlauf)
+#define KEY_ACTIVITY 11     // Zähler je Tag/Woche/Monat für die Diagramme
 #define KEY_SESSION_BASE 100
 
 // Werte bleiben stabil, da sie in gespeicherten Sessions stehen
@@ -28,6 +31,7 @@ typedef enum { STYLE_AUTO = 0, STYLE_STROKE = 1, STYLE_RUB = 2, STYLE_TOY = 3 } 
 typedef enum { SEX_MALE = 0, SEX_FEMALE = 1, SEX_OTHER = 2 } Sex;
 typedef enum { SENS_LOW = 0, SENS_NORMAL = 1, SENS_HIGH = 2 } Sensitivity;
 typedef enum { LIGHT_NORMAL = 0, LIGHT_ON = 1, LIGHT_PULSE = 2 } LightMode;
+typedef enum { TIMELINE_OFF = 0, TIMELINE_BADGES = 1, TIMELINE_ALL = 2 } TimelineMode;
 
 typedef struct __attribute__((packed)) {
   uint8_t sex;
@@ -43,6 +47,7 @@ typedef struct __attribute__((packed)) {
   uint8_t ask_partner;    // beim Start einer Partner-Session nach dem Partner fragen
   uint8_t auto_from;      // Auto-Start nur von ... (volle Stunde, 0-23)
   uint8_t auto_to;        // ... bis (exklusiv); gleich = ganztägig
+  uint8_t timeline;       // TimelineMode: Pins über den Timeline-Server (Internet)
 } Profile;
 
 // Angelernte Erkennung je Bewegungsart

@@ -30,6 +30,7 @@ static int s_cur_second;
 static uint8_t s_buckets[SPM_WINDOW];
 static int s_bucket_idx, s_bucket_filled;
 static bool s_finishing;
+static uint64_t s_new_badges;
 
 // Licht: dauerhaft an oder bei jedem Zug kurz rot aufblitzen + kurz vibrieren
 #define FLASH_MS 120
@@ -255,6 +256,7 @@ static void close_window(void *saved) {
   Window *w = s_window;
   if (saved) detail_window_push(0);
   window_stack_remove(w, !saved);
+  if (saved) badges_announce(s_new_badges);
 }
 
 static void finish(void) {
@@ -285,6 +287,17 @@ static void finish(void) {
   s_sess.day_state = morning_is_morning(s_sess.start) ? DAY_PENDING : DAY_NOT_MORNING;
 
   storage_add(&s_sess);
+  s_new_badges = badges_on_session(&s_sess);
+  charts_add_session(&s_sess);
+  if (storage_profile()->timeline == TIMELINE_ALL) {
+    char id[24], dur[12], kcal[20], sub[32], body[64];
+    snprintf(id, sizeof(id), "stamina-s-%lu", (unsigned long)s_sess.start);
+    fmt_duration(dur, sizeof(dur), s_sess.duration_s);
+    fmt_kcal(kcal, sizeof(kcal), s_sess.kcal_x10);
+    snprintf(sub, sizeof(sub), tr(S_D_DURATION_FMT), dur);
+    snprintf(body, sizeof(body), tr(S_D_ENERGY_FMT), kcal);
+    settings_queue_pin(id, s_sess.start, sub, body);
+  }
   if (s_sess.day_state == DAY_PENDING) morning_schedule_checkin(&s_sess);
   vibes_double_pulse();
   app_timer_register(10, close_window, (void *)1);
@@ -443,6 +456,8 @@ void tracker_window_push_at(SessionMode mode, time_t start, uint16_t cycles, int
   s_sess.start = start;
   s_sess.mode = mode;
   s_sess.partner = partner;
+  if (time(NULL) - start > 30) s_sess.flags |= SESSION_AUTO;
+  if (storage_profile()->light == LIGHT_PULSE) s_sess.flags |= SESSION_PULSE_LIGHT;
   s_paused = false;
   s_finishing = false;
   s_kcal = 0;

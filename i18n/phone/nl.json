@@ -37,5 +37,10 @@
   "ask_partner_desc": "Bij het starten van een partnersessie vraagt het horloge met wie.",
   "auto_from": "Actief vanaf",
   "auto_to": "Actief tot",
-  "auto_window_desc": "Auto-start let alleen binnen dit tijdvak op beweging (bijv. 20:00 tot 02:00). Dezelfde tijd = hele dag. Daarbuiten kost het geen extra batterij."
+  "auto_window_desc": "Auto-start let alleen binnen dit tijdvak op beweging (bijv. 20:00 tot 02:00). Dezelfde tijd = hele dag. Daarbuiten kost het geen extra batterij.",
+  "timeline": "Tijdlijn-pins",
+  "timeline_off": "Uit",
+  "timeline_badges": "Alleen prestaties",
+  "timeline_all": "Sessies + prestaties",
+  "timeline_desc": "Zet een pin in de tijdlijn van het horloge. Pins gaan via de Rebble-tijdlijnserver (internet) en kunnen tot 30 minuten duren. Sessiepins tonen alleen duur en kcal. Standaard uit; al het andere blijft op je horloge."
 }

@@ -37,5 +37,10 @@
   "ask_partner_desc": "Przy starcie sesji we dwoje zegarek pyta, z kim.",
   "auto_from": "Aktywny od",
   "auto_to": "Aktywny do",
-  "auto_window_desc": "Autostart nasłuchuje tylko w tym przedziale czasu (np. 20:00–02:00). Ta sama godzina = cały dzień. Poza nim nie zużywa dodatkowo baterii."
+  "auto_window_desc": "Autostart nasłuchuje tylko w tym przedziale czasu (np. 20:00–02:00). Ta sama godzina = cały dzień. Poza nim nie zużywa dodatkowo baterii.",
+  "timeline": "Piny na osi czasu",
+  "timeline_off": "Wył.",
+  "timeline_badges": "Tylko osiągnięcia",
+  "timeline_all": "Sesje + osiągnięcia",
+  "timeline_desc": "Dodaje pin do osi czasu zegarka. Piny przechodzą przez serwer osi czasu Rebble (internet) i mogą pojawić się nawet po 30 minutach. Piny sesji pokazują tylko czas trwania i kcal. Domyślnie wyłączone; reszta danych zostaje na zegarku."
 }

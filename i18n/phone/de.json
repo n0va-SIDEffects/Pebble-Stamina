@@ -37,5 +37,10 @@
   "ask_partner_desc": "Beim Start einer Partner-Session fragt die Uhr, mit wem.",
   "auto_from": "Aktiv ab",
   "auto_to": "Aktiv bis",
-  "auto_window_desc": "Auto-Start achtet nur in diesem Zeitfenster auf Bewegung (z. B. 20:00 bis 02:00). Gleiche Uhrzeit = ganztägig. Außerhalb kostet es keinen zusätzlichen Akku."
+  "auto_window_desc": "Auto-Start achtet nur in diesem Zeitfenster auf Bewegung (z. B. 20:00 bis 02:00). Gleiche Uhrzeit = ganztägig. Außerhalb kostet es keinen zusätzlichen Akku.",
+  "timeline": "Timeline-Pins",
+  "timeline_off": "Aus",
+  "timeline_badges": "Nur Erfolge",
+  "timeline_all": "Sessions + Erfolge",
+  "timeline_desc": "Legt einen Pin in der Timeline der Uhr an. Pins laufen über den Rebble-Timeline-Server (Internet) und können bis zu 30 Minuten brauchen. Session-Pins zeigen nur Dauer und kcal. Standardmäßig aus; alles andere bleibt auf deiner Uhr."
 }

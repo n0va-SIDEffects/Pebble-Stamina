@@ -290,7 +290,10 @@ static void view_push(int idx) {
 
 void detail_window_push(int idx) { view_push(idx); }
 
-void stats_window_push(void) { view_push(-1); }
+void stats_window_push(void) {
+  view_push(-1);
+  badges_announce(badges_stats_opened());
+}
 
 // --- Verlaufsliste -------------------------------------------------------
 

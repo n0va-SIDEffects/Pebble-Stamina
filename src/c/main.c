@@ -1,6 +1,16 @@
 #include "app.h"
 
-enum { ROW_SOLO, ROW_PARTNER, ROW_HISTORY, ROW_STATS, ROW_CALIB, ROW_SETTINGS, ROW_COUNT };
+enum {
+  ROW_SOLO,
+  ROW_PARTNER,
+  ROW_HISTORY,
+  ROW_STATS,
+  ROW_CHARTS,
+  ROW_BADGES,
+  ROW_CALIB,
+  ROW_SETTINGS,
+  ROW_COUNT
+};
 
 static Window *s_window;
 static MenuLayer *s_menu;
@@ -13,7 +23,7 @@ static char s_sub[48];
 #endif
 
 static void start_partner(int partner) {
-  tracker_window_push_at(MODE_PARTNER, time(NULL) - DEMO_ELAPSED(1122), DEMO_ELAPSED(861), partner);
+  tracker_window_push_at(MODE_PARTNER, time(NULL) - DEMO_ELAPSED(1122), DEMO_ELAPSED(647), partner);
 }
 
 static uint16_t menu_rows(MenuLayer *m, uint16_t section, void *ctx) { return ROW_COUNT; }
@@ -33,6 +43,13 @@ static void menu_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ct
     case ROW_STATS:
       menu_cell_basic_draw(g, cell, tr(S_MENU_STATS), tr(S_SUB_STATS), NULL);
       break;
+    case ROW_CHARTS:
+      menu_cell_basic_draw(g, cell, tr(S_MENU_CHARTS), tr(S_SUB_CHARTS), NULL);
+      break;
+    case ROW_BADGES:
+      snprintf(s_sub, sizeof(s_sub), tr(S_SUB_BADGES_FMT), badges_unlocked_count(), badges_total());
+      menu_cell_basic_draw(g, cell, tr(S_MENU_BADGES), s_sub, NULL);
+      break;
     case ROW_CALIB:
       menu_cell_basic_draw(g, cell, tr(S_MENU_CALIB), tr(S_SUB_CALIB), NULL);
       break;
@@ -50,6 +67,8 @@ static void menu_select(MenuLayer *m, MenuIndex *index, void *ctx) {
     case ROW_PARTNER: partner_choose(start_partner); break;
     case ROW_HISTORY: history_window_push(); break;
     case ROW_STATS: stats_window_push(); break;
+    case ROW_CHARTS: charts_window_push(); break;
+    case ROW_BADGES: badges_window_push(); break;
     case ROW_CALIB: calibrate_window_push(); break;
     case ROW_SETTINGS: profile_window_push(); break;
   }
@@ -78,6 +97,8 @@ static void window_appear(Window *window) {
     changed |= morning_evaluate(s);
     if (changed) storage_save(i);
   }
+  // Erfolge, die von Schlaf, Stimmung oder Anlernen abhängen
+  badges_announce(badges_check());
   menu_layer_reload_data(s_menu);
 }
 
@@ -88,6 +109,8 @@ static void init(void) {
   positions_init();
   partners_init();
   demo_seed();
+  badges_init();
+  charts_init();
   i18n_load();
   settings_init();
   morning_init();

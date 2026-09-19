@@ -62,7 +62,12 @@ module.exports = {
     "ask_partner_desc": "When a partner session starts, the watch asks who it is with.",
     "auto_from": "Active from",
     "auto_to": "Active until",
-    "auto_window_desc": "Auto start only listens within this time window (e.g. 20:00 to 02:00). Same time for both = all day. Outside the window it uses no extra battery."
+    "auto_window_desc": "Auto start only listens within this time window (e.g. 20:00 to 02:00). Same time for both = all day. Outside the window it uses no extra battery.",
+    "timeline": "Timeline pins",
+    "timeline_off": "Off",
+    "timeline_badges": "Achievements only",
+    "timeline_all": "Sessions + achievements",
+    "timeline_desc": "Adds a pin to your watch timeline. Pins are sent through the Rebble timeline server (internet) and can take up to 30 minutes to appear. Session pins only show duration and kcal. Off by default; everything else stays on your watch."
   },
   "de": {
     "title": "Stamina Einstellungen",
@@ -125,7 +130,12 @@ module.exports = {
     "ask_partner_desc": "Beim Start einer Partner-Session fragt die Uhr, mit wem.",
     "auto_from": "Aktiv ab",
     "auto_to": "Aktiv bis",
-    "auto_window_desc": "Auto-Start achtet nur in diesem Zeitfenster auf Bewegung (z. B. 20:00 bis 02:00). Gleiche Uhrzeit = ganztägig. Außerhalb kostet es keinen zusätzlichen Akku."
+    "auto_window_desc": "Auto-Start achtet nur in diesem Zeitfenster auf Bewegung (z. B. 20:00 bis 02:00). Gleiche Uhrzeit = ganztägig. Außerhalb kostet es keinen zusätzlichen Akku.",
+    "timeline": "Timeline-Pins",
+    "timeline_off": "Aus",
+    "timeline_badges": "Nur Erfolge",
+    "timeline_all": "Sessions + Erfolge",
+    "timeline_desc": "Legt einen Pin in der Timeline der Uhr an. Pins laufen über den Rebble-Timeline-Server (Internet) und können bis zu 30 Minuten brauchen. Session-Pins zeigen nur Dauer und kcal. Standardmäßig aus; alles andere bleibt auf deiner Uhr."
   },
   "fr": {
     "title": "Réglages Stamina",
@@ -188,7 +198,12 @@ module.exports = {
     "ask_partner_desc": "Au début d'une session à deux, la montre demande avec qui.",
     "auto_from": "Actif dès",
     "auto_to": "Actif jusqu'à",
-    "auto_window_desc": "Le démarrage auto n'écoute que dans cette plage horaire (p. ex. 20:00 à 02:00). Même heure = toute la journée. En dehors, aucune batterie supplémentaire."
+    "auto_window_desc": "Le démarrage auto n'écoute que dans cette plage horaire (p. ex. 20:00 à 02:00). Même heure = toute la journée. En dehors, aucune batterie supplémentaire.",
+    "timeline": "Épingles timeline",
+    "timeline_off": "Désactivé",
+    "timeline_badges": "Succès uniquement",
+    "timeline_all": "Sessions + succès",
+    "timeline_desc": "Ajoute une épingle dans la timeline de la montre. Les épingles passent par le serveur timeline de Rebble (Internet) et peuvent mettre jusqu'à 30 minutes. Les épingles de session n'affichent que la durée et les kcal. Désactivé par défaut ; tout le reste reste sur ta montre."
   },
   "es": {
     "title": "Ajustes de Stamina",
@@ -251,7 +266,12 @@ module.exports = {
     "ask_partner_desc": "Al iniciar una sesión en pareja, el reloj pregunta con quién.",
     "auto_from": "Activo desde",
     "auto_to": "Activo hasta",
-    "auto_window_desc": "El inicio automático solo escucha en esta franja horaria (p. ej. 20:00 a 02:00). Misma hora = todo el día. Fuera de ella no gasta batería extra."
+    "auto_window_desc": "El inicio automático solo escucha en esta franja horaria (p. ej. 20:00 a 02:00). Misma hora = todo el día. Fuera de ella no gasta batería extra.",
+    "timeline": "Pines en timeline",
+    "timeline_off": "Desactivado",
+    "timeline_badges": "Solo logros",
+    "timeline_all": "Sesiones + logros",
+    "timeline_desc": "Añade un pin a la timeline del reloj. Los pines pasan por el servidor de timeline de Rebble (internet) y pueden tardar hasta 30 minutos. Los pines de sesión solo muestran duración y kcal. Desactivado por defecto; todo lo demás se queda en tu reloj."
   },
   "it": {
     "title": "Impostazioni Stamina",
@@ -314,7 +334,12 @@ module.exports = {
     "ask_partner_desc": "All'avvio di una sessione in coppia, l'orologio chiede con chi.",
     "auto_from": "Attivo dalle",
     "auto_to": "Attivo fino alle",
-    "auto_window_desc": "L'avvio automatico ascolta solo in questa fascia oraria (ad es. 20:00-02:00). Stessa ora = tutto il giorno. Fuori dalla fascia non consuma batteria in più."
+    "auto_window_desc": "L'avvio automatico ascolta solo in questa fascia oraria (ad es. 20:00-02:00). Stessa ora = tutto il giorno. Fuori dalla fascia non consuma batteria in più.",
+    "timeline": "Pin in timeline",
+    "timeline_off": "Disattivato",
+    "timeline_badges": "Solo traguardi",
+    "timeline_all": "Sessioni + traguardi",
+    "timeline_desc": "Aggiunge un pin alla timeline dell'orologio. I pin passano dal server timeline di Rebble (internet) e possono impiegare fino a 30 minuti. I pin delle sessioni mostrano solo durata e kcal. Disattivato di default; tutto il resto resta sull'orologio."
   },
   "pt": {
     "title": "Configurações do Stamina",
@@ -377,7 +402,12 @@ module.exports = {
     "ask_partner_desc": "Ao iniciar uma sessão a dois, o relógio pergunta com quem.",
     "auto_from": "Ativo a partir de",
     "auto_to": "Ativo até",
-    "auto_window_desc": "O início automático só está atento neste intervalo (ex.: 20:00 às 02:00). Mesma hora = o dia todo. Fora do intervalo não gasta bateria extra."
+    "auto_window_desc": "O início automático só está atento neste intervalo (ex.: 20:00 às 02:00). Mesma hora = o dia todo. Fora do intervalo não gasta bateria extra.",
+    "timeline": "Pins na timeline",
+    "timeline_off": "Desligado",
+    "timeline_badges": "Só conquistas",
+    "timeline_all": "Sessões + conquistas",
+    "timeline_desc": "Adiciona um pin à timeline do relógio. Os pins passam pelo servidor de timeline do Rebble (internet) e podem demorar até 30 minutos. Os pins de sessão só mostram duração e kcal. Desligado por padrão; tudo o resto fica no teu relógio."
   },
   "nl": {
     "title": "Stamina-instellingen",
@@ -440,7 +470,12 @@ module.exports = {
     "ask_partner_desc": "Bij het starten van een partnersessie vraagt het horloge met wie.",
     "auto_from": "Actief vanaf",
     "auto_to": "Actief tot",
-    "auto_window_desc": "Auto-start let alleen binnen dit tijdvak op beweging (bijv. 20:00 tot 02:00). Dezelfde tijd = hele dag. Daarbuiten kost het geen extra batterij."
+    "auto_window_desc": "Auto-start let alleen binnen dit tijdvak op beweging (bijv. 20:00 tot 02:00). Dezelfde tijd = hele dag. Daarbuiten kost het geen extra batterij.",
+    "timeline": "Tijdlijn-pins",
+    "timeline_off": "Uit",
+    "timeline_badges": "Alleen prestaties",
+    "timeline_all": "Sessies + prestaties",
+    "timeline_desc": "Zet een pin in de tijdlijn van het horloge. Pins gaan via de Rebble-tijdlijnserver (internet) en kunnen tot 30 minuten duren. Sessiepins tonen alleen duur en kcal. Standaard uit; al het andere blijft op je horloge."
   },
   "pl": {
     "title": "Ustawienia Stamina",
@@ -503,7 +538,12 @@ module.exports = {
     "ask_partner_desc": "Przy starcie sesji we dwoje zegarek pyta, z kim.",
     "auto_from": "Aktywny od",
     "auto_to": "Aktywny do",
-    "auto_window_desc": "Autostart nasłuchuje tylko w tym przedziale czasu (np. 20:00–02:00). Ta sama godzina = cały dzień. Poza nim nie zużywa dodatkowo baterii."
+    "auto_window_desc": "Autostart nasłuchuje tylko w tym przedziale czasu (np. 20:00–02:00). Ta sama godzina = cały dzień. Poza nim nie zużywa dodatkowo baterii.",
+    "timeline": "Piny na osi czasu",
+    "timeline_off": "Wył.",
+    "timeline_badges": "Tylko osiągnięcia",
+    "timeline_all": "Sesje + osiągnięcia",
+    "timeline_desc": "Dodaje pin do osi czasu zegarka. Piny przechodzą przez serwer osi czasu Rebble (internet) i mogą pojawić się nawet po 30 minutach. Piny sesji pokazują tylko czas trwania i kcal. Domyślnie wyłączone; reszta danych zostaje na zegarku."
   },
   "cs": {
     "title": "Nastavení Stamina",
@@ -566,7 +606,12 @@ module.exports = {
     "ask_partner_desc": "Při spuštění relace s partnerem se hodinky zeptají, s kým.",
     "auto_from": "Aktivní od",
     "auto_to": "Aktivní do",
-    "auto_window_desc": "Automatický start sleduje pohyb jen v tomto časovém okně (např. 20:00–02:00). Stejný čas = celý den. Mimo okno nespotřebovává baterii navíc."
+    "auto_window_desc": "Automatický start sleduje pohyb jen v tomto časovém okně (např. 20:00–02:00). Stejný čas = celý den. Mimo okno nespotřebovává baterii navíc.",
+    "timeline": "Piny na časové ose",
+    "timeline_off": "Vypnuto",
+    "timeline_badges": "Jen úspěchy",
+    "timeline_all": "Relace + úspěchy",
+    "timeline_desc": "Přidá pin na časovou osu hodinek. Piny jdou přes server časové osy Rebble (internet) a mohou se objevit až za 30 minut. Piny relací ukazují jen délku a kcal. Ve výchozím stavu vypnuto; vše ostatní zůstává v hodinkách."
   },
   "sv": {
     "title": "Stamina-inställningar",
@@ -629,7 +674,12 @@ module.exports = {
     "ask_partner_desc": "När en partnersession startar frågar klockan med vem.",
     "auto_from": "Aktiv från",
     "auto_to": "Aktiv till",
-    "auto_window_desc": "Autostart lyssnar bara inom detta tidsfönster (t.ex. 20:00–02:00). Samma tid = hela dagen. Utanför fönstret drar den inget extra batteri."
+    "auto_window_desc": "Autostart lyssnar bara inom detta tidsfönster (t.ex. 20:00–02:00). Samma tid = hela dagen. Utanför fönstret drar den inget extra batteri.",
+    "timeline": "Tidslinje-nålar",
+    "timeline_off": "Av",
+    "timeline_badges": "Bara prestationer",
+    "timeline_all": "Sessioner + prestationer",
+    "timeline_desc": "Lägger en nål i klockans tidslinje. Nålarna skickas via Rebbles tidslinjeserver (internet) och kan ta upp till 30 minuter. Sessionsnålar visar bara längd och kcal. Av som standard; allt annat stannar på klockan."
   },
   "da": {
     "title": "Stamina-indstillinger",
@@ -692,7 +742,12 @@ module.exports = {
     "ask_partner_desc": "Når en partnersession starter, spørger uret med hvem.",
     "auto_from": "Aktiv fra",
     "auto_to": "Aktiv til",
-    "auto_window_desc": "Autostart lytter kun i dette tidsrum (f.eks. 20:00–02:00). Samme tid = hele dagen. Uden for tidsrummet bruger den ikke ekstra batteri."
+    "auto_window_desc": "Autostart lytter kun i dette tidsrum (f.eks. 20:00–02:00). Samme tid = hele dagen. Uden for tidsrummet bruger den ikke ekstra batteri.",
+    "timeline": "Tidslinje-pins",
+    "timeline_off": "Fra",
+    "timeline_badges": "Kun præstationer",
+    "timeline_all": "Sessioner + præstationer",
+    "timeline_desc": "Tilføjer en pin i urets tidslinje. Pins sendes via Rebbles tidslinjeserver (internet) og kan tage op til 30 minutter. Session-pins viser kun varighed og kcal. Slået fra som standard; alt andet bliver på uret."
   },
   "nb": {
     "title": "Stamina-innstillinger",
@@ -755,7 +810,12 @@ module.exports = {
     "ask_partner_desc": "Når en partnerøkt starter, spør klokken med hvem.",
     "auto_from": "Aktiv fra",
     "auto_to": "Aktiv til",
-    "auto_window_desc": "Autostart lytter bare i dette tidsrommet (f.eks. 20:00–02:00). Samme tid = hele dagen. Utenfor bruker den ikke ekstra batteri."
+    "auto_window_desc": "Autostart lytter bare i dette tidsrommet (f.eks. 20:00–02:00). Samme tid = hele dagen. Utenfor bruker den ikke ekstra batteri.",
+    "timeline": "Tidslinje-pins",
+    "timeline_off": "Av",
+    "timeline_badges": "Bare prestasjoner",
+    "timeline_all": "Økter + prestasjoner",
+    "timeline_desc": "Legger en pin i klokkens tidslinje. Pins sendes via Rebbles tidslinjeserver (internett) og kan ta opptil 30 minutter. Økt-pins viser bare varighet og kcal. Av som standard; alt annet blir på klokken."
   },
   "fi": {
     "title": "Stamina-asetukset",
@@ -818,7 +878,12 @@ module.exports = {
     "ask_partner_desc": "Kun kumppani-istunto alkaa, kello kysyy kenen kanssa.",
     "auto_from": "Käytössä alkaen",
     "auto_to": "Käytössä asti",
-    "auto_window_desc": "Automaattinen aloitus kuuntelee vain tällä aikavälillä (esim. 20:00–02:00). Sama aika = koko päivän. Aikavälin ulkopuolella se ei kuluta lisäakkua."
+    "auto_window_desc": "Automaattinen aloitus kuuntelee vain tällä aikavälillä (esim. 20:00–02:00). Sama aika = koko päivän. Aikavälin ulkopuolella se ei kuluta lisäakkua.",
+    "timeline": "Aikajanan nastat",
+    "timeline_off": "Pois",
+    "timeline_badges": "Vain saavutukset",
+    "timeline_all": "Sessiot + saavutukset",
+    "timeline_desc": "Lisää nastan kellon aikajanalle. Nastat kulkevat Rebblen aikajanapalvelimen kautta (internet) ja voivat näkyä vasta 30 minuutin päästä. Sessionastoissa näkyy vain kesto ja kcal. Oletuksena pois; kaikki muu pysyy kellossa."
   },
   "ru": {
     "title": "Настройки Stamina",
@@ -881,7 +946,12 @@ module.exports = {
     "ask_partner_desc": "При старте парной сессии часы спрашивают, с кем.",
     "auto_from": "Активен с",
     "auto_to": "Активен до",
-    "auto_window_desc": "Автостарт отслеживает движения только в этом интервале (например, 20:00–02:00). Одинаковое время = весь день. Вне интервала заряд не расходуется."
+    "auto_window_desc": "Автостарт отслеживает движения только в этом интервале (например, 20:00–02:00). Одинаковое время = весь день. Вне интервала заряд не расходуется.",
+    "timeline": "Пины в ленте",
+    "timeline_off": "Выкл.",
+    "timeline_badges": "Только достижения",
+    "timeline_all": "Сессии + достижения",
+    "timeline_desc": "Добавляет пин в ленту часов. Пины отправляются через сервер ленты Rebble (интернет) и могут появиться до 30 минут спустя. Пины сессий показывают только длительность и ккал. По умолчанию выключено; всё остальное остаётся на часах."
   },
   "uk": {
     "title": "Налаштування Stamina",
@@ -944,7 +1014,12 @@ module.exports = {
     "ask_partner_desc": "Під час старту парної сесії годинник питає, з ким.",
     "auto_from": "Активний з",
     "auto_to": "Активний до",
-    "auto_window_desc": "Автостарт відстежує рухи лише в цьому проміжку (наприклад, 20:00–02:00). Однаковий час = увесь день. Поза проміжком заряд не витрачається."
+    "auto_window_desc": "Автостарт відстежує рухи лише в цьому проміжку (наприклад, 20:00–02:00). Однаковий час = увесь день. Поза проміжком заряд не витрачається.",
+    "timeline": "Піни у стрічці",
+    "timeline_off": "Вимк.",
+    "timeline_badges": "Лише досягнення",
+    "timeline_all": "Сесії + досягнення",
+    "timeline_desc": "Додає пін у стрічку годинника. Піни надсилаються через сервер стрічки Rebble (інтернет) і можуть з’явитися до 30 хвилин потому. Піни сесій показують лише тривалість і ккал. Типово вимкнено; усе інше лишається на годиннику."
   },
   "tr": {
     "title": "Stamina Ayarları",
@@ -1007,7 +1082,12 @@ module.exports = {
     "ask_partner_desc": "Partner seansı başlarken saat kiminle olduğunu sorar.",
     "auto_from": "Etkin başlangıç",
     "auto_to": "Etkin bitiş",
-    "auto_window_desc": "Otomatik başlatma yalnızca bu zaman aralığında hareketi izler (ör. 20:00–02:00). Aynı saat = tüm gün. Aralık dışında ek pil kullanmaz."
+    "auto_window_desc": "Otomatik başlatma yalnızca bu zaman aralığında hareketi izler (ör. 20:00–02:00). Aynı saat = tüm gün. Aralık dışında ek pil kullanmaz.",
+    "timeline": "Zaman çizelgesi",
+    "timeline_off": "Kapalı",
+    "timeline_badges": "Yalnızca başarılar",
+    "timeline_all": "Seanslar + başarılar",
+    "timeline_desc": "Saatin zaman çizelgesine pin ekler. Pinler Rebble zaman çizelgesi sunucusu (internet) üzerinden gider ve görünmesi 30 dakikayı bulabilir. Seans pinleri yalnızca süre ve kcal gösterir. Varsayılan olarak kapalı; diğer her şey saatinde kalır."
   },
   "ja": {
     "title": "Stamina 設定",
@@ -1070,7 +1150,12 @@ module.exports = {
     "ask_partner_desc": "パートナーセッション開始時に、誰とかをウォッチが尋ねます。",
     "auto_from": "有効開始",
     "auto_to": "有効終了",
-    "auto_window_desc": "自動スタートはこの時間帯だけ動きを検知します（例：20:00〜02:00）。同じ時刻＝終日。時間外はバッテリーを余分に使いません。"
+    "auto_window_desc": "自動スタートはこの時間帯だけ動きを検知します（例：20:00〜02:00）。同じ時刻＝終日。時間外はバッテリーを余分に使いません。",
+    "timeline": "タイムラインピン",
+    "timeline_off": "オフ",
+    "timeline_badges": "実績のみ",
+    "timeline_all": "セッション＋実績",
+    "timeline_desc": "ウォッチのタイムラインにピンを追加します。ピンはRebbleのタイムラインサーバー（インターネット）経由で送信され、表示まで最大30分かかることがあります。セッションのピンには時間とkcalのみ表示。初期設定はオフ。その他のデータはウォッチ内に残ります。"
   },
   "zh": {
     "title": "Stamina 设置",
@@ -1133,7 +1218,12 @@ module.exports = {
     "ask_partner_desc": "开始双人记录时，手表会询问和谁。",
     "auto_from": "生效开始",
     "auto_to": "生效结束",
-    "auto_window_desc": "自动开始只在此时间段内检测动作（例如 20:00–02:00）。两者相同 = 全天。时间段外不额外耗电。"
+    "auto_window_desc": "自动开始只在此时间段内检测动作（例如 20:00–02:00）。两者相同 = 全天。时间段外不额外耗电。",
+    "timeline": "时间线图钉",
+    "timeline_off": "关闭",
+    "timeline_badges": "仅成就",
+    "timeline_all": "记录 + 成就",
+    "timeline_desc": "在手表时间线中添加图钉。图钉通过 Rebble 时间线服务器（互联网）发送，最多可能需要 30 分钟才显示。记录图钉只显示时长和 kcal。默认关闭；其他数据都保留在手表上。"
   },
   "ko": {
     "title": "Stamina 설정",
@@ -1196,6 +1286,11 @@ module.exports = {
     "ask_partner_desc": "파트너 세션을 시작하면 워치가 누구와인지 묻습니다.",
     "auto_from": "활성 시작",
     "auto_to": "활성 종료",
-    "auto_window_desc": "자동 시작은 이 시간대에만 움직임을 감지합니다(예: 20:00~02:00). 같은 시각 = 종일. 시간대 밖에서는 배터리를 추가로 쓰지 않습니다."
+    "auto_window_desc": "자동 시작은 이 시간대에만 움직임을 감지합니다(예: 20:00~02:00). 같은 시각 = 종일. 시간대 밖에서는 배터리를 추가로 쓰지 않습니다.",
+    "timeline": "타임라인 핀",
+    "timeline_off": "끔",
+    "timeline_badges": "업적만",
+    "timeline_all": "세션 + 업적",
+    "timeline_desc": "워치 타임라인에 핀을 추가합니다. 핀은 Rebble 타임라인 서버(인터넷)를 거쳐 전송되며 표시까지 최대 30분이 걸릴 수 있습니다. 세션 핀에는 시간과 kcal만 표시됩니다. 기본값은 끔이며, 나머지 데이터는 워치에 남습니다."
   }
 };

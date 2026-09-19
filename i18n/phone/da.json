@@ -37,5 +37,10 @@
   "ask_partner_desc": "Når en partnersession starter, spørger uret med hvem.",
   "auto_from": "Aktiv fra",
   "auto_to": "Aktiv til",
-  "auto_window_desc": "Autostart lytter kun i dette tidsrum (f.eks. 20:00–02:00). Samme tid = hele dagen. Uden for tidsrummet bruger den ikke ekstra batteri."
+  "auto_window_desc": "Autostart lytter kun i dette tidsrum (f.eks. 20:00–02:00). Samme tid = hele dagen. Uden for tidsrummet bruger den ikke ekstra batteri.",
+  "timeline": "Tidslinje-pins",
+  "timeline_off": "Fra",
+  "timeline_badges": "Kun præstationer",
+  "timeline_all": "Sessioner + præstationer",
+  "timeline_desc": "Tilføjer en pin i urets tidslinje. Pins sendes via Rebbles tidslinjeserver (internet) og kan tage op til 30 minutter. Session-pins viser kun varighed og kcal. Slået fra som standard; alt andet bliver på uret."
 }

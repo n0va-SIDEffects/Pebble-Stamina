@@ -37,5 +37,10 @@
   "ask_partner_desc": "Při spuštění relace s partnerem se hodinky zeptají, s kým.",
   "auto_from": "Aktivní od",
   "auto_to": "Aktivní do",
-  "auto_window_desc": "Automatický start sleduje pohyb jen v tomto časovém okně (např. 20:00–02:00). Stejný čas = celý den. Mimo okno nespotřebovává baterii navíc."
+  "auto_window_desc": "Automatický start sleduje pohyb jen v tomto časovém okně (např. 20:00–02:00). Stejný čas = celý den. Mimo okno nespotřebovává baterii navíc.",
+  "timeline": "Piny na časové ose",
+  "timeline_off": "Vypnuto",
+  "timeline_badges": "Jen úspěchy",
+  "timeline_all": "Relace + úspěchy",
+  "timeline_desc": "Přidá pin na časovou osu hodinek. Piny jdou přes server časové osy Rebble (internet) a mohou se objevit až za 30 minut. Piny relací ukazují jen délku a kcal. Ve výchozím stavu vypnuto; vše ostatní zůstává v hodinkách."
 }

@@ -37,5 +37,10 @@
   "ask_partner_desc": "When a partner session starts, the watch asks who it is with.",
   "auto_from": "Active from",
   "auto_to": "Active until",
-  "auto_window_desc": "Auto start only listens within this time window (e.g. 20:00 to 02:00). Same time for both = all day. Outside the window it uses no extra battery."
+  "auto_window_desc": "Auto start only listens within this time window (e.g. 20:00 to 02:00). Same time for both = all day. Outside the window it uses no extra battery.",
+  "timeline": "Timeline pins",
+  "timeline_off": "Off",
+  "timeline_badges": "Achievements only",
+  "timeline_all": "Sessions + achievements",
+  "timeline_desc": "Adds a pin to your watch timeline. Pins are sent through the Rebble timeline server (internet) and can take up to 30 minutes to appear. Session pins only show duration and kcal. Off by default; everything else stays on your watch."
 }

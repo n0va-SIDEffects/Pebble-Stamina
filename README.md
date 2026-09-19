@@ -25,6 +25,9 @@ Alle Daten bleiben **nur auf der Uhr**. Es gibt keinen Upload, weder aufs Handy 
 | **Höhepunkt** | Taste UNTEN (oder hochwischen) markiert den Zeitpunkt |
 | **Schlaf danach** | Aus Pebble Health: Einschlafzeit, Schlafdauer, Tiefschlaf, Abweichung vom persönlichen Durchschnitt |
 | **Start in den Tag** | Nach Morgen-Sessions (Start zwischen 4 und 12 Uhr): Schritte, aktive Minuten und Puls der 4 Stunden danach, verglichen mit deinem Üblichen für dasselbe Zeitfenster (Werktag/Wochenende getrennt). Dazu 3 h danach eine kurze Stimmungsfrage (1–5), abschaltbar. |
+| **Erfolge** | 59 Abzeichen für Meilensteine (Sessions, Bewegungen, kcal, Stunden), Rekorde pro Session (Dauer, Rhythmus, Puls, kcal), Serien und Kalender (Tage in Folge, Wochenende, Neujahr), Wohlbefinden (Schlaf, Stimmung) und Funktionen (Stellungen, Auto-Start, Anlernen). Neue Erfolge werden mit Vibration und Medaille angezeigt; Hauptmenü > Erfolge zeigt alle mit Datum. Summen werden getrennt vom Verlauf gezählt, der nur 30 Sessions behält. |
+| **Diagramme** | Sessions je Tag (14), Woche (12) und Monat (12), Solo und Partner gestapelt. Eigene Zähler, unabhängig vom Verlauf. |
+| **Timeline-Pins** | Optional (aus / nur Erfolge / Sessions + Erfolge). Das Handy schickt einen neutralen Pin an den Rebble-Timeline-Server (`timeline-api.rebble.io`); Session-Pins zeigen nur Dauer und kcal. Funktioniert erst, wenn die App im Store veröffentlicht ist (Timeline-Token). |
 | **Statistik** | Durchschnittswerte, Wochenzähler, Schlaf- und Morgen-Auswirkung über alle Einträge |
 | **Touchscreen** (Time 2) | Menüs: wischen scrollt, tippen wählt. Zahleneingabe: ziehen ändert, tippen bestätigt. Session: seitlich wischen = Pause, hochwischen = Höhepunkt. Einfache Taps lösen nichts aus, damit Hautkontakt keine Aktion startet. Die Gesten sind abschaltbar. |
 | **Sprachen** | Uhr und Einstellungsseite in 19 Sprachen: en, de, fr, es, it, pt, nl, pl, cs, sv, da, nb, fi, ru, uk, tr, ja, zh, ko. Automatisch nach Systemsprache oder fest einstellbar. Russisch, Ukrainisch, Japanisch, Chinesisch und Koreanisch brauchen das passende Sprachpaket auf der Uhr, sonst erscheint Englisch. |
@@ -53,6 +56,8 @@ src/c/            Watch-App (C)
 src/c/autostart.c Nachfrage beim automatischen Start, Worker ein/aus
 src/c/positions.c Stellungen: Merkmale, Anlegen/Benennen, Anlernen, Live-Test, Erkennung
 src/c/partners.c  Partner-Kürzel: Auswahl beim Start, Kürzel-Eingabe
+src/c/badges.c    Erfolge: Regeln, Summen, Medaillen-Anzeige
+src/c/charts.c    Diagramme je Tag/Woche/Monat
 src/c/demo.c      Beispieldaten für Store-Screenshots (nur Demo-Build)
 store/            Store-Texte und Screenshots
 src/shared/       Bewegungserkennung + gemeinsame Typen/Schlüssel (App und Worker)

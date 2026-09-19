@@ -37,5 +37,10 @@
   "ask_partner_desc": "Kun kumppani-istunto alkaa, kello kysyy kenen kanssa.",
   "auto_from": "Käytössä alkaen",
   "auto_to": "Käytössä asti",
-  "auto_window_desc": "Automaattinen aloitus kuuntelee vain tällä aikavälillä (esim. 20:00–02:00). Sama aika = koko päivän. Aikavälin ulkopuolella se ei kuluta lisäakkua."
+  "auto_window_desc": "Automaattinen aloitus kuuntelee vain tällä aikavälillä (esim. 20:00–02:00). Sama aika = koko päivän. Aikavälin ulkopuolella se ei kuluta lisäakkua.",
+  "timeline": "Aikajanan nastat",
+  "timeline_off": "Pois",
+  "timeline_badges": "Vain saavutukset",
+  "timeline_all": "Sessiot + saavutukset",
+  "timeline_desc": "Lisää nastan kellon aikajanalle. Nastat kulkevat Rebblen aikajanapalvelimen kautta (internet) ja voivat näkyä vasta 30 minuutin päästä. Sessionastoissa näkyy vain kesto ja kcal. Oletuksena pois; kaikki muu pysyy kellossa."
 }

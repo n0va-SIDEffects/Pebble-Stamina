@@ -37,5 +37,10 @@
   "ask_partner_desc": "Au début d'une session à deux, la montre demande avec qui.",
   "auto_from": "Actif dès",
   "auto_to": "Actif jusqu'à",
-  "auto_window_desc": "Le démarrage auto n'écoute que dans cette plage horaire (p. ex. 20:00 à 02:00). Même heure = toute la journée. En dehors, aucune batterie supplémentaire."
+  "auto_window_desc": "Le démarrage auto n'écoute que dans cette plage horaire (p. ex. 20:00 à 02:00). Même heure = toute la journée. En dehors, aucune batterie supplémentaire.",
+  "timeline": "Épingles timeline",
+  "timeline_off": "Désactivé",
+  "timeline_badges": "Succès uniquement",
+  "timeline_all": "Sessions + succès",
+  "timeline_desc": "Ajoute une épingle dans la timeline de la montre. Les épingles passent par le serveur timeline de Rebble (Internet) et peuvent mettre jusqu'à 30 minutes. Les épingles de session n'affichent que la durée et les kcal. Désactivé par défaut ; tout le reste reste sur ta montre."
 }

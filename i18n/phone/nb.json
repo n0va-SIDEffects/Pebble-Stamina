@@ -37,5 +37,10 @@
   "ask_partner_desc": "Når en partnerøkt starter, spør klokken med hvem.",
   "auto_from": "Aktiv fra",
   "auto_to": "Aktiv til",
-  "auto_window_desc": "Autostart lytter bare i dette tidsrommet (f.eks. 20:00–02:00). Samme tid = hele dagen. Utenfor bruker den ikke ekstra batteri."
+  "auto_window_desc": "Autostart lytter bare i dette tidsrommet (f.eks. 20:00–02:00). Samme tid = hele dagen. Utenfor bruker den ikke ekstra batteri.",
+  "timeline": "Tidslinje-pins",
+  "timeline_off": "Av",
+  "timeline_badges": "Bare prestasjoner",
+  "timeline_all": "Økter + prestasjoner",
+  "timeline_desc": "Legger en pin i klokkens tidslinje. Pins sendes via Rebbles tidslinjeserver (internett) og kan ta opptil 30 minutter. Økt-pins viser bare varighet og kcal. Av som standard; alt annet blir på klokken."
 }

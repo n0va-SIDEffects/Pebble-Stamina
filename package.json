@@ -18,6 +18,7 @@
     },
     "messageKeys": ["SEX", "AGE", "WEIGHT", "SENSITIVITY", "TOUCH_SESSION", "REQUEST_PROFILE",
                     "SOLO_STYLE", "LANGUAGE", "CHECKIN", "AUTO_START", "LIGHT", "ASK_PARTNER", "AUTO_FROM", "AUTO_TO",
+                    "TIMELINE", "PIN_ID", "PIN_TIME", "PIN_SUBTITLE", "PIN_BODY",
                     "PARTNER_1", "PARTNER_2", "PARTNER_3", "PARTNER_4", "PARTNER_5", "PARTNER_6", "PARTNER_7", "PARTNER_8",
                     "POS_NAME_1", "POS_NAME_2", "POS_NAME_3", "POS_NAME_4", "POS_NAME_5", "POS_NAME_6", "POS_NAME_7", "POS_NAME_8"],
     "resources": {

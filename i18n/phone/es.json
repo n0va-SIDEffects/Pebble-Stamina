@@ -37,5 +37,10 @@
   "ask_partner_desc": "Al iniciar una sesión en pareja, el reloj pregunta con quién.",
   "auto_from": "Activo desde",
   "auto_to": "Activo hasta",
-  "auto_window_desc": "El inicio automático solo escucha en esta franja horaria (p. ej. 20:00 a 02:00). Misma hora = todo el día. Fuera de ella no gasta batería extra."
+  "auto_window_desc": "El inicio automático solo escucha en esta franja horaria (p. ej. 20:00 a 02:00). Misma hora = todo el día. Fuera de ella no gasta batería extra.",
+  "timeline": "Pines en timeline",
+  "timeline_off": "Desactivado",
+  "timeline_badges": "Solo logros",
+  "timeline_all": "Sesiones + logros",
+  "timeline_desc": "Añade un pin a la timeline del reloj. Los pines pasan por el servidor de timeline de Rebble (internet) y pueden tardar hasta 30 minutos. Los pines de sesión solo muestran duración y kcal. Desactivado por defecto; todo lo demás se queda en tu reloj."
 }

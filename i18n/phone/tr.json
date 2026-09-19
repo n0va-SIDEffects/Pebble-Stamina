@@ -37,5 +37,10 @@
   "ask_partner_desc": "Partner seansı başlarken saat kiminle olduğunu sorar.",
   "auto_from": "Etkin başlangıç",
   "auto_to": "Etkin bitiş",
-  "auto_window_desc": "Otomatik başlatma yalnızca bu zaman aralığında hareketi izler (ör. 20:00–02:00). Aynı saat = tüm gün. Aralık dışında ek pil kullanmaz."
+  "auto_window_desc": "Otomatik başlatma yalnızca bu zaman aralığında hareketi izler (ör. 20:00–02:00). Aynı saat = tüm gün. Aralık dışında ek pil kullanmaz.",
+  "timeline": "Zaman çizelgesi",
+  "timeline_off": "Kapalı",
+  "timeline_badges": "Yalnızca başarılar",
+  "timeline_all": "Seanslar + başarılar",
+  "timeline_desc": "Saatin zaman çizelgesine pin ekler. Pinler Rebble zaman çizelgesi sunucusu (internet) üzerinden gider ve görünmesi 30 dakikayı bulabilir. Seans pinleri yalnızca süre ve kcal gösterir. Varsayılan olarak kapalı; diğer her şey saatinde kalır."
 }

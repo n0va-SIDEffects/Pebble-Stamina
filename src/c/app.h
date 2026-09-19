@@ -54,7 +54,11 @@ typedef struct __attribute__((packed)) {
   uint8_t day_active_min;
   uint8_t pos_pct[POS_COUNT]; // Zeitanteil je erkannter Stellung (Partner-Modus)
   uint8_t partner;            // 1..PARTNER_COUNT, 0 = keine Angabe
+  uint8_t flags;              // SESSION_*
 } Session;
+
+#define SESSION_AUTO 1         // per Auto-Start begonnen (rückdatiert)
+#define SESSION_PULSE_LIGHT 2  // mit Puls-Licht
 
 // i18n.c
 void i18n_load(void);
@@ -81,6 +85,7 @@ void storage_save_calib(void);
 // settings.c (Einstellungen aus der Pebble-App auf dem Handy)
 void settings_init(void);
 void settings_send_profile(void);
+void settings_queue_pin(const char *id, time_t time, const char *subtitle, const char *body);
 
 // sleep.c
 bool sleep_evaluate(Session *s);  // true = Eintrag wurde geändert
@@ -157,11 +162,27 @@ void stats_window_push(void);
 // profile.c
 void profile_window_push(void);
 
+// badges.c (Erfolge)
+void badges_init(void);
+uint64_t badges_on_session(const Session *s);  // Bitmaske neu freigeschalteter Erfolge
+uint64_t badges_check(void);                   // Schlaf/Stimmung/Anlernen nachträglich prüfen
+uint64_t badges_stats_opened(void);            // Erfolg "Analyst"
+void badges_announce(uint64_t fresh);          // "Erfolg freigeschaltet!" anzeigen
+void badges_window_push(void);
+int badges_unlocked_count(void);
+int badges_total(void);
+
 // demo.c (nur Demo-Build, sonst leer)
 void demo_seed(void);
 void pos_set_template(int i, const int16_t *f, uint8_t count);
 
+// charts.c (Diagramme)
+void charts_init(void);
+void charts_add_session(const Session *s);
+void charts_window_push(void);
+
 // util.c
+int32_t local_day_index(time_t t);
 void fmt_duration(char *buf, size_t n, int secs);
 void fmt_minutes(char *buf, size_t n, int mins);
 void fmt_date(char *buf, size_t n, time_t t);

@@ -37,5 +37,10 @@
   "ask_partner_desc": "All'avvio di una sessione in coppia, l'orologio chiede con chi.",
   "auto_from": "Attivo dalle",
   "auto_to": "Attivo fino alle",
-  "auto_window_desc": "L'avvio automatico ascolta solo in questa fascia oraria (ad es. 20:00-02:00). Stessa ora = tutto il giorno. Fuori dalla fascia non consuma batteria in più."
+  "auto_window_desc": "L'avvio automatico ascolta solo in questa fascia oraria (ad es. 20:00-02:00). Stessa ora = tutto il giorno. Fuori dalla fascia non consuma batteria in più.",
+  "timeline": "Pin in timeline",
+  "timeline_off": "Disattivato",
+  "timeline_badges": "Solo traguardi",
+  "timeline_all": "Sessioni + traguardi",
+  "timeline_desc": "Aggiunge un pin alla timeline dell'orologio. I pin passano dal server timeline di Rebble (internet) e possono impiegare fino a 30 minuti. I pin delle sessioni mostrano solo durata e kcal. Disattivato di default; tutto il resto resta sull'orologio."
 }

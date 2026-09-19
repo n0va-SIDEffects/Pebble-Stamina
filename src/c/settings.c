@@ -31,6 +31,61 @@ static uint32_t partner_key(int i) {
 
 static int32_t clamp(int32_t v, int32_t lo, int32_t hi) { return v < lo ? lo : v > hi ? hi : v; }
 
+// --- Timeline-Pins ------------------------------------------------------
+// Die Uhr baut die (neutralen, übersetzten) Texte, das Handy schickt den Pin an
+// den Timeline-Server. Nachrichten gehen einzeln raus, daher eine kleine Warteschlange.
+
+#define PIN_QUEUE 8
+
+typedef struct {
+  char id[24];
+  int32_t time;
+  char subtitle[32];
+  char body[64];
+} Pin;
+
+static Pin s_pins[PIN_QUEUE];
+static int s_pin_count;
+static bool s_sending;
+
+static void send_next_pin(void) {
+  if (s_sending || !s_pin_count) return;
+  DictionaryIterator *out;
+  if (app_message_outbox_begin(&out) != APP_MSG_OK) return;
+  Pin *p = &s_pins[0];
+  dict_write_cstring(out, MESSAGE_KEY_PIN_ID, p->id);
+  dict_write_int32(out, MESSAGE_KEY_PIN_TIME, p->time);
+  dict_write_cstring(out, MESSAGE_KEY_PIN_SUBTITLE, p->subtitle);
+  dict_write_cstring(out, MESSAGE_KEY_PIN_BODY, p->body);
+  if (app_message_outbox_send() == APP_MSG_OK) s_sending = true;
+}
+
+static void pin_done(bool drop) {
+  s_sending = false;
+  if (drop && s_pin_count) {
+    memmove(&s_pins[0], &s_pins[1], sizeof(Pin) * (s_pin_count - 1));
+    s_pin_count--;
+  }
+  send_next_pin();
+}
+
+static void outbox_sent(DictionaryIterator *it, void *ctx) { pin_done(dict_find(it, MESSAGE_KEY_PIN_ID) != NULL); }
+
+// Handy nicht erreichbar: Pin verwerfen, damit die Warteschlange nicht hängt
+static void outbox_failed(DictionaryIterator *it, AppMessageResult reason, void *ctx) {
+  pin_done(dict_find(it, MESSAGE_KEY_PIN_ID) != NULL);
+}
+
+void settings_queue_pin(const char *id, time_t time, const char *subtitle, const char *body) {
+  if (s_pin_count == PIN_QUEUE) return;
+  Pin *p = &s_pins[s_pin_count++];
+  snprintf(p->id, sizeof(p->id), "%s", id);
+  p->time = (int32_t)time;
+  snprintf(p->subtitle, sizeof(p->subtitle), "%s", subtitle);
+  snprintf(p->body, sizeof(p->body), "%s", body);
+  send_next_pin();
+}
+
 void settings_send_profile(void) {
   DictionaryIterator *out;
   if (app_message_outbox_begin(&out) != APP_MSG_OK) return;
@@ -48,6 +103,7 @@ void settings_send_profile(void) {
   dict_write_int32(out, MESSAGE_KEY_ASK_PARTNER, p->ask_partner);
   dict_write_int32(out, MESSAGE_KEY_AUTO_FROM, p->auto_from);
   dict_write_int32(out, MESSAGE_KEY_AUTO_TO, p->auto_to);
+  dict_write_int32(out, MESSAGE_KEY_TIMELINE, p->timeline);
   for (int i = 0; i < PARTNER_COUNT; i++) dict_write_cstring(out, partner_key(i), partner_name(i + 1));
   for (int i = 0; i < POS_COUNT; i++) dict_write_cstring(out, pos_name_key(i), pos_custom_name(i));
   app_message_outbox_send();
@@ -89,6 +145,10 @@ static void inbox_received(DictionaryIterator *it, void *context) {
   }
   if ((t = dict_find(it, MESSAGE_KEY_CHECKIN))) {
     p->checkin = tuple_int(t) ? 1 : 0;
+    changed = true;
+  }
+  if ((t = dict_find(it, MESSAGE_KEY_TIMELINE))) {
+    p->timeline = clamp(tuple_int(t), TIMELINE_OFF, TIMELINE_ALL);
     changed = true;
   }
   if ((t = dict_find(it, MESSAGE_KEY_AUTO_FROM))) {
@@ -139,5 +199,7 @@ static void inbox_received(DictionaryIterator *it, void *context) {
 
 void settings_init(void) {
   app_message_register_inbox_received(inbox_received);
+  app_message_register_outbox_sent(outbox_sent);
+  app_message_register_outbox_failed(outbox_failed);
   app_message_open(512, 512);  // inkl. 8 Stellungsnamen
 }

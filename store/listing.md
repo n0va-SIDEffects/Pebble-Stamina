@@ -40,7 +40,7 @@ Your private rhythm tracker for intimate wellness. 100 % on your wrist. (Beta)
 
 Stamina is a private wellness tracker for your intimate life, solo or with a partner. It measures rhythm, heart rate and estimated calories, and shows how a session affects your sleep and the start of your day.
 
-All data stays on your watch. No account, no cloud, no upload.
+All data stays on your watch. No account, no cloud. Only if you turn on timeline pins, their short text is sent.
 
 TRACK
 • Motion detection counts movements and shows your rhythm per minute
@@ -51,7 +51,8 @@ TRACK
 UNDERSTAND
 • Sleep afterwards: time to fall asleep, duration, deep sleep, compared with your normal nights
 • Start of the day: steps, activity and heart rate in the 4 hours after a morning session, plus a short mood check-in
-• Statistics with averages, weekly count and trends
+• Charts per day, week and month, solo and partner
+• 59 achievements for milestones, records and streaks
 
 PARTNER MODE
 • Teach the watch your own positions (name them by voice), with live detection and time share per position
@@ -61,6 +62,7 @@ SMART AND DISCREET
 • Auto start with optional time window
 • Calibration adapts detection to you
 • Display light options, touch controls on Pebble Time 2
+• Optional timeline pins (sent via the Rebble timeline server)
 • Neutral wording on the watch, 19 languages
 
 TIP: Wear the watch on the hand that does the movement. Detection works best there.
@@ -71,7 +73,7 @@ Support development: buymeacoffee.com/SIDEffects
 
 ### Release notes (0.6 Beta)
 
-First public beta. Motion and heart rate tracking, calorie estimate, sleep and start-of-day analysis, partner mode with position learning and partner initials, auto start with time window, calibration, touch controls, 19 languages. Feedback welcome on GitHub.
+First public beta. Motion and heart rate tracking, calorie estimate, sleep and start-of-day analysis, partner mode with position learning and partner initials, charts, 59 achievements, optional timeline pins, auto start with time window, calibration, touch controls, 19 languages. Feedback welcome on GitHub.
 
 ---
 
@@ -85,7 +87,7 @@ Dein privater Rhythmus-Tracker für intimes Wohlbefinden. Komplett auf deinem Ha
 
 Stamina ist ein privater Wellness-Tracker für dein Liebesleben, solo oder zu zweit. Die App misst Rhythmus, Puls und geschätzte Kalorien und zeigt, wie eine Session deinen Schlaf und den Start in den Tag beeinflusst.
 
-Alle Daten bleiben auf deiner Uhr. Kein Konto, keine Cloud, kein Upload.
+Alle Daten bleiben auf deiner Uhr. Kein Konto, keine Cloud. Nur optionale Timeline-Pins werden übertragen.
 
 TRACKEN
 • Bewegungserkennung zählt Bewegungen und zeigt den Rhythmus pro Minute
@@ -96,7 +98,8 @@ TRACKEN
 VERSTEHEN
 • Schlaf danach: Einschlafzeit, Dauer, Tiefschlaf, im Vergleich zu deinen normalen Nächten
 • Start in den Tag: Schritte, Aktivität und Puls in den 4 Stunden nach einer Morgen-Session, dazu eine kurze Stimmungsabfrage
-• Statistik mit Durchschnittswerten, Wochenzähler und Trends
+• Diagramme je Tag, Woche und Monat, solo und zu zweit
+• 59 Erfolge für Meilensteine, Rekorde und Serien
 
 PARTNER-MODUS
 • Bring der Uhr eigene Stellungen bei (Namen per Sprache), mit Live-Erkennung und Zeitanteil je Stellung
@@ -106,6 +109,7 @@ CLEVER UND DISKRET
 • Auto-Start mit optionalem Zeitfenster
 • Anlernen passt die Erkennung an dich an
 • Optionen fürs Display-Licht, Touch-Bedienung auf der Pebble Time 2
+• Optionale Timeline-Pins (über den Rebble-Timeline-Server)
 • Neutrale Texte auf der Uhr, 19 Sprachen
 
 TIPP: Trag die Uhr an der Hand, die die Bewegung ausführt. Dort funktioniert die Erkennung am besten.
@@ -116,7 +120,7 @@ Entwicklung unterstützen: buymeacoffee.com/SIDEffects
 
 ### Versionshinweise (0.6 Beta)
 
-Erste öffentliche Beta. Bewegungs- und Pulstracking, Kalorienschätzung, Auswertung von Schlaf und Start in den Tag, Partner-Modus mit Stellungen anlernen und Partner-Kürzeln, Auto-Start mit Zeitfenster, Anlernen, Touch-Bedienung, 19 Sprachen. Feedback gerne auf GitHub.
+Erste öffentliche Beta. Bewegungs- und Pulstracking, Kalorienschätzung, Auswertung von Schlaf und Start in den Tag, Partner-Modus mit Stellungen anlernen und Partner-Kürzeln, Diagramme, 59 Erfolge, optionale Timeline-Pins, Auto-Start mit Zeitfenster, Anlernen, Touch-Bedienung, 19 Sprachen. Feedback gerne auf GitHub.
 
 ---
 
@@ -126,11 +130,11 @@ Liegen in `store/screenshots/emery/`. Für den Store die ersten fünf, in dieser
 
 | Datei | Zeigt |
 |---|---|
-| 01_session.png | Laufende Partner-Session: Zeit, Bewegungen, Puls, kcal |
+| 01_session.png | Laufende Partner-Session: 666 Bewegungen, Puls, kcal, erkannte Stellung |
 | 02_session_detail.png | Auswertung einer Session |
-| 03_positions_start_of_day.png | Stellungsanteile und Start in den Tag |
-| 04_stats_sleep.png | Statistik mit Partnern und Schlaf danach |
-| 05_who_with.png | Partnerauswahl „Who with?“ |
-| 06–10 | Hauptmenü, Verlauf, Stellungen, Solo-Session, Auto-Start (nicht für den Store vorgesehen, da teils Solo-Begriffe) |
+| 03_charts.png | Diagramm: letzte 14 Tage, Solo und Partner |
+| 04_achievements.png | Erfolge (16 von 59) |
+| 05_stats_sleep.png | Statistik mit Partnern und Schlaf danach |
+| 06–10 | Stellungen/Start in den Tag, Erfolg freigeschaltet, Wochen-Diagramm, Partnerauswahl, Hauptmenü |
 
 Aufgenommen im Emulator mit Beispieldaten (Demo-Build, siehe README).
