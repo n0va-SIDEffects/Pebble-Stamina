@@ -1,0 +1,12 @@
+# Build
+build/
+.lock-waf*
+*.pbw
+node_modules/
+package-lock.json
+
+# aus i18n/*.json erzeugt (tools/gen_strings.py, läuft bei jedem Build)
+resources/lang/
+src/c/i18n.auto.h
+
+__pycache__/

@@ -1,0 +1,13 @@
+{
+  "style": "Styl solo",
+  "style_auto": "Automatycznie (z profilu)",
+  "style_stroke": "Ruch posuwisty",
+  "style_rub": "Pocieranie (okrężne)",
+  "style_toy": "Gadżet / wibrator",
+  "style_desc": "Tryb automatyczny używa pocierania dla kobiet, w pozostałych przypadkach ruchu posuwistego. Pocieranie wykrywa małe, szybkie ruchy okrężne; z gadżetem mierzony jest tylko czas aktywności.",
+  "language": "Język zegarka",
+  "lang_auto": "Automatycznie",
+  "lang_desc": "Niektóre języki wymagają zainstalowania na zegarku odpowiedniego pakietu językowego.",
+  "checkin": "Poranny check-in",
+  "checkin_desc": "Po porannej sesji zegarek raz zapyta, jak mija ci dzień (3 h później)."
+}

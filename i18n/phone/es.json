@@ -1,0 +1,13 @@
+{
+  "style": "Estilo solo",
+  "style_auto": "Automático (según el perfil)",
+  "style_stroke": "Vaivén",
+  "style_rub": "Frotar (circular)",
+  "style_toy": "Juguete / vibrador",
+  "style_desc": "Automático usa frotar para mujer y vaivén en los demás casos. Frotar detecta movimientos circulares pequeños y rápidos; con un juguete solo se mide el tiempo activo.",
+  "language": "Idioma del reloj",
+  "lang_auto": "Automático",
+  "lang_desc": "Algunos idiomas requieren instalar en el reloj el paquete de idioma correspondiente.",
+  "checkin": "Check-in matutino",
+  "checkin_desc": "Tras una sesión por la mañana, el reloj te pregunta una vez qué tal va tu día (3 h después)."
+}

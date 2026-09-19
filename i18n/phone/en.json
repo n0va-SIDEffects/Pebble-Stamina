@@ -1,0 +1,13 @@
+{
+  "style": "Solo style",
+  "style_auto": "Automatic (from profile)",
+  "style_stroke": "Stroking",
+  "style_rub": "Rubbing (circular)",
+  "style_toy": "Toy / vibrator",
+  "style_desc": "Automatic uses rubbing for female, stroking otherwise. Rubbing detects small, fast circular movements; with a toy only the active time is measured.",
+  "language": "Watch language",
+  "lang_auto": "Automatic",
+  "lang_desc": "Some languages need the matching language pack installed on the watch.",
+  "checkin": "Morning check-in",
+  "checkin_desc": "After a morning session, the watch asks once how your day is going (3 h later)."
+}

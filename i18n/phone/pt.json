@@ -1,0 +1,13 @@
+{
+  "style": "Estilo solo",
+  "style_auto": "Automático (do perfil)",
+  "style_stroke": "Vaivém",
+  "style_rub": "Fricção (circular)",
+  "style_toy": "Brinquedo / vibrador",
+  "style_desc": "O modo automático usa fricção para o perfil feminino e vaivém nos restantes. A fricção deteta movimentos circulares pequenos e rápidos; com um brinquedo só é medido o tempo ativo.",
+  "language": "Idioma do relógio",
+  "lang_auto": "Automático",
+  "lang_desc": "Alguns idiomas precisam do pacote de idioma correspondente instalado no relógio.",
+  "checkin": "Check-in matinal",
+  "checkin_desc": "Após uma sessão de manhã, o relógio pergunta uma vez como está a correr o teu dia (3 h depois)."
+}

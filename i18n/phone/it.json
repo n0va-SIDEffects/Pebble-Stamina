@@ -1,0 +1,13 @@
+{
+  "style": "Stile solo",
+  "style_auto": "Automatico (dal profilo)",
+  "style_stroke": "Su e giù",
+  "style_rub": "Sfregamento (circolare)",
+  "style_toy": "Sex toy / vibratore",
+  "style_desc": "Automatico usa lo sfregamento per il profilo femminile, altrimenti su e giù. Lo sfregamento rileva piccoli movimenti circolari rapidi; con un sex toy viene misurato solo il tempo attivo.",
+  "language": "Lingua dell'orologio",
+  "lang_auto": "Automatica",
+  "lang_desc": "Alcune lingue richiedono il relativo language pack installato sull'orologio.",
+  "checkin": "Check-in mattutino",
+  "checkin_desc": "Dopo una sessione mattutina, l'orologio ti chiede una volta come va la giornata (3 h dopo)."
+}

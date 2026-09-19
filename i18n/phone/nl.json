@@ -1,0 +1,13 @@
+{
+  "style": "Solostijl",
+  "style_auto": "Automatisch (uit profiel)",
+  "style_stroke": "Strelen",
+  "style_rub": "Wrijven (cirkelend)",
+  "style_toy": "Toy / vibrator",
+  "style_desc": "Automatisch gebruikt wrijven bij vrouw, anders strelen. Wrijven herkent kleine, snelle cirkelbewegingen; met een toy wordt alleen de actieve tijd gemeten.",
+  "language": "Taal van het horloge",
+  "lang_auto": "Automatisch",
+  "lang_desc": "Sommige talen vereisen dat het bijbehorende taalpakket op het horloge is geïnstalleerd.",
+  "checkin": "Ochtend-check-in",
+  "checkin_desc": "Na een ochtendsessie vraagt het horloge één keer hoe je dag gaat (3 u later)."
+}

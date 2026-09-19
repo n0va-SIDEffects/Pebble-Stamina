@@ -1,0 +1,13 @@
+{
+  "style": "Solostil",
+  "style_auto": "Automatisk (fra profil)",
+  "style_stroke": "Strygning",
+  "style_rub": "Gnidning (cirkulær)",
+  "style_toy": "Legetøj / vibrator",
+  "style_desc": "Automatisk bruger gnidning for kvinder, ellers strygning. Gnidning registrerer små, hurtige cirkelbevægelser; med legetøj måles kun den aktive tid.",
+  "language": "Urets sprog",
+  "lang_auto": "Automatisk",
+  "lang_desc": "Nogle sprog kræver, at den tilsvarende sprogpakke er installeret på uret.",
+  "checkin": "Morgen-check-in",
+  "checkin_desc": "Efter en morgensession spørger uret én gang, hvordan din dag går (3 timer senere)."
+}

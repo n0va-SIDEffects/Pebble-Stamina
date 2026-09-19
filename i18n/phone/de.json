@@ -1,0 +1,13 @@
+{
+  "style": "Solo-Stil",
+  "style_auto": "Automatisch (aus dem Profil)",
+  "style_stroke": "Streichen",
+  "style_rub": "Reiben (kreisend)",
+  "style_toy": "Toy / Vibrator",
+  "style_desc": "Automatisch nutzt Reiben bei weiblich, sonst Streichen. Reiben erkennt kleine, schnelle kreisende Bewegungen; mit Toy wird nur die aktive Zeit gemessen.",
+  "language": "Sprache der Uhr",
+  "lang_auto": "Automatisch",
+  "lang_desc": "Manche Sprachen brauchen das passende Sprachpaket auf der Uhr.",
+  "checkin": "Morgen-Check-in",
+  "checkin_desc": "Nach einer Morgen-Session fragt die Uhr einmal, wie dein Tag läuft (3 h später)."
+}

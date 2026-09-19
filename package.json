@@ -1,0 +1,44 @@
+{
+  "name": "stamina",
+  "author": "Mike",
+  "version": "1.2.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {},
+  "pebble": {
+    "displayName": "Stamina",
+    "uuid": "ca26453c-432f-4f97-94a6-b2afac7fb0c9",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": ["emery", "flint", "basalt", "diorite"],
+    "capabilities": ["health", "configurable"],
+    "watchapp": {
+      "watchface": false
+    },
+    "messageKeys": ["SEX", "AGE", "WEIGHT", "SENSITIVITY", "TOUCH_SESSION", "REQUEST_PROFILE",
+                    "SOLO_STYLE", "LANGUAGE", "CHECKIN"],
+    "resources": {
+      "media": [
+        {"type": "raw", "name": "LANG_EN", "file": "lang/en.bin"},
+        {"type": "raw", "name": "LANG_DE", "file": "lang/de.bin"},
+        {"type": "raw", "name": "LANG_FR", "file": "lang/fr.bin"},
+        {"type": "raw", "name": "LANG_ES", "file": "lang/es.bin"},
+        {"type": "raw", "name": "LANG_IT", "file": "lang/it.bin"},
+        {"type": "raw", "name": "LANG_PT", "file": "lang/pt.bin"},
+        {"type": "raw", "name": "LANG_NL", "file": "lang/nl.bin"},
+        {"type": "raw", "name": "LANG_PL", "file": "lang/pl.bin"},
+        {"type": "raw", "name": "LANG_CS", "file": "lang/cs.bin"},
+        {"type": "raw", "name": "LANG_SV", "file": "lang/sv.bin"},
+        {"type": "raw", "name": "LANG_DA", "file": "lang/da.bin"},
+        {"type": "raw", "name": "LANG_NB", "file": "lang/nb.bin"},
+        {"type": "raw", "name": "LANG_FI", "file": "lang/fi.bin"},
+        {"type": "raw", "name": "LANG_RU", "file": "lang/ru.bin"},
+        {"type": "raw", "name": "LANG_UK", "file": "lang/uk.bin"},
+        {"type": "raw", "name": "LANG_TR", "file": "lang/tr.bin"},
+        {"type": "raw", "name": "LANG_JA", "file": "lang/ja.bin"},
+        {"type": "raw", "name": "LANG_ZH", "file": "lang/zh.bin"},
+        {"type": "raw", "name": "LANG_KO", "file": "lang/ko.bin"}
+      ]
+    }
+  }
+}

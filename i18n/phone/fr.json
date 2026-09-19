@@ -1,0 +1,13 @@
+{
+  "style": "Style solo",
+  "style_auto": "Automatique (selon le profil)",
+  "style_stroke": "Va-et-vient",
+  "style_rub": "Frottement (circulaire)",
+  "style_toy": "Sextoy / vibromasseur",
+  "style_desc": "En automatique : frottement pour le profil femme, va-et-vient sinon. Le frottement détecte de petits mouvements circulaires rapides ; avec un sextoy, seul le temps actif est mesuré.",
+  "language": "Langue de la montre",
+  "lang_auto": "Automatique",
+  "lang_desc": "Certaines langues nécessitent le pack de langue correspondant sur la montre.",
+  "checkin": "Bilan du matin",
+  "checkin_desc": "Après une session le matin, la montre te demande une fois comment se passe ta journée (3 h plus tard)."
+}

@@ -1,0 +1,13 @@
+{
+  "style": "Sólo styl",
+  "style_auto": "Automaticky (podle profilu)",
+  "style_stroke": "Hlazení",
+  "style_rub": "Tření (krouživé)",
+  "style_toy": "Hračka / vibrátor",
+  "style_desc": "Automatický režim používá u žen tření, jinak hlazení. Tření rozpoznává malé, rychlé krouživé pohyby; s hračkou se měří jen aktivní čas.",
+  "language": "Jazyk hodinek",
+  "lang_auto": "Automaticky",
+  "lang_desc": "Některé jazyky vyžadují, aby byl v hodinkách nainstalován odpovídající jazykový balíček.",
+  "checkin": "Ranní check-in",
+  "checkin_desc": "Po ranní relaci se hodinky jednou zeptají, jak ti jde den (o 3 h později)."
+}
