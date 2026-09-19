@@ -1,6 +1,7 @@
 #
 # Pebble SDK build script
 #
+import os
 top = '.'
 out = 'build'
 
@@ -27,6 +28,8 @@ def build(ctx):
     for platform in ctx.env.TARGET_PLATFORMS:
         ctx.env = ctx.all_envs[platform]
         ctx.set_group(ctx.env.PLATFORM_NAME)
+        if os.environ.get('STAMINA_DEMO'):
+            ctx.env.append_value('DEFINES', 'DEMO')  # Beispieldaten für Screenshots
         # src/shared: Bewegungserkennung, von App und Hintergrund-Worker genutzt
         app_elf = '{}/pebble-app.elf'.format(ctx.env.BUILD_DIR)
         ctx.pbl_build(source=ctx.path.ant_glob(['src/c/**/*.c', 'src/shared/**/*.c']),

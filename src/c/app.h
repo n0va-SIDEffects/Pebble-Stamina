@@ -157,6 +157,10 @@ void stats_window_push(void);
 // profile.c
 void profile_window_push(void);
 
+// demo.c (nur Demo-Build, sonst leer)
+void demo_seed(void);
+void pos_set_template(int i, const int16_t *f, uint8_t count);
+
 // util.c
 void fmt_duration(char *buf, size_t n, int secs);
 void fmt_minutes(char *buf, size_t n, int mins);

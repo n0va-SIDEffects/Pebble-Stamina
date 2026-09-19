@@ -38,7 +38,7 @@
   "NOT_FOUND": "Eintrag nicht gefunden.",
   "D_DURATION_FMT": "Dauer %s",
   "D_ACTIVE_FMT": "aktiv %s",
-  "D_RHYTHM_FMT": "Rhythmus Ø %d, max %d/min",
+  "D_RHYTHM_FMT": "Rhythmus Ø %d, max %d",
   "D_CLIMAX_FMT": "Höhepunkt nach %s",
   "D_HR_FMT": "Puls Ø %d (%d-%d)",
   "D_HR_NONE": "Puls: keine Daten",

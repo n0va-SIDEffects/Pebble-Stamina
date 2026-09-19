@@ -6,8 +6,14 @@ static Window *s_window;
 static MenuLayer *s_menu;
 static char s_sub[48];
 
+#if defined(DEMO)
+#define DEMO_ELAPSED(s) (s)
+#else
+#define DEMO_ELAPSED(s) 0
+#endif
+
 static void start_partner(int partner) {
-  tracker_window_push_at(MODE_PARTNER, time(NULL), 0, partner);
+  tracker_window_push_at(MODE_PARTNER, time(NULL) - DEMO_ELAPSED(1122), DEMO_ELAPSED(861), partner);
 }
 
 static uint16_t menu_rows(MenuLayer *m, uint16_t section, void *ctx) { return ROW_COUNT; }
@@ -38,7 +44,9 @@ static void menu_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ct
 
 static void menu_select(MenuLayer *m, MenuIndex *index, void *ctx) {
   switch (index->row) {
-    case ROW_SOLO: tracker_window_push(solo_mode()); break;
+    case ROW_SOLO:
+      tracker_window_push_at(solo_mode(), time(NULL) - DEMO_ELAPSED(754), DEMO_ELAPSED(689), 0);
+      break;
     case ROW_PARTNER: partner_choose(start_partner); break;
     case ROW_HISTORY: history_window_push(); break;
     case ROW_STATS: stats_window_push(); break;
@@ -79,6 +87,7 @@ static void init(void) {
   storage_init();
   positions_init();
   partners_init();
+  demo_seed();
   i18n_load();
   settings_init();
   morning_init();

@@ -49,6 +49,8 @@ src/c/            Watch-App (C)
 src/c/autostart.c Nachfrage beim automatischen Start, Worker ein/aus
 src/c/positions.c Stellungen: Merkmale, Anlegen/Benennen, Anlernen, Live-Test, Erkennung
 src/c/partners.c  Partner-Kürzel: Auswahl beim Start, Kürzel-Eingabe
+src/c/demo.c      Beispieldaten für Store-Screenshots (nur Demo-Build)
+store/            Store-Texte und Screenshots
 src/shared/       Bewegungserkennung + gemeinsame Typen/Schlüssel (App und Worker)
 worker_src/c/     Hintergrund-Worker für den Auto-Start
 src/pkjs/         Einstellungsseite (Clay 1.0.4 in vendor/, weil das npm-Paket flint nicht kennt)
@@ -82,6 +84,16 @@ wsl -d Pebble -u root bash build.sh logs --emulator emery        # APP_LOG-Ausga
 ```
 
 Zielplattformen: `emery` (Pebble Time 2, 200×228, Touch), `flint` (Pebble 2 Duo), `basalt`, `diorite`.
+
+### Demo-Build und Store
+
+`STAMINA_DEMO=1` baut eine Version, die eine leere App mit Beispieldaten füllt (Sessions, Stellungen, Partner) und Sessions mit einigen Minuten Laufzeit startet. Nur für Screenshots gedacht:
+
+```powershell
+wsl -d Pebble -u root -e bash -c "STAMINA_DEMO=1 bash build.sh"
+```
+
+Store-Texte (Englisch/Deutsch) und Screenshots liegen in `store/`.
 
 ### Testen im Emulator
 

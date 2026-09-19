@@ -37,6 +37,13 @@ const char *pos_name(int i) {
   return s_names[i][0] ? s_names[i] : tr(S_POS_1 + i);
 }
 
+// Für Beispieldaten (demo.c)
+void pos_set_template(int i, const int16_t *f, uint8_t count) {
+  memcpy(s_templates[i].f, f, sizeof(s_templates[i].f));
+  s_templates[i].count = count;
+  save_templates();
+}
+
 // Angelegt = benannt oder angelernt
 bool pos_in_use(int i) { return s_names[i][0] || s_templates[i].count; }
 
