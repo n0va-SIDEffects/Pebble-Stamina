@@ -102,7 +102,17 @@ Zielplattformen: `emery` (Pebble Time 2, 200×228, Touch), `flint` (Pebble 2 Duo
 wsl -d Pebble -u root -e bash -c "STAMINA_DEMO=1 bash build.sh"
 ```
 
-Store-Texte (Englisch/Deutsch), Datenschutzerklärung, Screenshots, Icons und Banner liegen in `store/`.
+Store-Texte, Datenschutzerklärung, Screenshots (alle vier Plattformen), Icons und Banner liegen in `store/`.
+Die Listung ist nur englisch (`store/description_en.txt`), der Store kennt keine Sprachvarianten.
+
+Release-Paket für das Portal (normaler Build, nicht Demo):
+
+```powershell
+python tools/make_store_assets.py   # Icons, Banner (mit SIDE effect's Logo), Menü-Icon
+python tools/make_release.py --zip  # store/release/ + store/Stamina_Store_Paket.zip
+```
+
+Die Schritte im Portal stehen in `store/VEROEFFENTLICHEN.md`. Jeder Build legt zusätzlich `build/stamina.pbw` ab.
 Icons, Banner und das Menü-Icon der Uhr erzeugt `python tools/make_store_assets.py` (Pillow, Schrift Montserrat unter SIL OFL in `store/fonts/`).
 
 ### Testen im Emulator

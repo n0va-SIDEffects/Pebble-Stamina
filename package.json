@@ -1,7 +1,7 @@
 {
   "name": "stamina",
   "author": "Mike",
-  "version": "0.6.0",
+  "version": "0.6",
   "keywords": ["pebble-app"],
   "private": true,
   "license": "MIT",

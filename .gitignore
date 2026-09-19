@@ -10,3 +10,6 @@ resources/lang/
 src/c/i18n.auto.h
 
 __pycache__/
+
+# Store-Paket (wird aus store/release gebaut)
+store/*_Store_Paket.zip

@@ -40,6 +40,15 @@ def build(ctx):
         binaries.append({'platform': platform, 'app_elf': app_elf, 'worker_elf': worker_elf})
     ctx.env = cached_env
 
+    # Das SDK benennt die .pbw nach dem Projektordner (pebble install erwartet diesen
+    # Namen). Für den Store zusätzlich eine Kopie als stamina.pbw ablegen.
+    def copy_bundle(ctx):
+        import shutil
+        src = ctx.path.get_bld().find_node(ctx.env.BUNDLE_NAME)
+        if src:
+            shutil.copyfile(src.abspath(), os.path.join(ctx.path.get_bld().abspath(), 'stamina.pbw'))
+    ctx.add_post_fun(copy_bundle)
+
     ctx.set_group('bundle')
     ctx.pbl_bundle(binaries=binaries,
                    js=ctx.path.ant_glob(['src/pkjs/**/*.js', 'src/pkjs/**/*.json']),

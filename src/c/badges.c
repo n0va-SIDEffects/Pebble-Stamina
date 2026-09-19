@@ -274,23 +274,26 @@ static void pop_update(Layer *layer, GContext *g) {
   int b_id = s_pop_badge;
   bool unlocked = has(b_id);
 
-  GRect head = GRect(4, big ? 6 : 2, b.size.w - 8, 26);
+  // Kleine Bildschirme: Überschrift darf zweizeilig umbrechen, Medaille kleiner
+  GRect head = big ? GRect(4, 6, b.size.w - 8, 26) : GRect(4, 0, b.size.w - 8, 34);
   graphics_context_set_text_color(g, PBL_IF_COLOR_ELSE(GColorFolly, GColorBlack));
   graphics_draw_text(g, s_pop_fresh ? tr(S_BADGE_UNLOCKED) : tr(S_MENU_BADGES),
-                     fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD), head,
-                     GTextOverflowModeTrailingEllipsis, GTextAlignmentCenter, NULL);
+                     fonts_get_system_font(big ? FONT_KEY_GOTHIC_18_BOLD : FONT_KEY_GOTHIC_14_BOLD), head,
+                     big ? GTextOverflowModeTrailingEllipsis : GTextOverflowModeWordWrap,
+                     GTextAlignmentCenter, NULL);
 
-  int r = big ? 30 : 22;
-  int cy = big ? 84 : 64;
+  int r = big ? 30 : 17;
+  int cy = big ? 84 : 66;
   draw_medal(g, GPoint(b.size.w / 2, cy), r, unlocked);
 
   graphics_context_set_text_color(g, GColorBlack);
   int y = cy + r + 6;
-  graphics_draw_text(g, name(b_id), fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD),
+  graphics_draw_text(g, name(b_id), fonts_get_system_font(big ? FONT_KEY_GOTHIC_24_BOLD : FONT_KEY_GOTHIC_18_BOLD),
                      GRect(4, y, b.size.w - 8, 30), GTextOverflowModeTrailingEllipsis,
                      GTextAlignmentCenter, NULL);
-  graphics_draw_text(g, description(b_id), fonts_get_system_font(FONT_KEY_GOTHIC_18),
-                     GRect(8, y + 28, b.size.w - 16, 44), GTextOverflowModeTrailingEllipsis,
+  int dy = big ? 28 : 22;
+  graphics_draw_text(g, description(b_id), fonts_get_system_font(big ? FONT_KEY_GOTHIC_18 : FONT_KEY_GOTHIC_14),
+                     GRect(6, y + dy, b.size.w - 12, big ? 44 : 32), GTextOverflowModeTrailingEllipsis,
                      GTextAlignmentCenter, NULL);
 
   char foot[48];

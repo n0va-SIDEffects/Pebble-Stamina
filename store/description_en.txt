@@ -1,0 +1,33 @@
+Your private rhythm tracker for intimate wellness. 100 % on your wrist. (Beta)
+Stamina is a private wellness tracker for your intimate life, solo or with a partner. It measures rhythm, heart rate and estimated calories, and shows how a session affects your sleep and the start of your day.
+
+All data stays on your watch. No account, no cloud. Only if you turn on timeline pins, their short text is sent.
+
+TRACK
+• Motion detection counts movements and shows your rhythm per minute
+• Heart rate every second: average, min, max
+• Calorie estimate from movement and heart rate
+• Mark the peak moment with a button press or swipe
+
+UNDERSTAND
+• Sleep afterwards: time to fall asleep, duration, deep sleep, compared with your normal nights
+• Start of the day: steps, activity and heart rate in the 4 hours after a morning session, plus a short mood check-in
+• Charts per day, week and month, solo and partner
+• 59 achievements for milestones, records and streaks
+
+PARTNER MODE
+• Teach the watch your own positions (name them by voice), with live detection and time share per position
+• Optional partner initials
+
+SMART AND DISCREET
+• Auto start with optional time window
+• Calibration adapts detection to you
+• Display light options, touch controls on Pebble Time 2
+• Optional timeline pins (sent via the Rebble timeline server)
+• Neutral wording on the watch, 19 languages
+
+TIP: Wear the watch on the hand that does the movement. Detection works best there.
+
+This is a beta (0.6). Intended for adults. Values are estimates, not medical advice.
+
+Support development: buymeacoffee.com/SIDEffects

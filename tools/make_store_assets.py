@@ -5,6 +5,8 @@
 Ausgabe:
   store/icon_large.png         144 x 144 (Store)
   store/icon_small.png          48 x 48  (Store)
+  store/icon_80.png             80 x 80  (Pflichtfeld im Portal, RGB ohne Alpha, weißer Grund)
+  store/icon_80_transparent.png 80 x 80  (Reserve mit Transparenz)
   store/banner.png             720 x 320 (Store)
   resources/images/menu_icon.png      25 x 25 (Launcher auf der Uhr, Farbe)
   resources/images/menu_icon~bw.png   25 x 25 (Launcher, Schwarz-Weiß-Uhren)
@@ -19,6 +21,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONT = os.path.join(ROOT, 'store', 'fonts', 'Montserrat.ttf')
+LOGO = os.path.join(ROOT, 'store', 'assets', 'side_effects_logo.png')
 SCREENSHOT = os.path.join(ROOT, 'store', 'screenshots', 'emery', '01_session.png')
 
 PINK = (255, 0, 85)          # GColorFolly, Akzentfarbe der App
@@ -115,9 +118,36 @@ def hearts_background(img):
     img.alpha_composite(big, (150, -34))
     # kleine Herzen: (x, y, Größe, Deckkraft, Drehung)
     for x, y, size, alpha, angle in ((34, 20, 26, 120, -18), (318, 248, 34, 110, 20),
-                                     (408, 22, 22, 140, -8), (86, 272, 18, 150, 12),
+                                     (408, 22, 22, 140, -8), (262, 284, 18, 150, 12),
                                      (262, 128, 16, 120, -24), (452, 272, 20, 100, 30)):
         img.alpha_composite(heart_layer(size, PINK_LIGHT, alpha, angle), (x, y))
+
+
+def sideffects_logo(img):
+    """SIDE effect's Logo unten links (Vorgabe: 185 px breit, volle Deckkraft).
+
+    Weißer Hintergrund wird transparent; auf dunklem Grund werden Pulslinie,
+    Schriftzug und Pfeil (rechter Teil ab 42 % der Breite) hellgrau, der
+    Pac-Man samt schwarzem X bleibt unverändert.
+    """
+    logo = Image.open(LOGO).convert('RGBA')
+    px = logo.load()
+    for y in range(logo.height):
+        for x in range(logo.width):
+            r, g, b, a = px[x, y]
+            if r > 235 and g > 235 and b > 235:
+                px[x, y] = (0, 0, 0, 0)
+    logo = logo.crop(logo.getbbox())
+    px = logo.load()
+    split = int(logo.width * 0.42)
+    for y in range(logo.height):
+        for x in range(split, logo.width):
+            r, g, b, a = px[x, y]
+            if a and r < 110 and g < 110 and b < 110:
+                px[x, y] = (225, 232, 240, a)
+    width = 185
+    logo = logo.resize((width, round(logo.height * width / logo.width)), Image.LANCZOS)
+    img.alpha_composite(logo, (30, img.height - logo.height - 8))
 
 
 def font(size, weight):
@@ -150,21 +180,23 @@ def banner():
 
     # Herzschlag quer durchs Bild, dezent
     faint = Image.new('RGBA', (w, h), (0, 0, 0, 0))
-    draw_line(faint, ecg_points(-40, 214, w + 80, 70), PINK, 5, glow=8)
+    draw_line(faint, ecg_points(-40, 230, w + 80, 70), PINK, 5, glow=8)
     faint.putalpha(faint.getchannel('A').point(lambda a: a * 55 // 100))
     img.alpha_composite(faint)
 
     d = ImageDraw.Draw(img)
     title_font = font(66, 'ExtraBold')
-    d.text((40, 66), 'Stamina', font=title_font, fill=WHITE)
-    d.text((42, 156), 'Your private rhythm tracker', font=font(23, 'SemiBold'), fill=PINK_LIGHT)
-    d.text((42, 200), 'Heart rate · Sleep · Partner mode', font=font(17, 'Medium'), fill=GREY)
-    d.text((42, 226), '100 % on your wrist · no cloud', font=font(17, 'Medium'), fill=GREY)
+    d.text((40, 42), 'Stamina', font=title_font, fill=WHITE)
+    d.text((42, 130), 'Your private rhythm tracker', font=font(23, 'SemiBold'), fill=PINK_LIGHT)
+    d.text((42, 170), 'Heart rate · Sleep · Partner mode', font=font(17, 'Medium'), fill=GREY)
+    d.text((42, 194), '100 % on your wrist · no cloud', font=font(17, 'Medium'), fill=GREY)
 
     # Beta-Kennzeichnung rechts neben dem Namen
-    right = d.textbbox((40, 66), 'Stamina', font=title_font)[2]
-    d.rounded_rectangle([right + 10, 80, right + 66, 104], radius=12, fill=PINK)
-    d.text((right + 38, 92), 'BETA', font=font(15, 'Bold'), fill=WHITE, anchor='mm')
+    right = d.textbbox((40, 42), 'Stamina', font=title_font)[2]
+    d.rounded_rectangle([right + 10, 56, right + 66, 80], radius=12, fill=PINK)
+    d.text((right + 38, 68), 'BETA', font=font(15, 'Bold'), fill=WHITE, anchor='mm')
+
+    sideffects_logo(img)
 
     shot = Image.open(SCREENSHOT)
     wt = watch(shot)
@@ -176,6 +208,11 @@ def main():
     os.makedirs(os.path.join(ROOT, 'resources', 'images'), exist_ok=True)
     app_icon(144).save(os.path.join(ROOT, 'store', 'icon_large.png'))
     app_icon(48).save(os.path.join(ROOT, 'store', 'icon_small.png'))
+    icon80 = app_icon(80)
+    icon80.save(os.path.join(ROOT, 'store', 'icon_80_transparent.png'))
+    white = Image.new('RGBA', icon80.size, WHITE + (255,))
+    white.alpha_composite(icon80)
+    white.convert('RGB').save(os.path.join(ROOT, 'store', 'icon_80.png'))
     menu_icon(PINK).save(os.path.join(ROOT, 'resources', 'images', 'menu_icon.png'))
     menu_icon((0, 0, 0)).save(os.path.join(ROOT, 'resources', 'images', 'menu_icon~bw.png'))
     banner().save(os.path.join(ROOT, 'store', 'banner.png'))
