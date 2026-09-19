@@ -65,7 +65,7 @@ SMART AND DISCREET
 
 TIP: Wear the watch on the hand that does the movement. Detection works best there.
 
-This is a beta (0.6). Values are estimates, not medical advice. Adults only (18+).
+This is a beta (0.6). Intended for adults. Values are estimates, not medical advice.
 
 Support development: buymeacoffee.com/SIDEffects
 
@@ -110,7 +110,7 @@ CLEVER UND DISKRET
 
 TIPP: Trag die Uhr an der Hand, die die Bewegung ausführt. Dort funktioniert die Erkennung am besten.
 
-Dies ist eine Beta (0.6). Alle Werte sind Schätzungen und keine medizinische Beratung. Nur für Erwachsene (18+).
+Dies ist eine Beta (0.6). Für Erwachsene gedacht. Alle Werte sind Schätzungen und keine medizinische Beratung.
 
 Entwicklung unterstützen: buymeacoffee.com/SIDEffects
 
