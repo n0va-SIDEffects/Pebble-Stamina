@@ -4,6 +4,7 @@
   "version": "0.6.0",
   "keywords": ["pebble-app"],
   "private": true,
+  "license": "MIT",
   "dependencies": {},
   "pebble": {
     "displayName": "Stamina",

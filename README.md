@@ -5,7 +5,7 @@
 Diskret benannte Watchapp, die Masturbation und Sex wie ein Workout trackt.
 Alle Daten bleiben **nur auf der Uhr**. Es gibt keinen Upload, weder aufs Handy noch in eine Cloud.
 
-☕ [Buy me a coffee](https://buymeacoffee.com/SIDEffects) · [Datenschutz](store/privacy.md)
+☕ [Buy me a coffee](https://buymeacoffee.com/SIDEffects) · [Datenschutz](store/privacy.md) · Lizenz: [MIT](LICENSE)
 
 > **Tipp:** Trag die Uhr an der Hand, die die Bewegung ausführt. Nur dort sieht der Bewegungssensor den Rhythmus zuverlässig. Die App erinnert in den ersten drei Sessions daran.
 

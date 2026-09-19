@@ -15,6 +15,7 @@ Wortwahl bewusst sachlich: Die Pebble Developer Program Policies verbieten „se
 | Plattformen | Pebble Time 2 (emery), Pebble 2 Duo (flint), Pebble Time (basalt), Pebble 2 (diorite) |
 | Website / Quellcode | https://github.com/n0va-SIDEffects/Pebble-Stamina |
 | Datenschutz | https://github.com/n0va-SIDEffects/Pebble-Stamina/blob/main/store/privacy.md |
+| Lizenz | MIT (LICENSE im Repo) |
 | Unterstützen | https://buymeacoffee.com/SIDEffects |
 | Tags | health, wellness, heart rate, sleep, tracker, private |
 
