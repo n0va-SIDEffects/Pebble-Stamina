@@ -157,9 +157,12 @@ static void update_ui(void) {
     char t[12];
     fmt_duration(t, sizeof(t), s_sess.climax_s);
     snprintf(s_mode_buf, sizeof(s_mode_buf), tr(S_CLIMAX_FMT), t);
+  } else if (s_mode == MODE_PARTNER && s_pos_current >= 0) {
+    snprintf(s_mode_buf, sizeof(s_mode_buf), "%s", pos_name(s_pos_current));
+  } else if (s_mode == MODE_PARTNER && s_sess.partner) {
+    snprintf(s_mode_buf, sizeof(s_mode_buf), "%s · %s", hdr, partner_name(s_sess.partner));
   } else if (s_mode == MODE_PARTNER) {
-    snprintf(s_mode_buf, sizeof(s_mode_buf), "%s",
-             s_pos_current >= 0 ? pos_name(s_pos_current) : hdr);
+    snprintf(s_mode_buf, sizeof(s_mode_buf), "%s", hdr);
   } else {
     snprintf(s_mode_buf, sizeof(s_mode_buf), "%s · %s", hdr, mode_name(s_mode));
   }
@@ -411,13 +414,14 @@ static void window_unload(Window *window) {
   s_window = NULL;
 }
 
-void tracker_window_push(SessionMode mode) { tracker_window_push_at(mode, time(NULL), 0); }
+void tracker_window_push(SessionMode mode) { tracker_window_push_at(mode, time(NULL), 0, 0); }
 
-void tracker_window_push_at(SessionMode mode, time_t start, uint16_t cycles) {
+void tracker_window_push_at(SessionMode mode, time_t start, uint16_t cycles, int partner) {
   s_mode = mode;
   s_sess = (Session){0};
   s_sess.start = start;
   s_sess.mode = mode;
+  s_sess.partner = partner;
   s_paused = false;
   s_finishing = false;
   s_kcal = 0;

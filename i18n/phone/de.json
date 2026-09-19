@@ -15,7 +15,7 @@
   "auto_after": "Nach {n} min",
   "auto_desc": "Die Uhr achtet im Hintergrund auf anhaltende rhythmische Bewegung und fragt, ob eine Session gestartet werden soll. Kostet etwas mehr Akku. Ähnliche Bewegungen (z. B. Zähneputzen) können gelegentlich auslösen; mit Toy ist die Erkennung unzuverlässig.",
   "positions": "Stellungen (Partner-Modus)",
-  "positions_desc": "Namen der Stellungen, die du auf der Uhr anlernen kannst (Anlernen > Stellungen). Leer lassen für den Standardnamen.",
+  "positions_desc": "Stellungen legst du auf der Uhr an: Anlernen > Stellungen > Neue Stellung. Namen sprechen oder einen Vorschlag wählen, dann anlernen. Hier kannst du sie umbenennen.",
   "pos_n": "Stellung {n}",
   "pos_1": "Missionar (oben)",
   "pos_2": "Missionar (unten)",
@@ -29,5 +29,10 @@
   "light_normal": "normal",
   "light_on": "immer an",
   "light_pulse": "Puls pro Zug",
-  "light_desc": "Nur während einer Session. „Puls“ lässt den Bildschirm bei jedem Zug rot aufblitzen und kurz vibrieren. Braucht mehr Akku."
+  "light_desc": "Nur während einer Session. „Puls“ lässt den Bildschirm bei jedem Zug rot aufblitzen und kurz vibrieren. Braucht mehr Akku.",
+  "partners": "Partner",
+  "partners_desc": "Kürzel deiner Partner (max. 4 Zeichen). Neue Partner kannst du auch beim Start einer Partner-Session auf der Uhr anlegen.",
+  "partner_n": "Partner {n}",
+  "ask_partner": "Partner abfragen",
+  "ask_partner_desc": "Beim Start einer Partner-Session fragt die Uhr, mit wem."
 }

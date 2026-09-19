@@ -40,7 +40,7 @@ module.exports = {
     "auto_after": "After {n} min",
     "auto_desc": "In the background the watch looks for ongoing rhythmic movement and asks whether to start a session. Uses some extra battery. Similar movements (e.g. brushing teeth) can occasionally trigger it; with a toy, detection is unreliable.",
     "positions": "Positions (partner mode)",
-    "positions_desc": "Names of the positions you can learn on the watch (Calibrate > Positions). Leave empty to use the default name.",
+    "positions_desc": "Create positions on the watch: Calibrate > Positions > New position. Speak a name or pick a suggestion, then learn it. Here you can rename them.",
     "pos_n": "Position {n}",
     "pos_1": "Missionary (top)",
     "pos_2": "Missionary (bottom)",
@@ -54,7 +54,12 @@ module.exports = {
     "light_normal": "normal",
     "light_on": "always on",
     "light_pulse": "pulse with strokes",
-    "light_desc": "Only during a session. \"Pulse\" flashes the screen red and vibrates briefly with every stroke. Uses more battery."
+    "light_desc": "Only during a session. \"Pulse\" flashes the screen red and vibrates briefly with every stroke. Uses more battery.",
+    "partners": "Partners",
+    "partners_desc": "Initials of your partners (max. 4 characters). New partners can also be added on the watch when starting a partner session.",
+    "partner_n": "Partner {n}",
+    "ask_partner": "Ask for partner",
+    "ask_partner_desc": "When a partner session starts, the watch asks who it is with."
   },
   "de": {
     "title": "Stamina Einstellungen",
@@ -95,7 +100,7 @@ module.exports = {
     "auto_after": "Nach {n} min",
     "auto_desc": "Die Uhr achtet im Hintergrund auf anhaltende rhythmische Bewegung und fragt, ob eine Session gestartet werden soll. Kostet etwas mehr Akku. Ähnliche Bewegungen (z. B. Zähneputzen) können gelegentlich auslösen; mit Toy ist die Erkennung unzuverlässig.",
     "positions": "Stellungen (Partner-Modus)",
-    "positions_desc": "Namen der Stellungen, die du auf der Uhr anlernen kannst (Anlernen > Stellungen). Leer lassen für den Standardnamen.",
+    "positions_desc": "Stellungen legst du auf der Uhr an: Anlernen > Stellungen > Neue Stellung. Namen sprechen oder einen Vorschlag wählen, dann anlernen. Hier kannst du sie umbenennen.",
     "pos_n": "Stellung {n}",
     "pos_1": "Missionar (oben)",
     "pos_2": "Missionar (unten)",
@@ -109,7 +114,12 @@ module.exports = {
     "light_normal": "normal",
     "light_on": "immer an",
     "light_pulse": "Puls pro Zug",
-    "light_desc": "Nur während einer Session. „Puls“ lässt den Bildschirm bei jedem Zug rot aufblitzen und kurz vibrieren. Braucht mehr Akku."
+    "light_desc": "Nur während einer Session. „Puls“ lässt den Bildschirm bei jedem Zug rot aufblitzen und kurz vibrieren. Braucht mehr Akku.",
+    "partners": "Partner",
+    "partners_desc": "Kürzel deiner Partner (max. 4 Zeichen). Neue Partner kannst du auch beim Start einer Partner-Session auf der Uhr anlegen.",
+    "partner_n": "Partner {n}",
+    "ask_partner": "Partner abfragen",
+    "ask_partner_desc": "Beim Start einer Partner-Session fragt die Uhr, mit wem."
   },
   "fr": {
     "title": "Réglages Stamina",
@@ -150,7 +160,7 @@ module.exports = {
     "auto_after": "Après {n} min",
     "auto_desc": "En arrière-plan, la montre repère un mouvement rythmique prolongé et te demande s'il faut démarrer une session. Consomme un peu plus de batterie. Des mouvements similaires (p. ex. se brosser les dents) peuvent parfois la déclencher ; avec un sextoy, la détection est peu fiable.",
     "positions": "Positions (à deux)",
-    "positions_desc": "Noms des positions que tu peux apprendre sur la montre (Calibrer > Positions). Laisse vide pour utiliser le nom par défaut.",
+    "positions_desc": "Crée les positions sur la montre : Calibrer > Positions > Nouvelle position. Dicte un nom ou choisis une suggestion, puis apprends-la. Ici, tu peux les renommer.",
     "pos_n": "Position {n}",
     "pos_1": "Missionnaire dessus",
     "pos_2": "Missionnaire dessous",
@@ -164,7 +174,12 @@ module.exports = {
     "light_normal": "normal",
     "light_on": "toujours allumé",
     "light_pulse": "pulse au rythme",
-    "light_desc": "Uniquement pendant une session. « Pulse » fait clignoter l'écran en rouge et vibrer brièvement à chaque mouvement. Consomme plus de batterie."
+    "light_desc": "Uniquement pendant une session. « Pulse » fait clignoter l'écran en rouge et vibrer brièvement à chaque mouvement. Consomme plus de batterie.",
+    "partners": "Partenaires",
+    "partners_desc": "Initiales de tes partenaires (4 caractères max.). Tu peux aussi en ajouter sur la montre au début d'une session à deux.",
+    "partner_n": "Partenaire {n}",
+    "ask_partner": "Demander le partenaire",
+    "ask_partner_desc": "Au début d'une session à deux, la montre demande avec qui."
   },
   "es": {
     "title": "Ajustes de Stamina",
@@ -205,7 +220,7 @@ module.exports = {
     "auto_after": "Tras {n} min",
     "auto_desc": "En segundo plano, el reloj detecta movimientos rítmicos continuos y te pregunta si quieres iniciar una sesión. Gasta algo más de batería. Movimientos parecidos (p. ej. cepillarse los dientes) pueden activarlo a veces; con un juguete la detección es poco fiable.",
     "positions": "Posturas (en pareja)",
-    "positions_desc": "Nombres de las posturas que puedes enseñar al reloj (Calibrar > Posturas). Déjalo vacío para usar el nombre predeterminado.",
+    "positions_desc": "Crea las posturas en el reloj: Calibrar > Posturas > Nueva postura. Dicta un nombre o elige una sugerencia y luego apréndela. Aquí puedes cambiarles el nombre.",
     "pos_n": "Postura {n}",
     "pos_1": "Misionero (arriba)",
     "pos_2": "Misionero (abajo)",
@@ -219,7 +234,12 @@ module.exports = {
     "light_normal": "normal",
     "light_on": "siempre encendida",
     "light_pulse": "pulso con el ritmo",
-    "light_desc": "Solo durante una sesión. «Pulso» hace destellar la pantalla en rojo y vibrar brevemente con cada movimiento. Gasta más batería."
+    "light_desc": "Solo durante una sesión. «Pulso» hace destellar la pantalla en rojo y vibrar brevemente con cada movimiento. Gasta más batería.",
+    "partners": "Parejas",
+    "partners_desc": "Iniciales de tus parejas (máx. 4 caracteres). También puedes añadirlas en el reloj al iniciar una sesión en pareja.",
+    "partner_n": "Pareja {n}",
+    "ask_partner": "Preguntar pareja",
+    "ask_partner_desc": "Al iniciar una sesión en pareja, el reloj pregunta con quién."
   },
   "it": {
     "title": "Impostazioni Stamina",
@@ -260,7 +280,7 @@ module.exports = {
     "auto_after": "Dopo {n} min",
     "auto_desc": "In background l'orologio rileva movimenti ritmici prolungati e chiede se avviare una sessione. Consuma un po' più di batteria. Movimenti simili (ad es. lavarsi i denti) possono a volte attivarlo; con un sex toy il rilevamento è poco affidabile.",
     "positions": "Posizioni (in coppia)",
-    "positions_desc": "Nomi delle posizioni che puoi insegnare all'orologio (Calibra > Posizioni). Lascia vuoto per usare il nome predefinito.",
+    "positions_desc": "Crea le posizioni sull'orologio: Calibra > Posizioni > Nuova posizione. Detta un nome o scegli un suggerimento, poi insegnala. Qui puoi rinominarle.",
     "pos_n": "Posizione {n}",
     "pos_1": "Missionario (sopra)",
     "pos_2": "Missionario (sotto)",
@@ -274,7 +294,12 @@ module.exports = {
     "light_normal": "normale",
     "light_on": "sempre accesa",
     "light_pulse": "impulso col ritmo",
-    "light_desc": "Solo durante una sessione. «Impulso» fa lampeggiare lo schermo in rosso e vibrare brevemente a ogni movimento. Consuma più batteria."
+    "light_desc": "Solo durante una sessione. «Impulso» fa lampeggiare lo schermo in rosso e vibrare brevemente a ogni movimento. Consuma più batteria.",
+    "partners": "Partner",
+    "partners_desc": "Iniziali dei tuoi partner (max. 4 caratteri). Puoi aggiungerli anche sull'orologio all'avvio di una sessione in coppia.",
+    "partner_n": "Partner {n}",
+    "ask_partner": "Chiedi il partner",
+    "ask_partner_desc": "All'avvio di una sessione in coppia, l'orologio chiede con chi."
   },
   "pt": {
     "title": "Configurações do Stamina",
@@ -315,7 +340,7 @@ module.exports = {
     "auto_after": "Após {n} min",
     "auto_desc": "Em segundo plano, o relógio detecta movimentos rítmicos contínuos e pergunta se deve iniciar uma sessão. Gasta um pouco mais de bateria. Movimentos parecidos (ex.: escovar os dentes) podem disparar de vez em quando; com um brinquedo a detecção é pouco confiável.",
     "positions": "Posições (a dois)",
-    "positions_desc": "Nomes das posições que podes ensinar no relógio (Calibrar > Posições). Deixa vazio para usar o nome padrão.",
+    "positions_desc": "Cria as posições no relógio: Calibrar > Posições > Nova posição. Dita um nome ou escolhe uma sugestão e depois ensina-a. Aqui podes mudar os nomes.",
     "pos_n": "Posição {n}",
     "pos_1": "Missionário (cima)",
     "pos_2": "Missionário (baixo)",
@@ -329,7 +354,12 @@ module.exports = {
     "light_normal": "normal",
     "light_on": "sempre ligada",
     "light_pulse": "pulsa com o ritmo",
-    "light_desc": "Só durante uma sessão. \"Pulsa\" faz a tela piscar em vermelho e vibrar rapidamente a cada movimento. Gasta mais bateria."
+    "light_desc": "Só durante uma sessão. \"Pulsa\" faz a tela piscar em vermelho e vibrar rapidamente a cada movimento. Gasta mais bateria.",
+    "partners": "Parceiros",
+    "partners_desc": "Iniciais dos teus parceiros (máx. 4 caracteres). Também podes adicioná-los no relógio ao iniciar uma sessão a dois.",
+    "partner_n": "Parceiro {n}",
+    "ask_partner": "Perguntar parceiro",
+    "ask_partner_desc": "Ao iniciar uma sessão a dois, o relógio pergunta com quem."
   },
   "nl": {
     "title": "Stamina-instellingen",
@@ -370,7 +400,7 @@ module.exports = {
     "auto_after": "Na {n} min",
     "auto_desc": "Op de achtergrond let het horloge op aanhoudende ritmische beweging en vraagt of er een sessie moet starten. Kost iets meer batterij. Vergelijkbare bewegingen (bijv. tandenpoetsen) kunnen dit soms activeren; met een toy is de herkenning onbetrouwbaar.",
     "positions": "Standjes (partner)",
-    "positions_desc": "Namen van de standjes die je op het horloge kunt aanleren (Kalibreren > Standjes). Laat leeg voor de standaardnaam.",
+    "positions_desc": "Standjes maak je aan op het horloge: Kalibreren > Standjes > Nieuw standje. Spreek een naam in of kies een suggestie en leer het dan aan. Hier kun je ze hernoemen.",
     "pos_n": "Standje {n}",
     "pos_1": "Missionaris (boven)",
     "pos_2": "Missionaris (onder)",
@@ -384,7 +414,12 @@ module.exports = {
     "light_normal": "normaal",
     "light_on": "altijd aan",
     "light_pulse": "pulseert mee",
-    "light_desc": "Alleen tijdens een sessie. \"Pulseert\" laat het scherm bij elke beweging rood oplichten en kort trillen. Kost meer batterij."
+    "light_desc": "Alleen tijdens een sessie. \"Pulseert\" laat het scherm bij elke beweging rood oplichten en kort trillen. Kost meer batterij.",
+    "partners": "Partners",
+    "partners_desc": "Initialen van je partners (max. 4 tekens). Nieuwe partners kun je ook op het horloge toevoegen bij het starten van een partnersessie.",
+    "partner_n": "Partner {n}",
+    "ask_partner": "Partner vragen",
+    "ask_partner_desc": "Bij het starten van een partnersessie vraagt het horloge met wie."
   },
   "pl": {
     "title": "Ustawienia Stamina",
@@ -425,7 +460,7 @@ module.exports = {
     "auto_after": "Po {n} min",
     "auto_desc": "Zegarek w tle wykrywa dłuższy rytmiczny ruch i pyta, czy rozpocząć sesję. Zużywa trochę więcej baterii. Podobne ruchy (np. mycie zębów) mogą czasem go wywołać; z gadżetem wykrywanie jest zawodne.",
     "positions": "Pozycje (we dwoje)",
-    "positions_desc": "Nazwy pozycji, których możesz nauczyć zegarek (Kalibracja > Pozycje). Zostaw puste, by użyć nazwy domyślnej.",
+    "positions_desc": "Pozycje tworzysz na zegarku: Kalibracja > Pozycje > Nowa pozycja. Podyktuj nazwę lub wybierz propozycję, a potem naucz. Tutaj możesz zmienić ich nazwy.",
     "pos_n": "Pozycja {n}",
     "pos_1": "Misjonarska (góra)",
     "pos_2": "Misjonarska (dół)",
@@ -439,7 +474,12 @@ module.exports = {
     "light_normal": "normalne",
     "light_on": "zawsze wł.",
     "light_pulse": "pulsuje z ruchem",
-    "light_desc": "Tylko podczas sesji. „Pulsuje” błyska ekranem na czerwono i krótko wibruje przy każdym ruchu. Zużywa więcej baterii."
+    "light_desc": "Tylko podczas sesji. „Pulsuje” błyska ekranem na czerwono i krótko wibruje przy każdym ruchu. Zużywa więcej baterii.",
+    "partners": "Partnerzy",
+    "partners_desc": "Inicjały partnerów (maks. 4 znaki). Nowych partnerów możesz też dodać na zegarku przy starcie sesji we dwoje.",
+    "partner_n": "Partner {n}",
+    "ask_partner": "Pytaj o partnera",
+    "ask_partner_desc": "Przy starcie sesji we dwoje zegarek pyta, z kim."
   },
   "cs": {
     "title": "Nastavení Stamina",
@@ -480,7 +520,7 @@ module.exports = {
     "auto_after": "Po {n} min",
     "auto_desc": "Hodinky na pozadí sledují delší rytmický pohyb a zeptají se, zda spustit relaci. Spotřebují trochu víc baterie. Podobné pohyby (např. čištění zubů) ho mohou občas spustit; s hračkou je rozpoznání nespolehlivé.",
     "positions": "Polohy (režim s partnerem)",
-    "positions_desc": "Názvy poloh, které můžeš naučit na hodinkách (Kalibrace > Polohy). Nech prázdné pro výchozí název.",
+    "positions_desc": "Polohy vytváříš na hodinkách: Kalibrace > Polohy > Nová poloha. Nadiktuj název nebo vyber návrh a pak ji nauč. Tady je můžeš přejmenovat.",
     "pos_n": "Poloha {n}",
     "pos_1": "Misionář (nahoře)",
     "pos_2": "Misionář (dole)",
@@ -494,7 +534,12 @@ module.exports = {
     "light_normal": "normální",
     "light_on": "stále zap.",
     "light_pulse": "pulzuje s pohybem",
-    "light_desc": "Jen během relace. „Pulzuje“ rozsvítí displej červeně a krátce zavibruje při každém pohybu. Spotřebuje víc baterie."
+    "light_desc": "Jen během relace. „Pulzuje“ rozsvítí displej červeně a krátce zavibruje při každém pohybu. Spotřebuje víc baterie.",
+    "partners": "Partneři",
+    "partners_desc": "Iniciály tvých partnerů (max. 4 znaky). Nové partnery můžeš přidat i na hodinkách při spuštění relace s partnerem.",
+    "partner_n": "Partner {n}",
+    "ask_partner": "Ptát se na partnera",
+    "ask_partner_desc": "Při spuštění relace s partnerem se hodinky zeptají, s kým."
   },
   "sv": {
     "title": "Stamina-inställningar",
@@ -535,7 +580,7 @@ module.exports = {
     "auto_after": "Efter {n} min",
     "auto_desc": "I bakgrunden håller klockan utkik efter ihållande rytmiska rörelser och frågar om en session ska startas. Drar lite mer batteri. Liknande rörelser (t.ex. tandborstning) kan ibland utlösa den; med leksak är igenkänningen opålitlig.",
     "positions": "Ställningar (partnerläge)",
-    "positions_desc": "Namn på ställningarna du kan lära in på klockan (Kalibrera > Ställningar). Lämna tomt för att använda standardnamnet.",
+    "positions_desc": "Ställningar skapar du på klockan: Kalibrera > Ställningar > Ny ställning. Säg ett namn eller välj ett förslag och lär sedan in den. Här kan du byta namn på dem.",
     "pos_n": "Ställning {n}",
     "pos_1": "Missionär (överst)",
     "pos_2": "Missionär (underst)",
@@ -549,7 +594,12 @@ module.exports = {
     "light_normal": "normal",
     "light_on": "alltid på",
     "light_pulse": "pulserar i takt",
-    "light_desc": "Bara under en session. \"Pulserar\" blinkar skärmen rött och vibrerar kort vid varje rörelse. Drar mer batteri."
+    "light_desc": "Bara under en session. \"Pulserar\" blinkar skärmen rött och vibrerar kort vid varje rörelse. Drar mer batteri.",
+    "partners": "Partner",
+    "partners_desc": "Initialer för dina partner (max 4 tecken). Nya partner kan också läggas till på klockan när en partnersession startar.",
+    "partner_n": "Partner {n}",
+    "ask_partner": "Fråga efter partner",
+    "ask_partner_desc": "När en partnersession startar frågar klockan med vem."
   },
   "da": {
     "title": "Stamina-indstillinger",
@@ -590,7 +640,7 @@ module.exports = {
     "auto_after": "Efter {n} min",
     "auto_desc": "I baggrunden holder uret øje med vedvarende rytmiske bevægelser og spørger, om en session skal startes. Bruger lidt mere batteri. Lignende bevægelser (f.eks. tandbørstning) kan af og til udløse den; med legetøj er genkendelsen upålidelig.",
     "positions": "Stillinger (partnertilstand)",
-    "positions_desc": "Navne på de stillinger, du kan lære på uret (Kalibrér > Stillinger). Lad feltet stå tomt for at bruge standardnavnet.",
+    "positions_desc": "Stillinger opretter du på uret: Kalibrér > Stillinger > Ny stilling. Sig et navn eller vælg et forslag, og lær den derefter. Her kan du omdøbe dem.",
     "pos_n": "Stilling {n}",
     "pos_1": "Missionær (øverst)",
     "pos_2": "Missionær (nederst)",
@@ -604,7 +654,12 @@ module.exports = {
     "light_normal": "normal",
     "light_on": "altid tændt",
     "light_pulse": "pulserer i takt",
-    "light_desc": "Kun under en session. \"Pulserer\" blinker skærmen rødt og vibrerer kort ved hver bevægelse. Bruger mere batteri."
+    "light_desc": "Kun under en session. \"Pulserer\" blinker skærmen rødt og vibrerer kort ved hver bevægelse. Bruger mere batteri.",
+    "partners": "Partnere",
+    "partners_desc": "Initialer på dine partnere (maks. 4 tegn). Nye partnere kan også oprettes på uret, når en partnersession starter.",
+    "partner_n": "Partner {n}",
+    "ask_partner": "Spørg om partner",
+    "ask_partner_desc": "Når en partnersession starter, spørger uret med hvem."
   },
   "nb": {
     "title": "Stamina-innstillinger",
@@ -645,7 +700,7 @@ module.exports = {
     "auto_after": "Etter {n} min",
     "auto_desc": "I bakgrunnen ser klokken etter vedvarende rytmiske bevegelser og spør om en økt skal startes. Bruker litt mer batteri. Lignende bevegelser (f.eks. tannpuss) kan av og til utløse den; med leketøy er gjenkjenningen upålitelig.",
     "positions": "Stillinger (partnermodus)",
-    "positions_desc": "Navn på stillingene du kan lære inn på klokken (Kalibrer > Stillinger). La feltet stå tomt for å bruke standardnavnet.",
+    "positions_desc": "Stillinger oppretter du på klokken: Kalibrer > Stillinger > Ny stilling. Si et navn eller velg et forslag, og lær den deretter. Her kan du gi dem nye navn.",
     "pos_n": "Stilling {n}",
     "pos_1": "Misjonær (øverst)",
     "pos_2": "Misjonær (nederst)",
@@ -659,7 +714,12 @@ module.exports = {
     "light_normal": "normal",
     "light_on": "alltid på",
     "light_pulse": "pulserer i takt",
-    "light_desc": "Bare under en økt. \"Pulserer\" blinker skjermen rødt og vibrerer kort ved hver bevegelse. Bruker mer batteri."
+    "light_desc": "Bare under en økt. \"Pulserer\" blinker skjermen rødt og vibrerer kort ved hver bevegelse. Bruker mer batteri.",
+    "partners": "Partnere",
+    "partners_desc": "Initialer for partnerne dine (maks. 4 tegn). Nye partnere kan også legges til på klokken når en partnerøkt starter.",
+    "partner_n": "Partner {n}",
+    "ask_partner": "Spør om partner",
+    "ask_partner_desc": "Når en partnerøkt starter, spør klokken med hvem."
   },
   "fi": {
     "title": "Stamina-asetukset",
@@ -700,7 +760,7 @@ module.exports = {
     "auto_after": "{n} min jälkeen",
     "auto_desc": "Kello tarkkailee taustalla pitkään jatkuvaa rytmistä liikettä ja kysyy, aloitetaanko istunto. Kuluttaa hieman enemmän akkua. Samankaltaiset liikkeet (esim. hampaiden harjaus) voivat joskus laukaista sen; lelun kanssa tunnistus on epäluotettava.",
     "positions": "Asennot (partneritila)",
-    "positions_desc": "Asentojen nimet, joita voit opettaa kellolle (Kalibroi > Asennot). Jätä tyhjäksi, niin käytetään oletusnimeä.",
+    "positions_desc": "Asennot luodaan kellossa: Kalibroi > Asennot > Uusi asento. Sano nimi tai valitse ehdotus ja opeta asento. Täällä voit nimetä ne uudelleen.",
     "pos_n": "Asento {n}",
     "pos_1": "Perusasento (päällä)",
     "pos_2": "Perusasento (alla)",
@@ -714,7 +774,12 @@ module.exports = {
     "light_normal": "normaali",
     "light_on": "aina päällä",
     "light_pulse": "sykkii tahdissa",
-    "light_desc": "Vain istunnon aikana. \"Sykkii\" välähdyttää näyttöä punaisena ja värisee lyhyesti jokaisella liikkeellä. Kuluttaa enemmän akkua."
+    "light_desc": "Vain istunnon aikana. \"Sykkii\" välähdyttää näyttöä punaisena ja värisee lyhyesti jokaisella liikkeellä. Kuluttaa enemmän akkua.",
+    "partners": "Kumppanit",
+    "partners_desc": "Kumppaniesi nimikirjaimet (enint. 4 merkkiä). Uusia kumppaneita voi lisätä myös kellossa, kun kumppani-istunto alkaa.",
+    "partner_n": "Kumppani {n}",
+    "ask_partner": "Kysy kumppania",
+    "ask_partner_desc": "Kun kumppani-istunto alkaa, kello kysyy kenen kanssa."
   },
   "ru": {
     "title": "Настройки Stamina",
@@ -755,7 +820,7 @@ module.exports = {
     "auto_after": "Через {n} мин",
     "auto_desc": "В фоне часы отслеживают продолжительные ритмичные движения и спрашивают, начать ли сессию. Немного больше расходует заряд. Похожие движения (например, чистка зубов) иногда могут вызвать срабатывание; с игрушкой распознавание ненадёжно.",
     "positions": "Позы (режим с партнёром)",
-    "positions_desc": "Названия поз, которым можно обучить часы (Калибровка > Позы). Оставьте пустым, чтобы использовать название по умолчанию.",
+    "positions_desc": "Позы создаются на часах: Калибровка > Позы > Новая поза. Надиктуй название или выбери вариант, затем обучи. Здесь их можно переименовать.",
     "pos_n": "Поза {n}",
     "pos_1": "Миссионер (сверху)",
     "pos_2": "Миссионер (снизу)",
@@ -769,7 +834,12 @@ module.exports = {
     "light_normal": "обычная",
     "light_on": "всегда вкл.",
     "light_pulse": "пульс в такт",
-    "light_desc": "Только во время сессии. «Пульс» кратко подсвечивает экран красным и вибрирует при каждом движении. Расходует больше заряда."
+    "light_desc": "Только во время сессии. «Пульс» кратко подсвечивает экран красным и вибрирует при каждом движении. Расходует больше заряда.",
+    "partners": "Партнёры",
+    "partners_desc": "Инициалы партнёров (до 4 символов). Новых партнёров можно добавить и на часах при старте парной сессии.",
+    "partner_n": "Партнёр {n}",
+    "ask_partner": "Спрашивать партнёра",
+    "ask_partner_desc": "При старте парной сессии часы спрашивают, с кем."
   },
   "uk": {
     "title": "Налаштування Stamina",
@@ -810,7 +880,7 @@ module.exports = {
     "auto_after": "Через {n} хв",
     "auto_desc": "У фоні годинник відстежує тривалі ритмічні рухи й питає, чи почати сесію. Трохи більше витрачає заряд. Схожі рухи (наприклад, чищення зубів) іноді можуть спрацювати; з іграшкою розпізнавання ненадійне.",
     "positions": "Пози (режим з партнером)",
-    "positions_desc": "Назви поз, яких можна навчити годинник (Калібрування > Пози). Залиште порожнім, щоб використати назву за замовчуванням.",
+    "positions_desc": "Пози створюються на годиннику: Калібрування > Пози > Нова поза. Надиктуй назву або вибери варіант, потім навчи. Тут їх можна перейменувати.",
     "pos_n": "Поза {n}",
     "pos_1": "Місіонер (зверху)",
     "pos_2": "Місіонер (знизу)",
@@ -824,7 +894,12 @@ module.exports = {
     "light_normal": "звичайна",
     "light_on": "завжди увімк.",
     "light_pulse": "пульс у такт",
-    "light_desc": "Лише під час сесії. «Пульс» коротко підсвічує екран червоним і вібрує при кожному русі. Витрачає більше заряду."
+    "light_desc": "Лише під час сесії. «Пульс» коротко підсвічує екран червоним і вібрує при кожному русі. Витрачає більше заряду.",
+    "partners": "Партнери",
+    "partners_desc": "Ініціали партнерів (до 4 символів). Нових партнерів можна додати й на годиннику під час старту парної сесії.",
+    "partner_n": "Партнер {n}",
+    "ask_partner": "Питати партнера",
+    "ask_partner_desc": "Під час старту парної сесії годинник питає, з ким."
   },
   "tr": {
     "title": "Stamina Ayarları",
@@ -865,7 +940,7 @@ module.exports = {
     "auto_after": "{n} dk sonra",
     "auto_desc": "Saat arka planda süren ritmik hareketleri izler ve seans başlatılsın mı diye sorar. Biraz daha fazla pil kullanır. Benzer hareketler (ör. diş fırçalama) bazen tetikleyebilir; oyuncakla algılama güvenilir değildir.",
     "positions": "Pozisyonlar (partner modu)",
-    "positions_desc": "Saatte öğretebileceğin pozisyonların adları (Kalibre et > Pozisyonlar). Varsayılan adı kullanmak için boş bırak.",
+    "positions_desc": "Pozisyonları saatte oluşturursun: Kalibre et > Pozisyonlar > Yeni pozisyon. Bir isim söyle ya da öneri seç, sonra öğret. Burada yeniden adlandırabilirsin.",
     "pos_n": "Pozisyon {n}",
     "pos_1": "Misyoner (üstte)",
     "pos_2": "Misyoner (altta)",
@@ -879,7 +954,12 @@ module.exports = {
     "light_normal": "normal",
     "light_on": "hep açık",
     "light_pulse": "ritimle yanıp söner",
-    "light_desc": "Yalnızca seans sırasında. \"Ritimle yanıp söner\" her harekette ekranı kırmızı yakıp söndürür ve kısa titreşir. Daha fazla pil kullanır."
+    "light_desc": "Yalnızca seans sırasında. \"Ritimle yanıp söner\" her harekette ekranı kırmızı yakıp söndürür ve kısa titreşir. Daha fazla pil kullanır.",
+    "partners": "Partnerler",
+    "partners_desc": "Partnerlerinin baş harfleri (en fazla 4 karakter). Yeni partnerleri partner seansı başlarken saatten de ekleyebilirsin.",
+    "partner_n": "Partner {n}",
+    "ask_partner": "Partneri sor",
+    "ask_partner_desc": "Partner seansı başlarken saat kiminle olduğunu sorar."
   },
   "ja": {
     "title": "Stamina 設定",
@@ -920,7 +1000,7 @@ module.exports = {
     "auto_after": "{n}分後",
     "auto_desc": "ウォッチがバックグラウンドで続くリズミカルな動きを検知し、セッションを開始するか確認します。バッテリー消費が少し増えます。似た動き（歯みがきなど）で反応することがあります。トイ使用時は検知が不安定です。",
     "positions": "体位 (パートナーモード)",
-    "positions_desc": "ウォッチで学習できる体位の名前です (キャリブレーション > 体位)。空欄の場合はデフォルトの名前を使用します。",
+    "positions_desc": "体位はウォッチで作成します：キャリブレーション > 体位 > 新しい体位。名前を音声入力するか候補から選び、記録してください。ここでは名前を変更できます。",
     "pos_n": "体位 {n}",
     "pos_1": "正常位 (上)",
     "pos_2": "正常位 (下)",
@@ -934,7 +1014,12 @@ module.exports = {
     "light_normal": "通常",
     "light_on": "常時点灯",
     "light_pulse": "リズムで点滅",
-    "light_desc": "セッション中のみ。「リズムで点滅」は動きのたびに画面を赤く光らせ、短く振動します。バッテリー消費が増えます。"
+    "light_desc": "セッション中のみ。「リズムで点滅」は動きのたびに画面を赤く光らせ、短く振動します。バッテリー消費が増えます。",
+    "partners": "パートナー",
+    "partners_desc": "パートナーのイニシャル（最大4文字）。パートナーセッション開始時にウォッチでも追加できます。",
+    "partner_n": "パートナー {n}",
+    "ask_partner": "パートナーを確認",
+    "ask_partner_desc": "パートナーセッション開始時に、誰とかをウォッチが尋ねます。"
   },
   "zh": {
     "title": "Stamina 设置",
@@ -975,7 +1060,7 @@ module.exports = {
     "auto_after": "{n} 分钟后",
     "auto_desc": "手表会在后台检测持续的节律性动作，并询问是否开始记录。会稍微增加耗电。类似动作（如刷牙）偶尔可能触发；使用玩具时检测不可靠。",
     "positions": "体位 (双人模式)",
-    "positions_desc": "可在手表上学习的体位名称 (校准 > 体位)。留空则使用默认名称。",
+    "positions_desc": "在手表上创建体位：校准 > 体位 > 新体位。说出名称或选择建议，然后录入。在这里可以重命名。",
     "pos_n": "体位 {n}",
     "pos_1": "传教士 (上)",
     "pos_2": "传教士 (下)",
@@ -989,7 +1074,12 @@ module.exports = {
     "light_normal": "正常",
     "light_on": "常亮",
     "light_pulse": "随节奏闪烁",
-    "light_desc": "仅在记录期间生效。“随节奏闪烁”会在每次动作时让屏幕闪红光并短暂振动。会增加耗电。"
+    "light_desc": "仅在记录期间生效。“随节奏闪烁”会在每次动作时让屏幕闪红光并短暂振动。会增加耗电。",
+    "partners": "伴侣",
+    "partners_desc": "伴侣的缩写（最多 4 个字符）。开始双人记录时也可以在手表上添加新伴侣。",
+    "partner_n": "伴侣 {n}",
+    "ask_partner": "询问伴侣",
+    "ask_partner_desc": "开始双人记录时，手表会询问和谁。"
   },
   "ko": {
     "title": "Stamina 설정",
@@ -1030,7 +1120,7 @@ module.exports = {
     "auto_after": "{n}분 후",
     "auto_desc": "워치가 백그라운드에서 지속되는 리드미컬한 움직임을 감지하고 세션을 시작할지 묻습니다. 배터리를 조금 더 사용합니다. 비슷한 움직임(예: 양치질)에 가끔 반응할 수 있으며, 토이 사용 시에는 감지가 불안정합니다.",
     "positions": "체위 (파트너 모드)",
-    "positions_desc": "워치에서 학습할 수 있는 체위의 이름입니다 (보정 > 체위). 비워 두면 기본 이름을 사용합니다.",
+    "positions_desc": "체위는 워치에서 만듭니다: 보정 > 체위 > 새 체위. 이름을 말하거나 추천을 고른 뒤 학습하세요. 여기서 이름을 바꿀 수 있습니다.",
     "pos_n": "체위 {n}",
     "pos_1": "정상위 (위)",
     "pos_2": "정상위 (아래)",
@@ -1044,6 +1134,11 @@ module.exports = {
     "light_normal": "보통",
     "light_on": "항상 켜기",
     "light_pulse": "리듬에 맞춰 깜빡임",
-    "light_desc": "세션 중에만 적용됩니다. \"리듬에 맞춰 깜빡임\"은 움직일 때마다 화면을 빨갛게 깜빡이고 짧게 진동합니다. 배터리를 더 사용합니다."
+    "light_desc": "세션 중에만 적용됩니다. \"리듬에 맞춰 깜빡임\"은 움직일 때마다 화면을 빨갛게 깜빡이고 짧게 진동합니다. 배터리를 더 사용합니다.",
+    "partners": "파트너",
+    "partners_desc": "파트너 이니셜(최대 4자). 파트너 세션을 시작할 때 워치에서도 새 파트너를 추가할 수 있습니다.",
+    "partner_n": "파트너 {n}",
+    "ask_partner": "파트너 묻기",
+    "ask_partner_desc": "파트너 세션을 시작하면 워치가 누구와인지 묻습니다."
   }
 };

@@ -13,6 +13,7 @@
 #define KEY_AUTO 5          // letzte automatische Erkennung (AutoDetect)
 #define KEY_POS_TEMPLATES 6 // angelernte Stellungen
 #define KEY_POS_NAMES 7     // eigene Namen der Stellungen
+#define KEY_PARTNERS 8      // Partner-Kürzel
 #define KEY_SESSION_BASE 100
 
 // Werte bleiben stabil, da sie in gespeicherten Sessions stehen
@@ -39,6 +40,7 @@ typedef struct __attribute__((packed)) {
   uint8_t checkin;        // Stimmung nach Morgen-Session abfragen
   uint8_t auto_start;     // 0 = aus, sonst Minuten bis zur Nachfrage
   uint8_t light;          // LightMode während der Session
+  uint8_t ask_partner;    // beim Start einer Partner-Session nach dem Partner fragen
 } Profile;
 
 // Angelernte Erkennung je Bewegungsart

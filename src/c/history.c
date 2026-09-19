@@ -41,8 +41,13 @@ static void build_detail(char *buf, size_t n, int idx) {
   fmt_kcal(kcal, sizeof(kcal), s->kcal_x10);
 
   int len = 0;
-  APPEND("%s\n%s%s%s\n\n", date, s->mode == MODE_PARTNER ? "" : tr(S_HDR_SOLO),
+  APPEND("%s\n%s%s%s\n", date, s->mode == MODE_PARTNER ? "" : tr(S_HDR_SOLO),
          s->mode == MODE_PARTNER ? "" : " · ", mode_name(s->mode));
+  if (s->partner && partner_name(s->partner)[0]) {
+    APPEND(tr(S_D_PARTNER_FMT), partner_name(s->partner));
+    APPEND("\n");
+  }
+  APPEND("\n");
   APPEND(tr(S_D_DURATION_FMT), dur);
   APPEND("\n");
   APPEND(tr(S_D_ACTIVE_FMT), act);
@@ -131,6 +136,7 @@ static void build_stats(char *buf, size_t n) {
   int sleep_n = 0, lat = 0, delta = 0, deep_pct = 0;
   int day_n = 0, steps_pct = 0, hr_delta = 0, hr_delta_n = 0, mood = 0, mood_n = 0;
   uint32_t pos_secs[POS_COUNT] = {0};
+  int partner_n[PARTNER_COUNT + 1] = {0};
 
   for (int i = 0; i < count; i++) {
     Session *s = storage_get(i);
@@ -166,6 +172,7 @@ static void build_stats(char *buf, size_t n) {
       mood_n++;
     }
     for (int p = 0; p < POS_COUNT; p++) pos_secs[p] += (uint32_t)s->pos_pct[p] * s->duration_s;
+    if (s->partner <= PARTNER_COUNT) partner_n[s->partner]++;
   }
 
   char avg_dur[12], total_kcal[20], avg_climax[12];
@@ -185,6 +192,16 @@ static void build_stats(char *buf, size_t n) {
     if (pos_secs[p] && (fav < 0 || pos_secs[p] > pos_secs[fav])) fav = p;
   }
   if (fav >= 0) APPEND(tr(S_STATS_POS_FMT), pos_name(fav));
+  // Sessions je Partner (nur bestehende Kürzel)
+  bool any_partner = false;
+  for (int p = 1; p <= PARTNER_COUNT; p++) {
+    if (!partner_n[p] || !partner_name(p)[0]) continue;
+    if (!any_partner) APPEND("%s", tr(S_STATS_PARTNER_HDR));
+    APPEND("%s", any_partner ? ", " : "");
+    APPEND(tr(S_STATS_PARTNER_FMT), partner_name(p), partner_n[p]);
+    any_partner = true;
+  }
+  if (any_partner) APPEND("\n");
   APPEND(tr(S_STATS_TOTAL_FMT), total_kcal);
   if (sleep_n) {
     APPEND(tr(S_STATS_SLEEP_FMT), sleep_n, lat / sleep_n, SIGN(delta), delta / sleep_n,
@@ -296,6 +313,8 @@ static void list_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ct
   fmt_duration(dur, sizeof(dur), s->duration_s);
   if (s->mode == MODE_SOLO_TOY) {
     snprintf(sub, sizeof(sub), "%s · %s · %d kcal", mode_name(s->mode), dur, s->kcal_x10 / 10);
+  } else if (s->partner && partner_name(s->partner)[0]) {
+    snprintf(sub, sizeof(sub), "%s · %s · %s", partner_name(s->partner), dur, mode_name(s->mode));
   } else {
     snprintf(sub, sizeof(sub), "%s · %s · %u", mode_name(s->mode), dur, s->strokes);
   }

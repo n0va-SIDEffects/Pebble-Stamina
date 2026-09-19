@@ -15,7 +15,7 @@
   "auto_after": "Po {n} min",
   "auto_desc": "Hodinky na pozadí sledují delší rytmický pohyb a zeptají se, zda spustit relaci. Spotřebují trochu víc baterie. Podobné pohyby (např. čištění zubů) ho mohou občas spustit; s hračkou je rozpoznání nespolehlivé.",
   "positions": "Polohy (režim s partnerem)",
-  "positions_desc": "Názvy poloh, které můžeš naučit na hodinkách (Kalibrace > Polohy). Nech prázdné pro výchozí název.",
+  "positions_desc": "Polohy vytváříš na hodinkách: Kalibrace > Polohy > Nová poloha. Nadiktuj název nebo vyber návrh a pak ji nauč. Tady je můžeš přejmenovat.",
   "pos_n": "Poloha {n}",
   "pos_1": "Misionář (nahoře)",
   "pos_2": "Misionář (dole)",
@@ -29,5 +29,10 @@
   "light_normal": "normální",
   "light_on": "stále zap.",
   "light_pulse": "pulzuje s pohybem",
-  "light_desc": "Jen během relace. „Pulzuje“ rozsvítí displej červeně a krátce zavibruje při každém pohybu. Spotřebuje víc baterie."
+  "light_desc": "Jen během relace. „Pulzuje“ rozsvítí displej červeně a krátce zavibruje při každém pohybu. Spotřebuje víc baterie.",
+  "partners": "Partneři",
+  "partners_desc": "Iniciály tvých partnerů (max. 4 znaky). Nové partnery můžeš přidat i na hodinkách při spuštění relace s partnerem.",
+  "partner_n": "Partner {n}",
+  "ask_partner": "Ptát se na partnera",
+  "ask_partner_desc": "Při spuštění relace s partnerem se hodinky zeptají, s kým."
 }

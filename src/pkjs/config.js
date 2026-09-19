@@ -99,6 +99,21 @@ module.exports = function (t, platform) {
     });
   }
 
+  var partners = [
+    { type: 'heading', defaultValue: t.partners },
+    { type: 'text', defaultValue: t.partners_desc },
+    { type: 'toggle', messageKey: 'ASK_PARTNER', label: t.ask_partner, description: t.ask_partner_desc, defaultValue: true }
+  ];
+  for (var k = 1; k <= 8; k++) {
+    partners.push({
+      type: 'input',
+      messageKey: 'PARTNER_' + k,
+      label: t.partner_n.replace('{n}', k),
+      defaultValue: '',
+      attributes: { limit: 4 }
+    });
+  }
+
   var languageOptions = [{ label: t.lang_auto, value: '0' }].concat(
     LANGUAGES.map(function (name, i) { return { label: name, value: String(i + 1) }; })
   );
@@ -127,6 +142,7 @@ module.exports = function (t, platform) {
       ]
     },
     { type: 'section', items: tracking },
+    { type: 'section', items: partners },
     { type: 'section', items: positions },
     {
       type: 'section',

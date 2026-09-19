@@ -15,7 +15,7 @@
   "auto_after": "After {n} min",
   "auto_desc": "In the background the watch looks for ongoing rhythmic movement and asks whether to start a session. Uses some extra battery. Similar movements (e.g. brushing teeth) can occasionally trigger it; with a toy, detection is unreliable.",
   "positions": "Positions (partner mode)",
-  "positions_desc": "Names of the positions you can learn on the watch (Calibrate > Positions). Leave empty to use the default name.",
+  "positions_desc": "Create positions on the watch: Calibrate > Positions > New position. Speak a name or pick a suggestion, then learn it. Here you can rename them.",
   "pos_n": "Position {n}",
   "pos_1": "Missionary (top)",
   "pos_2": "Missionary (bottom)",
@@ -29,5 +29,10 @@
   "light_normal": "normal",
   "light_on": "always on",
   "light_pulse": "pulse with strokes",
-  "light_desc": "Only during a session. \"Pulse\" flashes the screen red and vibrates briefly with every stroke. Uses more battery."
+  "light_desc": "Only during a session. \"Pulse\" flashes the screen red and vibrates briefly with every stroke. Uses more battery.",
+  "partners": "Partners",
+  "partners_desc": "Initials of your partners (max. 4 characters). New partners can also be added on the watch when starting a partner session.",
+  "partner_n": "Partner {n}",
+  "ask_partner": "Ask for partner",
+  "ask_partner_desc": "When a partner session starts, the watch asks who it is with."
 }

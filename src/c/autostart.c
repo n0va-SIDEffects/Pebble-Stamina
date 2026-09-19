@@ -44,12 +44,16 @@ void autostart_settings_changed(void) {
 
 // --- Nachfrage -----------------------------------------------------------
 
+static void start_partner(int partner) {
+  tracker_window_push_at(MODE_PARTNER, s_det.start, s_det.cycles, partner);
+}
+
 // Fensterwechsel erst nach dem Klick-Handler (siehe tracker.c)
 static void apply_choice(void *ctx) {
   Window *w = s_window;
   switch (s_choice) {
-    case ROW_SOLO: tracker_window_push_at(solo_mode(), s_det.start, s_det.cycles); break;
-    case ROW_PARTNER: tracker_window_push_at(MODE_PARTNER, s_det.start, s_det.cycles); break;
+    case ROW_SOLO: tracker_window_push_at(solo_mode(), s_det.start, s_det.cycles, 0); break;
+    case ROW_PARTNER: partner_choose(start_partner); break;
     default:
       // Vom Worker gestartet und abgelehnt: App gleich wieder schließen
       if (s_launched_by_worker) {

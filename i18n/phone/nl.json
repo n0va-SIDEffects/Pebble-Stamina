@@ -15,7 +15,7 @@
   "auto_after": "Na {n} min",
   "auto_desc": "Op de achtergrond let het horloge op aanhoudende ritmische beweging en vraagt of er een sessie moet starten. Kost iets meer batterij. Vergelijkbare bewegingen (bijv. tandenpoetsen) kunnen dit soms activeren; met een toy is de herkenning onbetrouwbaar.",
   "positions": "Standjes (partner)",
-  "positions_desc": "Namen van de standjes die je op het horloge kunt aanleren (Kalibreren > Standjes). Laat leeg voor de standaardnaam.",
+  "positions_desc": "Standjes maak je aan op het horloge: Kalibreren > Standjes > Nieuw standje. Spreek een naam in of kies een suggestie en leer het dan aan. Hier kun je ze hernoemen.",
   "pos_n": "Standje {n}",
   "pos_1": "Missionaris (boven)",
   "pos_2": "Missionaris (onder)",
@@ -29,5 +29,10 @@
   "light_normal": "normaal",
   "light_on": "altijd aan",
   "light_pulse": "pulseert mee",
-  "light_desc": "Alleen tijdens een sessie. \"Pulseert\" laat het scherm bij elke beweging rood oplichten en kort trillen. Kost meer batterij."
+  "light_desc": "Alleen tijdens een sessie. \"Pulseert\" laat het scherm bij elke beweging rood oplichten en kort trillen. Kost meer batterij.",
+  "partners": "Partners",
+  "partners_desc": "Initialen van je partners (max. 4 tekens). Nieuwe partners kun je ook op het horloge toevoegen bij het starten van een partnersessie.",
+  "partner_n": "Partner {n}",
+  "ask_partner": "Partner vragen",
+  "ask_partner_desc": "Bij het starten van een partnersessie vraagt het horloge met wie."
 }

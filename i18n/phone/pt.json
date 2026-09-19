@@ -15,7 +15,7 @@
   "auto_after": "Após {n} min",
   "auto_desc": "Em segundo plano, o relógio detecta movimentos rítmicos contínuos e pergunta se deve iniciar uma sessão. Gasta um pouco mais de bateria. Movimentos parecidos (ex.: escovar os dentes) podem disparar de vez em quando; com um brinquedo a detecção é pouco confiável.",
   "positions": "Posições (a dois)",
-  "positions_desc": "Nomes das posições que podes ensinar no relógio (Calibrar > Posições). Deixa vazio para usar o nome padrão.",
+  "positions_desc": "Cria as posições no relógio: Calibrar > Posições > Nova posição. Dita um nome ou escolhe uma sugestão e depois ensina-a. Aqui podes mudar os nomes.",
   "pos_n": "Posição {n}",
   "pos_1": "Missionário (cima)",
   "pos_2": "Missionário (baixo)",
@@ -29,5 +29,10 @@
   "light_normal": "normal",
   "light_on": "sempre ligada",
   "light_pulse": "pulsa com o ritmo",
-  "light_desc": "Só durante uma sessão. \"Pulsa\" faz a tela piscar em vermelho e vibrar rapidamente a cada movimento. Gasta mais bateria."
+  "light_desc": "Só durante uma sessão. \"Pulsa\" faz a tela piscar em vermelho e vibrar rapidamente a cada movimento. Gasta mais bateria.",
+  "partners": "Parceiros",
+  "partners_desc": "Iniciais dos teus parceiros (máx. 4 caracteres). Também podes adicioná-los no relógio ao iniciar uma sessão a dois.",
+  "partner_n": "Parceiro {n}",
+  "ask_partner": "Perguntar parceiro",
+  "ask_partner_desc": "Ao iniciar uma sessão a dois, o relógio pergunta com quem."
 }

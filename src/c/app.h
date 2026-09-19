@@ -25,6 +25,8 @@ typedef enum {
 enum { ORIENT_XP, ORIENT_XN, ORIENT_YP, ORIENT_YN, ORIENT_ZP, ORIENT_ZN, ORIENT_COUNT };
 
 #define POS_COUNT 8  // Plätze für angelernte Stellungen
+#define PARTNER_COUNT 8
+#define PARTNER_LEN 5  // Kürzel bis 4 Zeichen + NUL
 
 typedef struct __attribute__((packed)) {
   uint32_t start;            // Unix-Zeit
@@ -51,6 +53,7 @@ typedef struct __attribute__((packed)) {
   int8_t day_hr_delta;       // Puls ggü. üblich, bpm
   uint8_t day_active_min;
   uint8_t pos_pct[POS_COUNT]; // Zeitanteil je erkannter Stellung (Partner-Modus)
+  uint8_t partner;            // 1..PARTNER_COUNT, 0 = keine Angabe
 } Session;
 
 // i18n.c
@@ -121,17 +124,26 @@ const char *pos_name(int i);         // eigener Name oder Standardname, -1 = "un
 const char *pos_custom_name(int i);  // "" = Standardname
 void pos_set_name(int i, const char *name);
 int pos_trained_count(void);
+bool pos_in_use(int i);
+void pos_delete(int i);
 void pos_acc_reset(PosAcc *a);
 void pos_acc_add(PosAcc *a, const Detector *d, int16_t x, int16_t y, int16_t z, bool cycle);
 bool pos_acc_ready(const PosAcc *a);
 bool pos_acc_features(PosAcc *a, uint32_t moving, int16_t *f);
 int pos_classify(const int16_t *f);  // -1 = unbekannt
 
+// partners.c
+typedef void (*PartnerCallback)(int partner);
+void partners_init(void);
+const char *partner_name(int partner);  // "" = keine Angabe
+void partner_set_name(int partner, const char *name);
+void partner_choose(PartnerCallback cb);  // fragt "Mit wem?" (falls eingeschaltet)
+
 // tracker.c
 SessionMode solo_mode(void);
 void tracker_window_push(SessionMode mode);
-// Session rückdatiert starten (automatische Erkennung)
-void tracker_window_push_at(SessionMode mode, time_t start, uint16_t cycles);
+// Session rückdatiert starten (automatische Erkennung), partner: 0 = keine Angabe
+void tracker_window_push_at(SessionMode mode, time_t start, uint16_t cycles, int partner);
 
 // calibrate.c
 void calibrate_window_push(void);

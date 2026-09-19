@@ -15,7 +15,7 @@
   "auto_after": "Tras {n} min",
   "auto_desc": "En segundo plano, el reloj detecta movimientos rítmicos continuos y te pregunta si quieres iniciar una sesión. Gasta algo más de batería. Movimientos parecidos (p. ej. cepillarse los dientes) pueden activarlo a veces; con un juguete la detección es poco fiable.",
   "positions": "Posturas (en pareja)",
-  "positions_desc": "Nombres de las posturas que puedes enseñar al reloj (Calibrar > Posturas). Déjalo vacío para usar el nombre predeterminado.",
+  "positions_desc": "Crea las posturas en el reloj: Calibrar > Posturas > Nueva postura. Dicta un nombre o elige una sugerencia y luego apréndela. Aquí puedes cambiarles el nombre.",
   "pos_n": "Postura {n}",
   "pos_1": "Misionero (arriba)",
   "pos_2": "Misionero (abajo)",
@@ -29,5 +29,10 @@
   "light_normal": "normal",
   "light_on": "siempre encendida",
   "light_pulse": "pulso con el ritmo",
-  "light_desc": "Solo durante una sesión. «Pulso» hace destellar la pantalla en rojo y vibrar brevemente con cada movimiento. Gasta más batería."
+  "light_desc": "Solo durante una sesión. «Pulso» hace destellar la pantalla en rojo y vibrar brevemente con cada movimiento. Gasta más batería.",
+  "partners": "Parejas",
+  "partners_desc": "Iniciales de tus parejas (máx. 4 caracteres). También puedes añadirlas en el reloj al iniciar una sesión en pareja.",
+  "partner_n": "Pareja {n}",
+  "ask_partner": "Preguntar pareja",
+  "ask_partner_desc": "Al iniciar una sesión en pareja, el reloj pregunta con quién."
 }

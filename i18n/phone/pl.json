@@ -15,7 +15,7 @@
   "auto_after": "Po {n} min",
   "auto_desc": "Zegarek w tle wykrywa dłuższy rytmiczny ruch i pyta, czy rozpocząć sesję. Zużywa trochę więcej baterii. Podobne ruchy (np. mycie zębów) mogą czasem go wywołać; z gadżetem wykrywanie jest zawodne.",
   "positions": "Pozycje (we dwoje)",
-  "positions_desc": "Nazwy pozycji, których możesz nauczyć zegarek (Kalibracja > Pozycje). Zostaw puste, by użyć nazwy domyślnej.",
+  "positions_desc": "Pozycje tworzysz na zegarku: Kalibracja > Pozycje > Nowa pozycja. Podyktuj nazwę lub wybierz propozycję, a potem naucz. Tutaj możesz zmienić ich nazwy.",
   "pos_n": "Pozycja {n}",
   "pos_1": "Misjonarska (góra)",
   "pos_2": "Misjonarska (dół)",
@@ -29,5 +29,10 @@
   "light_normal": "normalne",
   "light_on": "zawsze wł.",
   "light_pulse": "pulsuje z ruchem",
-  "light_desc": "Tylko podczas sesji. „Pulsuje” błyska ekranem na czerwono i krótko wibruje przy każdym ruchu. Zużywa więcej baterii."
+  "light_desc": "Tylko podczas sesji. „Pulsuje” błyska ekranem na czerwono i krótko wibruje przy każdym ruchu. Zużywa więcej baterii.",
+  "partners": "Partnerzy",
+  "partners_desc": "Inicjały partnerów (maks. 4 znaki). Nowych partnerów możesz też dodać na zegarku przy starcie sesji we dwoje.",
+  "partner_n": "Partner {n}",
+  "ask_partner": "Pytaj o partnera",
+  "ask_partner_desc": "Przy starcie sesji we dwoje zegarek pyta, z kim."
 }

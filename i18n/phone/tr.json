@@ -15,7 +15,7 @@
   "auto_after": "{n} dk sonra",
   "auto_desc": "Saat arka planda süren ritmik hareketleri izler ve seans başlatılsın mı diye sorar. Biraz daha fazla pil kullanır. Benzer hareketler (ör. diş fırçalama) bazen tetikleyebilir; oyuncakla algılama güvenilir değildir.",
   "positions": "Pozisyonlar (partner modu)",
-  "positions_desc": "Saatte öğretebileceğin pozisyonların adları (Kalibre et > Pozisyonlar). Varsayılan adı kullanmak için boş bırak.",
+  "positions_desc": "Pozisyonları saatte oluşturursun: Kalibre et > Pozisyonlar > Yeni pozisyon. Bir isim söyle ya da öneri seç, sonra öğret. Burada yeniden adlandırabilirsin.",
   "pos_n": "Pozisyon {n}",
   "pos_1": "Misyoner (üstte)",
   "pos_2": "Misyoner (altta)",
@@ -29,5 +29,10 @@
   "light_normal": "normal",
   "light_on": "hep açık",
   "light_pulse": "ritimle yanıp söner",
-  "light_desc": "Yalnızca seans sırasında. \"Ritimle yanıp söner\" her harekette ekranı kırmızı yakıp söndürür ve kısa titreşir. Daha fazla pil kullanır."
+  "light_desc": "Yalnızca seans sırasında. \"Ritimle yanıp söner\" her harekette ekranı kırmızı yakıp söndürür ve kısa titreşir. Daha fazla pil kullanır.",
+  "partners": "Partnerler",
+  "partners_desc": "Partnerlerinin baş harfleri (en fazla 4 karakter). Yeni partnerleri partner seansı başlarken saatten de ekleyebilirsin.",
+  "partner_n": "Partner {n}",
+  "ask_partner": "Partneri sor",
+  "ask_partner_desc": "Partner seansı başlarken saat kiminle olduğunu sorar."
 }

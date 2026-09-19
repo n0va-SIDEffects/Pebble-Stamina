@@ -132,6 +132,7 @@ enum {
   ROW_CHECKIN,
   ROW_AUTO,
   ROW_LIGHT,
+  ROW_ASK_PARTNER,
   ROW_LANG,
   ROW_WIPE,
   ROW_COUNT
@@ -228,6 +229,10 @@ static void menu_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ct
       value = tr(p->light == LIGHT_ON ? S_LIGHT_ON : p->light == LIGHT_PULSE ? S_LIGHT_PULSE
                                                                             : S_LIGHT_NORMAL);
       break;
+    case ROW_ASK_PARTNER:
+      title = tr(S_P_ASK_PARTNER);
+      value = tr(p->ask_partner ? S_ON : S_OFF);
+      break;
     case ROW_LANG:
       title = tr(S_P_LANG);
       value = p->lang ? lang_name(p->lang - 1) : tr(S_STYLE_AUTO);
@@ -250,6 +255,7 @@ static void menu_select(MenuLayer *m, MenuIndex *index, void *ctx) {
     case ROW_CHECKIN: p->checkin = !p->checkin; break;
     case ROW_AUTO: p->auto_start = (p->auto_start + 1) % 4; break;
     case ROW_LIGHT: p->light = (p->light + 1) % 3; break;
+    case ROW_ASK_PARTNER: p->ask_partner = !p->ask_partner; break;
     case ROW_LANG:
       p->lang = (p->lang + 1) % (LANG_COUNT + 1);
       i18n_load();

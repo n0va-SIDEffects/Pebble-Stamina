@@ -15,7 +15,7 @@
   "auto_after": "Efter {n} min",
   "auto_desc": "I bakgrunden håller klockan utkik efter ihållande rytmiska rörelser och frågar om en session ska startas. Drar lite mer batteri. Liknande rörelser (t.ex. tandborstning) kan ibland utlösa den; med leksak är igenkänningen opålitlig.",
   "positions": "Ställningar (partnerläge)",
-  "positions_desc": "Namn på ställningarna du kan lära in på klockan (Kalibrera > Ställningar). Lämna tomt för att använda standardnamnet.",
+  "positions_desc": "Ställningar skapar du på klockan: Kalibrera > Ställningar > Ny ställning. Säg ett namn eller välj ett förslag och lär sedan in den. Här kan du byta namn på dem.",
   "pos_n": "Ställning {n}",
   "pos_1": "Missionär (överst)",
   "pos_2": "Missionär (underst)",
@@ -29,5 +29,10 @@
   "light_normal": "normal",
   "light_on": "alltid på",
   "light_pulse": "pulserar i takt",
-  "light_desc": "Bara under en session. \"Pulserar\" blinkar skärmen rött och vibrerar kort vid varje rörelse. Drar mer batteri."
+  "light_desc": "Bara under en session. \"Pulserar\" blinkar skärmen rött och vibrerar kort vid varje rörelse. Drar mer batteri.",
+  "partners": "Partner",
+  "partners_desc": "Initialer för dina partner (max 4 tecken). Nya partner kan också läggas till på klockan när en partnersession startar.",
+  "partner_n": "Partner {n}",
+  "ask_partner": "Fråga efter partner",
+  "ask_partner_desc": "När en partnersession startar frågar klockan med vem."
 }

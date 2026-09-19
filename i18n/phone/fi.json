@@ -15,7 +15,7 @@
   "auto_after": "{n} min jälkeen",
   "auto_desc": "Kello tarkkailee taustalla pitkään jatkuvaa rytmistä liikettä ja kysyy, aloitetaanko istunto. Kuluttaa hieman enemmän akkua. Samankaltaiset liikkeet (esim. hampaiden harjaus) voivat joskus laukaista sen; lelun kanssa tunnistus on epäluotettava.",
   "positions": "Asennot (partneritila)",
-  "positions_desc": "Asentojen nimet, joita voit opettaa kellolle (Kalibroi > Asennot). Jätä tyhjäksi, niin käytetään oletusnimeä.",
+  "positions_desc": "Asennot luodaan kellossa: Kalibroi > Asennot > Uusi asento. Sano nimi tai valitse ehdotus ja opeta asento. Täällä voit nimetä ne uudelleen.",
   "pos_n": "Asento {n}",
   "pos_1": "Perusasento (päällä)",
   "pos_2": "Perusasento (alla)",
@@ -29,5 +29,10 @@
   "light_normal": "normaali",
   "light_on": "aina päällä",
   "light_pulse": "sykkii tahdissa",
-  "light_desc": "Vain istunnon aikana. \"Sykkii\" välähdyttää näyttöä punaisena ja värisee lyhyesti jokaisella liikkeellä. Kuluttaa enemmän akkua."
+  "light_desc": "Vain istunnon aikana. \"Sykkii\" välähdyttää näyttöä punaisena ja värisee lyhyesti jokaisella liikkeellä. Kuluttaa enemmän akkua.",
+  "partners": "Kumppanit",
+  "partners_desc": "Kumppaniesi nimikirjaimet (enint. 4 merkkiä). Uusia kumppaneita voi lisätä myös kellossa, kun kumppani-istunto alkaa.",
+  "partner_n": "Kumppani {n}",
+  "ask_partner": "Kysy kumppania",
+  "ask_partner_desc": "Kun kumppani-istunto alkaa, kello kysyy kenen kanssa."
 }

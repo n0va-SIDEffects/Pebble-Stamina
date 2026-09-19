@@ -31,9 +31,20 @@ static void save_templates(void) {
   persist_write_data(KEY_POS_TEMPLATES, s_templates, sizeof(s_templates));
 }
 
+// Eigener Name; ältere, ohne Namen angelernte Plätze behalten ihren früheren Standardnamen
 const char *pos_name(int i) {
   if (i < 0 || i >= POS_COUNT) return tr(S_POS_UNKNOWN);
   return s_names[i][0] ? s_names[i] : tr(S_POS_1 + i);
+}
+
+// Angelegt = benannt oder angelernt
+bool pos_in_use(int i) { return s_names[i][0] || s_templates[i].count; }
+
+void pos_delete(int i) {
+  s_templates[i] = (PosTemplate){0};
+  s_names[i][0] = '\0';
+  persist_write_data(KEY_POS_TEMPLATES, s_templates, sizeof(s_templates));
+  persist_write_data(KEY_POS_NAMES, s_names, sizeof(s_names));
 }
 
 const char *pos_custom_name(int i) { return s_names[i]; }
@@ -107,6 +118,8 @@ static int32_t distance(const int16_t *a, const int16_t *b) {
   // Orientierung zählt am meisten: 90° Drehung des Handgelenks ~ 2000 mg -> 250
   return dg / 8 + ds / 2 + (dr > 50 ? 50 : dr) + (dspm > 50 ? 50 : dspm);
 }
+
+static void rec_window_push(int pos);
 
 static int nearest(const int16_t *f, int skip, int32_t *dist_out) {
   int best = -1;
@@ -334,19 +347,249 @@ static void rec_window_push(int pos) {
   window_stack_push(s_rec_window, true);
 }
 
+// --- Name wählen (neue Stellung / umbenennen) ----------------------------
+
+#if defined(PBL_MICROPHONE)
+#define NAME_FIRST_PRESET 1  // Zeile 0: Name sprechen
+#else
+#define NAME_FIRST_PRESET 0
+#endif
+
+static Window *s_name_window;
+static MenuLayer *s_name_menu;
+static int s_name_slot;         // -1 = neue Stellung anlegen
+static char s_pending_name[64];
+#if defined(PBL_MICROPHONE)
+static DictationSession *s_dictation;
+#endif
+
+static int free_slot(void) {
+  for (int i = 0; i < POS_COUNT; i++) {
+    if (!pos_in_use(i)) return i;
+  }
+  return -1;
+}
+
+// Fensterwechsel erst nach dem Handler (siehe tracker.c)
+static void apply_name(void *ctx) {
+  Window *w = s_name_window;
+  if (s_name_slot < 0) {
+    int slot = free_slot();
+    if (slot >= 0) {
+      pos_set_name(slot, s_pending_name);
+      rec_window_push(slot);  // direkt anlernen
+    }
+    window_stack_remove(w, false);
+  } else {
+    pos_set_name(s_name_slot, s_pending_name);
+    window_stack_remove(w, true);
+  }
+}
+
+static void choose_name(const char *name) {
+  snprintf(s_pending_name, sizeof(s_pending_name), "%s", name);
+  app_timer_register(10, apply_name, NULL);
+}
+
+#if defined(PBL_MICROPHONE)
+static void dictation_handler(DictationSession *session, DictationSessionStatus status,
+                              char *transcription, void *ctx) {
+  if (status == DictationSessionStatusSuccess && transcription && transcription[0]) {
+    choose_name(transcription);
+  }
+}
+#endif
+
+static uint16_t name_rows(MenuLayer *m, uint16_t section, void *ctx) {
+  return NAME_FIRST_PRESET + POS_COUNT;
+}
+
+static void name_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ctx) {
+  if (index->row < NAME_FIRST_PRESET) {
+    menu_cell_basic_draw(g, cell, tr(S_POS_SPEAK), tr(S_POS_SPEAK_SUB), NULL);
+  } else {
+    // Vorschläge: die bisherigen Standardnamen
+    menu_cell_basic_draw(g, cell, tr(S_POS_1 + index->row - NAME_FIRST_PRESET), NULL, NULL);
+  }
+}
+
+static void name_select(MenuLayer *m, MenuIndex *index, void *ctx) {
+#if defined(PBL_MICROPHONE)
+  if (index->row == 0) {
+    if (!s_dictation) s_dictation = dictation_session_create(64, dictation_handler, NULL);
+    if (s_dictation) dictation_session_start(s_dictation);
+    return;
+  }
+#endif
+  choose_name(tr(S_POS_1 + index->row - NAME_FIRST_PRESET));
+}
+
+static void name_load(Window *window) {
+  Layer *root = window_get_root_layer(window);
+  s_name_menu = menu_layer_create(layer_get_bounds(root));
+  menu_layer_set_callbacks(s_name_menu, NULL, (MenuLayerCallbacks){
+                                                  .get_num_rows = name_rows,
+                                                  .draw_row = name_draw,
+                                                  .select_click = name_select,
+                                              });
+#if defined(PBL_COLOR)
+  menu_layer_set_highlight_colors(s_name_menu, GColorFolly, GColorWhite);
+#endif
+  menu_layer_set_click_config_onto_window(s_name_menu, window);
+  layer_add_child(root, menu_layer_get_layer(s_name_menu));
+}
+
+static void name_unload(Window *window) {
+#if defined(PBL_MICROPHONE)
+  if (s_dictation) {
+    dictation_session_destroy(s_dictation);
+    s_dictation = NULL;
+  }
+#endif
+  menu_layer_destroy(s_name_menu);
+  window_destroy(s_name_window);
+  s_name_window = NULL;
+}
+
+static void name_window_push(int slot) {
+  s_name_slot = slot;
+  s_name_window = window_create();
+  window_set_window_handlers(s_name_window, (WindowHandlers){
+                                                .load = name_load,
+                                                .unload = name_unload,
+                                            });
+  window_stack_push(s_name_window, true);
+}
+
+// --- Aktionen für eine Stellung ------------------------------------------
+
+enum { ACT_TRAIN, ACT_RENAME, ACT_DELETE, ACT_COUNT };
+
+static Window *s_act_window;
+static MenuLayer *s_act_menu;
+static int s_act_slot;
+static bool s_delete_armed;
+
+static uint16_t act_rows(MenuLayer *m, uint16_t section, void *ctx) { return ACT_COUNT; }
+
+static int16_t act_header_height(MenuLayer *m, uint16_t section, void *ctx) {
+  return MENU_CELL_BASIC_HEADER_HEIGHT;
+}
+
+static void act_draw_header(GContext *g, const Layer *cell, uint16_t section, void *ctx) {
+  menu_cell_basic_header_draw(g, cell, pos_name(s_act_slot));
+}
+
+static void act_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ctx) {
+  char sub[48];
+  switch (index->row) {
+    case ACT_TRAIN:
+      if (s_templates[s_act_slot].count) {
+        snprintf(sub, sizeof(sub), tr(S_POS_TRAINED_FMT), s_templates[s_act_slot].count);
+      } else {
+        snprintf(sub, sizeof(sub), "%s", tr(S_POS_UNTRAINED));
+      }
+      menu_cell_basic_draw(g, cell, tr(S_POS_ACT_TRAIN), sub, NULL);
+      break;
+    case ACT_RENAME:
+      menu_cell_basic_draw(g, cell, tr(S_POS_ACT_RENAME), NULL, NULL);
+      break;
+    case ACT_DELETE:
+      menu_cell_basic_draw(g, cell, tr(S_POS_ACT_DELETE),
+                           s_delete_armed ? tr(S_POS_DELETE_CONFIRM) : NULL, NULL);
+      break;
+  }
+}
+
+static void act_select(MenuLayer *m, MenuIndex *index, void *ctx) {
+  switch (index->row) {
+    case ACT_TRAIN: rec_window_push(s_act_slot); break;
+    case ACT_RENAME: name_window_push(s_act_slot); break;
+    case ACT_DELETE:
+      if (!s_delete_armed) {
+        s_delete_armed = true;
+        vibes_short_pulse();
+        menu_layer_reload_data(m);
+      } else {
+        pos_delete(s_act_slot);
+        vibes_double_pulse();
+        window_stack_pop(true);
+      }
+      break;
+  }
+}
+
+static void act_load(Window *window) {
+  Layer *root = window_get_root_layer(window);
+  s_act_menu = menu_layer_create(layer_get_bounds(root));
+  menu_layer_set_callbacks(s_act_menu, NULL, (MenuLayerCallbacks){
+                                                 .get_num_rows = act_rows,
+                                                 .get_header_height = act_header_height,
+                                                 .draw_header = act_draw_header,
+                                                 .draw_row = act_draw,
+                                                 .select_click = act_select,
+                                             });
+#if defined(PBL_COLOR)
+  menu_layer_set_highlight_colors(s_act_menu, GColorFolly, GColorWhite);
+#endif
+  menu_layer_set_click_config_onto_window(s_act_menu, window);
+  layer_add_child(root, menu_layer_get_layer(s_act_menu));
+}
+
+static void act_appear(Window *window) {
+  s_delete_armed = false;
+  menu_layer_reload_data(s_act_menu);
+}
+
+static void act_unload(Window *window) {
+  menu_layer_destroy(s_act_menu);
+  window_destroy(s_act_window);
+  s_act_window = NULL;
+}
+
+static void act_window_push(int slot) {
+  s_act_slot = slot;
+  s_act_window = window_create();
+  window_set_window_handlers(s_act_window, (WindowHandlers){
+                                               .load = act_load,
+                                               .appear = act_appear,
+                                               .unload = act_unload,
+                                           });
+  window_stack_push(s_act_window, true);
+}
+
 // --- Liste ---------------------------------------------------------------
+// Zeile 0: Live-Test, Zeile 1: neue Stellung, danach die angelegten Stellungen
+
+#define LIST_FIRST_POS 2
 
 static Window *s_window;
 static MenuLayer *s_menu;
+static int s_slots[POS_COUNT];
+static int s_slot_count;
 
-static uint16_t menu_rows(MenuLayer *m, uint16_t section, void *ctx) { return POS_COUNT + 1; }
+static void rebuild_slots(void) {
+  s_slot_count = 0;
+  for (int i = 0; i < POS_COUNT; i++) {
+    if (pos_in_use(i)) s_slots[s_slot_count++] = i;
+  }
+}
+
+static uint16_t menu_rows(MenuLayer *m, uint16_t section, void *ctx) {
+  return LIST_FIRST_POS + s_slot_count;
+}
 
 static void menu_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ctx) {
   if (index->row == 0) {
     menu_cell_basic_draw(g, cell, tr(S_POS_LIVE), tr(S_POS_LIVE_SUB), NULL);
     return;
   }
-  int i = index->row - 1;
+  if (index->row == 1) {
+    menu_cell_basic_draw(g, cell, tr(S_POS_NEW),
+                         tr(free_slot() < 0 ? S_POS_FULL : S_POS_NEW_SUB), NULL);
+    return;
+  }
+  int i = s_slots[index->row - LIST_FIRST_POS];
   char sub[48];
   if (s_templates[i].count) {
     snprintf(sub, sizeof(sub), tr(S_POS_TRAINED_FMT), s_templates[i].count);
@@ -357,17 +600,13 @@ static void menu_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ct
 }
 
 static void menu_select(MenuLayer *m, MenuIndex *index, void *ctx) {
-  rec_window_push((int)index->row - 1);
-}
-
-static void menu_select_long(MenuLayer *m, MenuIndex *index, void *ctx) {
-  if (index->row == 0) return;
-  PosTemplate *t = &s_templates[index->row - 1];
-  if (!t->count) return;
-  *t = (PosTemplate){0};
-  save_templates();
-  vibes_short_pulse();
-  menu_layer_reload_data(m);
+  if (index->row == 0) {
+    rec_window_push(-1);
+  } else if (index->row == 1) {
+    if (free_slot() >= 0) name_window_push(-1);
+  } else {
+    act_window_push(s_slots[index->row - LIST_FIRST_POS]);
+  }
 }
 
 static void window_load(Window *window) {
@@ -377,7 +616,6 @@ static void window_load(Window *window) {
                                              .get_num_rows = menu_rows,
                                              .draw_row = menu_draw,
                                              .select_click = menu_select,
-                                             .select_long_click = menu_select_long,
                                          });
 #if defined(PBL_COLOR)
   menu_layer_set_highlight_colors(s_menu, GColorFolly, GColorWhite);
@@ -386,7 +624,10 @@ static void window_load(Window *window) {
   layer_add_child(root, menu_layer_get_layer(s_menu));
 }
 
-static void window_appear(Window *window) { menu_layer_reload_data(s_menu); }
+static void window_appear(Window *window) {
+  rebuild_slots();
+  menu_layer_reload_data(s_menu);
+}
 
 static void window_unload(Window *window) {
   menu_layer_destroy(s_menu);

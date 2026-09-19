@@ -15,7 +15,7 @@
   "auto_after": "Dopo {n} min",
   "auto_desc": "In background l'orologio rileva movimenti ritmici prolungati e chiede se avviare una sessione. Consuma un po' più di batteria. Movimenti simili (ad es. lavarsi i denti) possono a volte attivarlo; con un sex toy il rilevamento è poco affidabile.",
   "positions": "Posizioni (in coppia)",
-  "positions_desc": "Nomi delle posizioni che puoi insegnare all'orologio (Calibra > Posizioni). Lascia vuoto per usare il nome predefinito.",
+  "positions_desc": "Crea le posizioni sull'orologio: Calibra > Posizioni > Nuova posizione. Detta un nome o scegli un suggerimento, poi insegnala. Qui puoi rinominarle.",
   "pos_n": "Posizione {n}",
   "pos_1": "Missionario (sopra)",
   "pos_2": "Missionario (sotto)",
@@ -29,5 +29,10 @@
   "light_normal": "normale",
   "light_on": "sempre accesa",
   "light_pulse": "impulso col ritmo",
-  "light_desc": "Solo durante una sessione. «Impulso» fa lampeggiare lo schermo in rosso e vibrare brevemente a ogni movimento. Consuma più batteria."
+  "light_desc": "Solo durante una sessione. «Impulso» fa lampeggiare lo schermo in rosso e vibrare brevemente a ogni movimento. Consuma più batteria.",
+  "partners": "Partner",
+  "partners_desc": "Iniziali dei tuoi partner (max. 4 caratteri). Puoi aggiungerli anche sull'orologio all'avvio di una sessione in coppia.",
+  "partner_n": "Partner {n}",
+  "ask_partner": "Chiedi il partner",
+  "ask_partner_desc": "All'avvio di una sessione in coppia, l'orologio chiede con chi."
 }

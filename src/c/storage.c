@@ -33,7 +33,8 @@ void storage_init(void) {
   // Defaults zuerst, damit Felder fehlen dürfen, die ältere Versionen noch nicht gespeichert haben
   s_profile = (Profile){
       .sex = SEX_MALE, .age = 30, .weight_kg = 80, .sensitivity = SENS_NORMAL, .touch_session = 1,
-      .solo_style = STYLE_AUTO, .lang = 0, .checkin = 1, .auto_start = 0};
+      .solo_style = STYLE_AUTO, .lang = 0, .checkin = 1, .auto_start = 0,
+      .ask_partner = 1};
   if (persist_exists(KEY_PROFILE)) {
     persist_read_data(KEY_PROFILE, &s_profile, sizeof(Profile));
   }

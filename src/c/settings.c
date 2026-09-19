@@ -22,6 +22,13 @@ static uint32_t pos_name_key(int i) {
   return keys[i];
 }
 
+static uint32_t partner_key(int i) {
+  const uint32_t keys[PARTNER_COUNT] = {
+      MESSAGE_KEY_PARTNER_1, MESSAGE_KEY_PARTNER_2, MESSAGE_KEY_PARTNER_3, MESSAGE_KEY_PARTNER_4,
+      MESSAGE_KEY_PARTNER_5, MESSAGE_KEY_PARTNER_6, MESSAGE_KEY_PARTNER_7, MESSAGE_KEY_PARTNER_8};
+  return keys[i];
+}
+
 static int32_t clamp(int32_t v, int32_t lo, int32_t hi) { return v < lo ? lo : v > hi ? hi : v; }
 
 void settings_send_profile(void) {
@@ -38,6 +45,8 @@ void settings_send_profile(void) {
   dict_write_int32(out, MESSAGE_KEY_CHECKIN, p->checkin);
   dict_write_int32(out, MESSAGE_KEY_AUTO_START, p->auto_start);
   dict_write_int32(out, MESSAGE_KEY_LIGHT, p->light);
+  dict_write_int32(out, MESSAGE_KEY_ASK_PARTNER, p->ask_partner);
+  for (int i = 0; i < PARTNER_COUNT; i++) dict_write_cstring(out, partner_key(i), partner_name(i + 1));
   for (int i = 0; i < POS_COUNT; i++) dict_write_cstring(out, pos_name_key(i), pos_custom_name(i));
   app_message_outbox_send();
 }
@@ -79,6 +88,16 @@ static void inbox_received(DictionaryIterator *it, void *context) {
   if ((t = dict_find(it, MESSAGE_KEY_CHECKIN))) {
     p->checkin = tuple_int(t) ? 1 : 0;
     changed = true;
+  }
+  if ((t = dict_find(it, MESSAGE_KEY_ASK_PARTNER))) {
+    p->ask_partner = tuple_int(t) ? 1 : 0;
+    changed = true;
+  }
+  for (int i = 0; i < PARTNER_COUNT; i++) {
+    if ((t = dict_find(it, partner_key(i))) && t->type == TUPLE_CSTRING) {
+      partner_set_name(i + 1, t->value->cstring);
+      changed = true;
+    }
   }
   if ((t = dict_find(it, MESSAGE_KEY_LIGHT))) {
     p->light = clamp(tuple_int(t), LIGHT_NORMAL, LIGHT_PULSE);

@@ -15,7 +15,7 @@
   "auto_after": "Etter {n} min",
   "auto_desc": "I bakgrunnen ser klokken etter vedvarende rytmiske bevegelser og spør om en økt skal startes. Bruker litt mer batteri. Lignende bevegelser (f.eks. tannpuss) kan av og til utløse den; med leketøy er gjenkjenningen upålitelig.",
   "positions": "Stillinger (partnermodus)",
-  "positions_desc": "Navn på stillingene du kan lære inn på klokken (Kalibrer > Stillinger). La feltet stå tomt for å bruke standardnavnet.",
+  "positions_desc": "Stillinger oppretter du på klokken: Kalibrer > Stillinger > Ny stilling. Si et navn eller velg et forslag, og lær den deretter. Her kan du gi dem nye navn.",
   "pos_n": "Stilling {n}",
   "pos_1": "Misjonær (øverst)",
   "pos_2": "Misjonær (nederst)",
@@ -29,5 +29,10 @@
   "light_normal": "normal",
   "light_on": "alltid på",
   "light_pulse": "pulserer i takt",
-  "light_desc": "Bare under en økt. \"Pulserer\" blinker skjermen rødt og vibrerer kort ved hver bevegelse. Bruker mer batteri."
+  "light_desc": "Bare under en økt. \"Pulserer\" blinker skjermen rødt og vibrerer kort ved hver bevegelse. Bruker mer batteri.",
+  "partners": "Partnere",
+  "partners_desc": "Initialer for partnerne dine (maks. 4 tegn). Nye partnere kan også legges til på klokken når en partnerøkt starter.",
+  "partner_n": "Partner {n}",
+  "ask_partner": "Spør om partner",
+  "ask_partner_desc": "Når en partnerøkt starter, spør klokken med hvem."
 }

@@ -15,7 +15,7 @@
   "auto_after": "Efter {n} min",
   "auto_desc": "I baggrunden holder uret øje med vedvarende rytmiske bevægelser og spørger, om en session skal startes. Bruger lidt mere batteri. Lignende bevægelser (f.eks. tandbørstning) kan af og til udløse den; med legetøj er genkendelsen upålidelig.",
   "positions": "Stillinger (partnertilstand)",
-  "positions_desc": "Navne på de stillinger, du kan lære på uret (Kalibrér > Stillinger). Lad feltet stå tomt for at bruge standardnavnet.",
+  "positions_desc": "Stillinger opretter du på uret: Kalibrér > Stillinger > Ny stilling. Sig et navn eller vælg et forslag, og lær den derefter. Her kan du omdøbe dem.",
   "pos_n": "Stilling {n}",
   "pos_1": "Missionær (øverst)",
   "pos_2": "Missionær (nederst)",
@@ -29,5 +29,10 @@
   "light_normal": "normal",
   "light_on": "altid tændt",
   "light_pulse": "pulserer i takt",
-  "light_desc": "Kun under en session. \"Pulserer\" blinker skærmen rødt og vibrerer kort ved hver bevægelse. Bruger mere batteri."
+  "light_desc": "Kun under en session. \"Pulserer\" blinker skærmen rødt og vibrerer kort ved hver bevægelse. Bruger mere batteri.",
+  "partners": "Partnere",
+  "partners_desc": "Initialer på dine partnere (maks. 4 tegn). Nye partnere kan også oprettes på uret, når en partnersession starter.",
+  "partner_n": "Partner {n}",
+  "ask_partner": "Spørg om partner",
+  "ask_partner_desc": "Når en partnersession starter, spørger uret med hvem."
 }

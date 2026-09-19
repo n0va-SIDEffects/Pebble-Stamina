@@ -6,6 +6,10 @@ static Window *s_window;
 static MenuLayer *s_menu;
 static char s_sub[48];
 
+static void start_partner(int partner) {
+  tracker_window_push_at(MODE_PARTNER, time(NULL), 0, partner);
+}
+
 static uint16_t menu_rows(MenuLayer *m, uint16_t section, void *ctx) { return ROW_COUNT; }
 
 static void menu_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ctx) {
@@ -35,7 +39,7 @@ static void menu_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ct
 static void menu_select(MenuLayer *m, MenuIndex *index, void *ctx) {
   switch (index->row) {
     case ROW_SOLO: tracker_window_push(solo_mode()); break;
-    case ROW_PARTNER: tracker_window_push(MODE_PARTNER); break;
+    case ROW_PARTNER: partner_choose(start_partner); break;
     case ROW_HISTORY: history_window_push(); break;
     case ROW_STATS: stats_window_push(); break;
     case ROW_CALIB: calibrate_window_push(); break;
@@ -74,6 +78,7 @@ static void window_unload(Window *window) { menu_layer_destroy(s_menu); }
 static void init(void) {
   storage_init();
   positions_init();
+  partners_init();
   i18n_load();
   settings_init();
   morning_init();
