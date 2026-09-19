@@ -68,21 +68,28 @@ def app_icon(size):
     img = gradient(big, big, BG_TOP, BG_BOTTOM).convert('RGBA')
     mask = Image.new('L', (big, big), 0)
     ImageDraw.Draw(mask).rounded_rectangle([0, 0, big - 1, big - 1], radius=int(big * 0.22), fill=255)
-    pad = big * 0.14
-    small = size < 100  # kleine Größe: dickere Linie, kein Leuchten (bleibt scharf)
-    draw_line(img, ecg_points(pad, big * 0.55, big - 2 * pad, big * 0.30), PINK,
-              max(1, int(big * (0.10 if small else 0.075))), glow=0 if small else big * 0.03)
+
+    # Herz, leicht gekippt und etwas aus der Mitte: frech statt brav
+    heart = heart_layer(int(big * 0.86), PINK, 255, -14, outline=max(1, big // 90), ss=1)
+    glow = heart.filter(ImageFilter.GaussianBlur(big * 0.035))
+    pos = ((big - heart.width) // 2 + int(big * 0.02), (big - heart.height) // 2 + int(big * 0.03))
+    img.alpha_composite(glow, pos)
+    img.alpha_composite(heart, pos)
+
+    # Herzschlag quer durchs Herz; klein dicker, damit er lesbar bleibt
+    small = size < 100
+    pad = big * 0.10
+    draw_line(img, ecg_points(pad, big * 0.54, big - 2 * pad, big * 0.26), WHITE,
+              max(1, int(big * (0.085 if small else 0.06))))
     img.putalpha(mask)
     return img.resize((size, size), Image.LANCZOS)
 
 
 def menu_icon(color):
-    s = 8
-    big = 25 * s
-    img = Image.new('RGBA', (big, big), (0, 0, 0, 0))
-    draw_line(img, ecg_points(big * 0.06, big * 0.56, big * 0.88, big * 0.40), color, int(big * 0.12))
-    img = img.resize((25, 25), Image.LANCZOS)
-    # Pebble kennt nur deckend/transparent: Alpha hart schneiden
+    """Launcher: gekipptes Herz als deckende Silhouette (Pebble kennt nur deckend/transparent)."""
+    heart = heart_layer(25, color, 255, -14, ss=8)
+    img = Image.new('RGBA', (25, 25), (0, 0, 0, 0))
+    img.alpha_composite(heart, ((25 - heart.width) // 2, (25 - heart.height) // 2 + 1))
     px = img.load()
     for y in range(25):
         for x in range(25):
@@ -91,9 +98,9 @@ def menu_icon(color):
     return img
 
 
-def heart_layer(size, color, alpha, angle, outline=0):
+def heart_layer(size, color, alpha, angle, outline=0, ss=4):
     """Herz (klassische Herzkurve) als RGBA-Bild, gedreht, weich gezeichnet."""
-    s = 4
+    s = ss
     big = size * s
     pts = []
     for i in range(240):
