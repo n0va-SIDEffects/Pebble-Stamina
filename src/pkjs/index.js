@@ -78,6 +78,8 @@ Pebble.addEventListener('appmessage', function (e) {
   settings.LANGUAGE = String(p.LANGUAGE);
   settings.CHECKIN = !!p.CHECKIN;
   settings.AUTO_START = String(p.AUTO_START);
+  settings.LIGHT = String(p.LIGHT);
+  for (var n = 1; n <= 8; n++) settings['POS_NAME_' + n] = p['POS_NAME_' + n] || '';
   localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
   console.log('Profil von der Uhr übernommen: ' + JSON.stringify(settings));
 });

@@ -13,5 +13,21 @@
   "auto": "Otomatik seans başlatma",
   "auto_off": "Kapalı",
   "auto_after": "{n} dk sonra",
-  "auto_desc": "Saat arka planda süren ritmik hareketleri izler ve seans başlatılsın mı diye sorar. Biraz daha fazla pil kullanır. Benzer hareketler (ör. diş fırçalama) bazen tetikleyebilir; oyuncakla algılama güvenilir değildir."
+  "auto_desc": "Saat arka planda süren ritmik hareketleri izler ve seans başlatılsın mı diye sorar. Biraz daha fazla pil kullanır. Benzer hareketler (ör. diş fırçalama) bazen tetikleyebilir; oyuncakla algılama güvenilir değildir.",
+  "positions": "Pozisyonlar (partner modu)",
+  "positions_desc": "Saatte öğretebileceğin pozisyonların adları (Kalibre et > Pozisyonlar). Varsayılan adı kullanmak için boş bırak.",
+  "pos_n": "Pozisyon {n}",
+  "pos_1": "Misyoner (üstte)",
+  "pos_2": "Misyoner (altta)",
+  "pos_3": "Binme (üstte)",
+  "pos_4": "Binme (altta)",
+  "pos_5": "Arkadan",
+  "pos_6": "Kaşık",
+  "pos_7": "Ayakta",
+  "pos_8": "Oturarak",
+  "light": "Ekran ışığı",
+  "light_normal": "normal",
+  "light_on": "hep açık",
+  "light_pulse": "ritimle yanıp söner",
+  "light_desc": "Yalnızca seans sırasında. \"Ritimle yanıp söner\" her harekette ekranı kırmızı yakıp söndürür ve kısa titreşir. Daha fazla pil kullanır."
 }

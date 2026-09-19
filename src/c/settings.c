@@ -15,6 +15,13 @@ static int32_t tuple_int(const Tuple *t) {
   }
 }
 
+static uint32_t pos_name_key(int i) {
+  const uint32_t keys[POS_COUNT] = {
+      MESSAGE_KEY_POS_NAME_1, MESSAGE_KEY_POS_NAME_2, MESSAGE_KEY_POS_NAME_3, MESSAGE_KEY_POS_NAME_4,
+      MESSAGE_KEY_POS_NAME_5, MESSAGE_KEY_POS_NAME_6, MESSAGE_KEY_POS_NAME_7, MESSAGE_KEY_POS_NAME_8};
+  return keys[i];
+}
+
 static int32_t clamp(int32_t v, int32_t lo, int32_t hi) { return v < lo ? lo : v > hi ? hi : v; }
 
 void settings_send_profile(void) {
@@ -30,6 +37,8 @@ void settings_send_profile(void) {
   dict_write_int32(out, MESSAGE_KEY_LANGUAGE, p->lang);
   dict_write_int32(out, MESSAGE_KEY_CHECKIN, p->checkin);
   dict_write_int32(out, MESSAGE_KEY_AUTO_START, p->auto_start);
+  dict_write_int32(out, MESSAGE_KEY_LIGHT, p->light);
+  for (int i = 0; i < POS_COUNT; i++) dict_write_cstring(out, pos_name_key(i), pos_custom_name(i));
   app_message_outbox_send();
 }
 
@@ -71,6 +80,10 @@ static void inbox_received(DictionaryIterator *it, void *context) {
     p->checkin = tuple_int(t) ? 1 : 0;
     changed = true;
   }
+  if ((t = dict_find(it, MESSAGE_KEY_LIGHT))) {
+    p->light = clamp(tuple_int(t), LIGHT_NORMAL, LIGHT_PULSE);
+    changed = true;
+  }
   if ((t = dict_find(it, MESSAGE_KEY_AUTO_START))) {
     p->auto_start = clamp(tuple_int(t), 0, 3);
     changed = true;
@@ -79,6 +92,13 @@ static void inbox_received(DictionaryIterator *it, void *context) {
     p->lang = clamp(tuple_int(t), 0, LANG_COUNT);
     changed = true;
     i18n_load();
+  }
+
+  for (int i = 0; i < POS_COUNT; i++) {
+    if ((t = dict_find(it, pos_name_key(i))) && t->type == TUPLE_CSTRING) {
+      pos_set_name(i, t->value->cstring);
+      changed = true;
+    }
   }
 
   if (changed) {
@@ -90,5 +110,5 @@ static void inbox_received(DictionaryIterator *it, void *context) {
 
 void settings_init(void) {
   app_message_register_inbox_received(inbox_received);
-  app_message_open(128, 128);
+  app_message_open(512, 512);  // inkl. 8 Stellungsnamen
 }

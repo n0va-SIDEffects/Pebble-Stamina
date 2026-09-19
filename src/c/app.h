@@ -21,8 +21,10 @@ typedef enum {
   DAY_UNAVAILABLE = 3
 } DayState;
 
-// Orientierung des Handgelenks (Schwerkraftachse), Basis für spätere Stellungserkennung
+// Orientierung des Handgelenks (Schwerkraftachse)
 enum { ORIENT_XP, ORIENT_XN, ORIENT_YP, ORIENT_YN, ORIENT_ZP, ORIENT_ZN, ORIENT_COUNT };
+
+#define POS_COUNT 8  // Plätze für angelernte Stellungen
 
 typedef struct __attribute__((packed)) {
   uint32_t start;            // Unix-Zeit
@@ -48,6 +50,7 @@ typedef struct __attribute__((packed)) {
   int8_t day_steps_pct;      // ggü. üblich an diesem Wochentagstyp, in %
   int8_t day_hr_delta;       // Puls ggü. üblich, bpm
   uint8_t day_active_min;
+  uint8_t pos_pct[POS_COUNT]; // Zeitanteil je erkannter Stellung (Partner-Modus)
 } Session;
 
 // i18n.c
@@ -96,6 +99,33 @@ void autostart_init(void);            // Worker passend zur Einstellung starten/
 void autostart_settings_changed(void);
 void autostart_session_active(bool active);
 bool autostart_handle_launch(void);   // Start durch den Worker? Dann Nachfrage zeigen
+
+// positions.c (Stellungserkennung im Partner-Modus)
+enum { F_GX, F_GY, F_GZ, F_SX, F_SY, F_SZ, F_RMS, F_SPM, POS_FEATURES };
+
+typedef struct {
+  uint8_t count;               // Anzahl Aufnahmen, 0 = nicht angelernt
+  int16_t f[POS_FEATURES];     // gemittelter Fingerabdruck
+} PosTemplate;
+
+typedef struct {
+  int32_t grav[3];
+  int32_t sq[3];
+  int n;
+  int cycles;
+} PosAcc;
+
+void positions_init(void);
+void positions_window_push(void);
+const char *pos_name(int i);         // eigener Name oder Standardname, -1 = "unbekannt"
+const char *pos_custom_name(int i);  // "" = Standardname
+void pos_set_name(int i, const char *name);
+int pos_trained_count(void);
+void pos_acc_reset(PosAcc *a);
+void pos_acc_add(PosAcc *a, const Detector *d, int16_t x, int16_t y, int16_t z, bool cycle);
+bool pos_acc_ready(const PosAcc *a);
+bool pos_acc_features(PosAcc *a, uint32_t moving, int16_t *f);
+int pos_classify(const int16_t *f);  // -1 = unbekannt
 
 // tracker.c
 SessionMode solo_mode(void);

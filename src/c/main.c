@@ -73,6 +73,7 @@ static void window_unload(Window *window) { menu_layer_destroy(s_menu); }
 
 static void init(void) {
   storage_init();
+  positions_init();
   i18n_load();
   settings_init();
   morning_init();

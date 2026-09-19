@@ -13,5 +13,21 @@
   "auto": "Automatické spuštění relace",
   "auto_off": "Vypnuto",
   "auto_after": "Po {n} min",
-  "auto_desc": "Hodinky na pozadí sledují delší rytmický pohyb a zeptají se, zda spustit relaci. Spotřebují trochu víc baterie. Podobné pohyby (např. čištění zubů) ho mohou občas spustit; s hračkou je rozpoznání nespolehlivé."
+  "auto_desc": "Hodinky na pozadí sledují delší rytmický pohyb a zeptají se, zda spustit relaci. Spotřebují trochu víc baterie. Podobné pohyby (např. čištění zubů) ho mohou občas spustit; s hračkou je rozpoznání nespolehlivé.",
+  "positions": "Polohy (režim s partnerem)",
+  "positions_desc": "Názvy poloh, které můžeš naučit na hodinkách (Kalibrace > Polohy). Nech prázdné pro výchozí název.",
+  "pos_n": "Poloha {n}",
+  "pos_1": "Misionář (nahoře)",
+  "pos_2": "Misionář (dole)",
+  "pos_3": "Na koníčka (nahoře)",
+  "pos_4": "Na koníčka (dole)",
+  "pos_5": "Zezadu",
+  "pos_6": "Na lžičku",
+  "pos_7": "Vestoje",
+  "pos_8": "Vsedě",
+  "light": "Podsvícení",
+  "light_normal": "normální",
+  "light_on": "stále zap.",
+  "light_pulse": "pulzuje s pohybem",
+  "light_desc": "Jen během relace. „Pulzuje“ rozsvítí displej červeně a krátce zavibruje při každém pohybu. Spotřebuje víc baterie."
 }

@@ -11,6 +11,8 @@
 #define KEY_COUNT 3
 #define KEY_CALIB 4
 #define KEY_AUTO 5          // letzte automatische Erkennung (AutoDetect)
+#define KEY_POS_TEMPLATES 6 // angelernte Stellungen
+#define KEY_POS_NAMES 7     // eigene Namen der Stellungen
 #define KEY_SESSION_BASE 100
 
 // Werte bleiben stabil, da sie in gespeicherten Sessions stehen
@@ -24,6 +26,7 @@ typedef enum {
 typedef enum { STYLE_AUTO = 0, STYLE_STROKE = 1, STYLE_RUB = 2, STYLE_TOY = 3 } SoloStyle;
 typedef enum { SEX_MALE = 0, SEX_FEMALE = 1, SEX_OTHER = 2 } Sex;
 typedef enum { SENS_LOW = 0, SENS_NORMAL = 1, SENS_HIGH = 2 } Sensitivity;
+typedef enum { LIGHT_NORMAL = 0, LIGHT_ON = 1, LIGHT_PULSE = 2 } LightMode;
 
 typedef struct __attribute__((packed)) {
   uint8_t sex;
@@ -35,6 +38,7 @@ typedef struct __attribute__((packed)) {
   uint8_t lang;           // 0 = automatisch, sonst 1 + Index in LANG_CODES
   uint8_t checkin;        // Stimmung nach Morgen-Session abfragen
   uint8_t auto_start;     // 0 = aus, sonst Minuten bis zur Nachfrage
+  uint8_t light;          // LightMode während der Session
 } Profile;
 
 // Angelernte Erkennung je Bewegungsart

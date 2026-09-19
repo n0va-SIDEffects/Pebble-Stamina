@@ -13,5 +13,21 @@
   "auto": "Automatischer Session-Start",
   "auto_off": "Aus",
   "auto_after": "Nach {n} min",
-  "auto_desc": "Die Uhr achtet im Hintergrund auf anhaltende rhythmische Bewegung und fragt, ob eine Session gestartet werden soll. Kostet etwas mehr Akku. Ähnliche Bewegungen (z. B. Zähneputzen) können gelegentlich auslösen; mit Toy ist die Erkennung unzuverlässig."
+  "auto_desc": "Die Uhr achtet im Hintergrund auf anhaltende rhythmische Bewegung und fragt, ob eine Session gestartet werden soll. Kostet etwas mehr Akku. Ähnliche Bewegungen (z. B. Zähneputzen) können gelegentlich auslösen; mit Toy ist die Erkennung unzuverlässig.",
+  "positions": "Stellungen (Partner-Modus)",
+  "positions_desc": "Namen der Stellungen, die du auf der Uhr anlernen kannst (Anlernen > Stellungen). Leer lassen für den Standardnamen.",
+  "pos_n": "Stellung {n}",
+  "pos_1": "Missionar (oben)",
+  "pos_2": "Missionar (unten)",
+  "pos_3": "Reiten (oben)",
+  "pos_4": "Reiten (unten)",
+  "pos_5": "Von hinten",
+  "pos_6": "Löffelchen",
+  "pos_7": "Stehend",
+  "pos_8": "Sitzend",
+  "light": "Display-Licht",
+  "light_normal": "normal",
+  "light_on": "immer an",
+  "light_pulse": "Puls pro Zug",
+  "light_desc": "Nur während einer Session. „Puls“ lässt den Bildschirm bei jedem Zug rot aufblitzen und kurz vibrieren. Braucht mehr Akku."
 }

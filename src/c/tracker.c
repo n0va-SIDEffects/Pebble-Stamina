@@ -31,17 +31,73 @@ static uint8_t s_buckets[SPM_WINDOW];
 static int s_bucket_idx, s_bucket_filled;
 static bool s_finishing;
 
+// Licht: dauerhaft an oder bei jedem Zug kurz rot aufblitzen + kurz vibrieren
+#define FLASH_MS 120
+#define PULSE_VIBE_MS 40
+static AppTimer *s_flash_timer;
+
+// Stellungserkennung (nur Partner-Modus mit angelernten Stellungen)
+static bool s_pos_enabled;
+static PosAcc s_pos_acc;
+static uint32_t s_pos_moving;
+static int s_pos_current, s_pos_candidate;
+static uint16_t s_pos_secs[POS_COUNT];
+
 SessionMode solo_mode(void) { return solo_mode_for(storage_profile()); }
 
 static bool counts_cycles(void) { return s_mode != MODE_SOLO_TOY; }
+
+// Akzentfarbige Texte wären auf Rot kaum lesbar: während des Blitzes weiß
+static void set_accent(GColor color) {
+  text_layer_set_text_color(s_mode_layer, color);
+  text_layer_set_text_color(s_count_layer, color);
+}
+
+static void flash_end(void *ctx) {
+  s_flash_timer = NULL;
+  window_set_background_color(s_window, GColorBlack);
+  set_accent(ACCENT_COLOR);
+  light_enable(false);
+}
+
+static void flash(void) {
+  static const uint32_t segments[] = {PULSE_VIBE_MS};
+  // Die Vibration markiert ihre Samples (did_vibrate); die Erkennung überspringt sie
+  vibes_enqueue_custom_pattern((VibePattern){.durations = segments, .num_segments = 1});
+  window_set_background_color(s_window, PBL_IF_COLOR_ELSE(GColorRed, GColorWhite));
+  set_accent(PBL_IF_COLOR_ELSE(GColorWhite, GColorBlack));
+  light_enable(true);
+  if (s_flash_timer) {
+    app_timer_reschedule(s_flash_timer, FLASH_MS);
+  } else {
+    s_flash_timer = app_timer_register(FLASH_MS, flash_end, NULL);
+  }
+}
 
 static void accel_handler(AccelData *data, uint32_t num) {
   if (s_paused) return;
   for (uint32_t i = 0; i < num; i++) {
     if (data[i].did_vibrate) continue;
-    if (detector_process(&s_det, data[i].x, data[i].y, data[i].z)) {
+    uint32_t moving_before = s_det.moving;
+    bool cycle = detector_process(&s_det, data[i].x, data[i].y, data[i].z);
+    if (cycle) {
       if (s_sess.strokes < UINT16_MAX) s_sess.strokes++;
       s_cur_second++;
+      if (storage_profile()->light == LIGHT_PULSE && !s_paused) flash();
+    }
+    if (s_pos_enabled) {
+      s_pos_moving += s_det.moving > moving_before;
+      pos_acc_add(&s_pos_acc, &s_det, data[i].x, data[i].y, data[i].z, cycle);
+      if (pos_acc_ready(&s_pos_acc)) {
+        int16_t f[POS_FEATURES];
+        if (pos_acc_features(&s_pos_acc, s_pos_moving, f)) {
+          // erst wechseln, wenn zweimal hintereinander dieselbe Stellung erkannt wurde
+          int p = pos_classify(f);
+          if (p == s_pos_candidate) s_pos_current = p;
+          s_pos_candidate = p;
+        }
+        s_pos_moving = 0;
+      }
     }
     for (int a = 0; a < 3; a++) s_grav_sum[a] += s_det.lp16[a] / 16;
     s_grav_n++;
@@ -102,7 +158,8 @@ static void update_ui(void) {
     fmt_duration(t, sizeof(t), s_sess.climax_s);
     snprintf(s_mode_buf, sizeof(s_mode_buf), tr(S_CLIMAX_FMT), t);
   } else if (s_mode == MODE_PARTNER) {
-    snprintf(s_mode_buf, sizeof(s_mode_buf), "%s", hdr);
+    snprintf(s_mode_buf, sizeof(s_mode_buf), "%s",
+             s_pos_current >= 0 ? pos_name(s_pos_current) : hdr);
   } else {
     snprintf(s_mode_buf, sizeof(s_mode_buf), "%s · %s", hdr, mode_name(s_mode));
   }
@@ -149,6 +206,7 @@ static void tick_handler(struct tm *tick_time, TimeUnits changed) {
 
   bool moving = s_det.moving > SAMPLE_HZ / 3;
   s_det.moving = 0;
+  if (moving && s_pos_current >= 0) s_pos_secs[s_pos_current]++;
   if (moving) {
     s_sess.active_s++;
     s_spm_sum += s_spm;
@@ -210,6 +268,9 @@ static void finish(void) {
   for (int i = 0; i < ORIENT_COUNT; i++) total += s_orient_count[i];
   for (int i = 0; i < ORIENT_COUNT; i++) {
     s_sess.orient_pct[i] = total ? s_orient_count[i] * 100 / total : 0;
+  }
+  for (int i = 0; i < POS_COUNT; i++) {
+    s_sess.pos_pct[i] = s_sess.duration_s ? s_pos_secs[i] * 100 / s_sess.duration_s : 0;
   }
   s_sess.sleep_state = SLEEP_PENDING;
   s_sess.day_state = morning_is_morning(s_sess.start) ? DAY_PENDING : DAY_NOT_MORNING;
@@ -322,11 +383,17 @@ static void window_load(Window *window) {
 #endif
   text_layer_set_text(s_hint_layer, hint);
 
+  if (storage_profile()->light == LIGHT_ON) light_enable(true);
   update_ui();
 }
 
 static void window_unload(Window *window) {
   autostart_session_active(false);
+  if (s_flash_timer) {
+    app_timer_cancel(s_flash_timer);
+    s_flash_timer = NULL;
+  }
+  light_enable(false);  // zurück zur automatischen Beleuchtung
   accel_data_service_unsubscribe();
   tick_timer_service_unsubscribe();
 #if defined(PBL_HEALTH)
@@ -368,6 +435,12 @@ void tracker_window_push_at(SessionMode mode, time_t start, uint16_t cycles) {
   DetectorParams params;
   detector_params_for(mode, &params);
   detector_init(&s_det, &params);
+
+  s_pos_enabled = mode == MODE_PARTNER && pos_trained_count() > 0;
+  pos_acc_reset(&s_pos_acc);
+  s_pos_moving = 0;
+  s_pos_current = s_pos_candidate = -1;
+  memset(s_pos_secs, 0, sizeof(s_pos_secs));
 
   // Rückdatiert (automatisch erkannt): bisherige Zeit und Zyklen übernehmen
   int elapsed = time(NULL) - start;

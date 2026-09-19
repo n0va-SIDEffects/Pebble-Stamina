@@ -13,5 +13,21 @@
   "auto": "Automatisk sessionsstart",
   "auto_off": "Fra",
   "auto_after": "Efter {n} min",
-  "auto_desc": "I baggrunden holder uret øje med vedvarende rytmiske bevægelser og spørger, om en session skal startes. Bruger lidt mere batteri. Lignende bevægelser (f.eks. tandbørstning) kan af og til udløse den; med legetøj er genkendelsen upålidelig."
+  "auto_desc": "I baggrunden holder uret øje med vedvarende rytmiske bevægelser og spørger, om en session skal startes. Bruger lidt mere batteri. Lignende bevægelser (f.eks. tandbørstning) kan af og til udløse den; med legetøj er genkendelsen upålidelig.",
+  "positions": "Stillinger (partnertilstand)",
+  "positions_desc": "Navne på de stillinger, du kan lære på uret (Kalibrér > Stillinger). Lad feltet stå tomt for at bruge standardnavnet.",
+  "pos_n": "Stilling {n}",
+  "pos_1": "Missionær (øverst)",
+  "pos_2": "Missionær (nederst)",
+  "pos_3": "Ridning (øverst)",
+  "pos_4": "Ridning (nederst)",
+  "pos_5": "Bagfra",
+  "pos_6": "Ske",
+  "pos_7": "Stående",
+  "pos_8": "Siddende",
+  "light": "Skærmlys",
+  "light_normal": "normal",
+  "light_on": "altid tændt",
+  "light_pulse": "pulserer i takt",
+  "light_desc": "Kun under en session. \"Pulserer\" blinker skærmen rødt og vibrerer kort ved hver bevægelse. Bruger mere batteri."
 }

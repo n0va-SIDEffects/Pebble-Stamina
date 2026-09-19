@@ -13,5 +13,21 @@
   "auto": "Automatisk øktstart",
   "auto_off": "Av",
   "auto_after": "Etter {n} min",
-  "auto_desc": "I bakgrunnen ser klokken etter vedvarende rytmiske bevegelser og spør om en økt skal startes. Bruker litt mer batteri. Lignende bevegelser (f.eks. tannpuss) kan av og til utløse den; med leketøy er gjenkjenningen upålitelig."
+  "auto_desc": "I bakgrunnen ser klokken etter vedvarende rytmiske bevegelser og spør om en økt skal startes. Bruker litt mer batteri. Lignende bevegelser (f.eks. tannpuss) kan av og til utløse den; med leketøy er gjenkjenningen upålitelig.",
+  "positions": "Stillinger (partnermodus)",
+  "positions_desc": "Navn på stillingene du kan lære inn på klokken (Kalibrer > Stillinger). La feltet stå tomt for å bruke standardnavnet.",
+  "pos_n": "Stilling {n}",
+  "pos_1": "Misjonær (øverst)",
+  "pos_2": "Misjonær (nederst)",
+  "pos_3": "Ridning (øverst)",
+  "pos_4": "Ridning (nederst)",
+  "pos_5": "Bakfra",
+  "pos_6": "Skje",
+  "pos_7": "Stående",
+  "pos_8": "Sittende",
+  "light": "Skjermlys",
+  "light_normal": "normal",
+  "light_on": "alltid på",
+  "light_pulse": "pulserer i takt",
+  "light_desc": "Bare under en økt. \"Pulserer\" blinker skjermen rødt og vibrerer kort ved hver bevegelse. Bruker mer batteri."
 }

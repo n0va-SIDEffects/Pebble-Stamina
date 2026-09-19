@@ -13,5 +13,21 @@
   "auto": "Automatisk sessionsstart",
   "auto_off": "Av",
   "auto_after": "Efter {n} min",
-  "auto_desc": "I bakgrunden håller klockan utkik efter ihållande rytmiska rörelser och frågar om en session ska startas. Drar lite mer batteri. Liknande rörelser (t.ex. tandborstning) kan ibland utlösa den; med leksak är igenkänningen opålitlig."
+  "auto_desc": "I bakgrunden håller klockan utkik efter ihållande rytmiska rörelser och frågar om en session ska startas. Drar lite mer batteri. Liknande rörelser (t.ex. tandborstning) kan ibland utlösa den; med leksak är igenkänningen opålitlig.",
+  "positions": "Ställningar (partnerläge)",
+  "positions_desc": "Namn på ställningarna du kan lära in på klockan (Kalibrera > Ställningar). Lämna tomt för att använda standardnamnet.",
+  "pos_n": "Ställning {n}",
+  "pos_1": "Missionär (överst)",
+  "pos_2": "Missionär (underst)",
+  "pos_3": "Ridning (överst)",
+  "pos_4": "Ridning (underst)",
+  "pos_5": "Bakifrån",
+  "pos_6": "Sked",
+  "pos_7": "Stående",
+  "pos_8": "Sittande",
+  "light": "Skärmljus",
+  "light_normal": "normal",
+  "light_on": "alltid på",
+  "light_pulse": "pulserar i takt",
+  "light_desc": "Bara under en session. \"Pulserar\" blinkar skärmen rött och vibrerar kort vid varje rörelse. Drar mer batteri."
 }

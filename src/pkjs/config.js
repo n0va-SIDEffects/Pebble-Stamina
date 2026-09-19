@@ -65,12 +65,39 @@ module.exports = function (t, platform) {
   });
 
   tracking.push({
+    type: 'select',
+    messageKey: 'LIGHT',
+    label: t.light,
+    description: t.light_desc,
+    defaultValue: '0',
+    options: [
+      { label: t.light_normal, value: '0' },
+      { label: t.light_on, value: '1' },
+      { label: t.light_pulse, value: '2' }
+    ]
+  });
+
+  tracking.push({
     type: 'toggle',
     messageKey: 'CHECKIN',
     label: t.checkin,
     description: t.checkin_desc,
     defaultValue: true
   });
+
+  var positions = [
+    { type: 'heading', defaultValue: t.positions },
+    { type: 'text', defaultValue: t.positions_desc }
+  ];
+  for (var n = 1; n <= 8; n++) {
+    positions.push({
+      type: 'input',
+      messageKey: 'POS_NAME_' + n,
+      label: t.pos_n.replace('{n}', n),
+      defaultValue: '',
+      attributes: { placeholder: t['pos_' + n], limit: 19 }
+    });
+  }
 
   var languageOptions = [{ label: t.lang_auto, value: '0' }].concat(
     LANGUAGES.map(function (name, i) { return { label: name, value: String(i + 1) }; })
@@ -100,6 +127,7 @@ module.exports = function (t, platform) {
       ]
     },
     { type: 'section', items: tracking },
+    { type: 'section', items: positions },
     {
       type: 'section',
       items: [

@@ -13,5 +13,21 @@
   "auto": "Avvio automatico della sessione",
   "auto_off": "Disattivato",
   "auto_after": "Dopo {n} min",
-  "auto_desc": "In background l'orologio rileva movimenti ritmici prolungati e chiede se avviare una sessione. Consuma un po' più di batteria. Movimenti simili (ad es. lavarsi i denti) possono a volte attivarlo; con un sex toy il rilevamento è poco affidabile."
+  "auto_desc": "In background l'orologio rileva movimenti ritmici prolungati e chiede se avviare una sessione. Consuma un po' più di batteria. Movimenti simili (ad es. lavarsi i denti) possono a volte attivarlo; con un sex toy il rilevamento è poco affidabile.",
+  "positions": "Posizioni (in coppia)",
+  "positions_desc": "Nomi delle posizioni che puoi insegnare all'orologio (Calibra > Posizioni). Lascia vuoto per usare il nome predefinito.",
+  "pos_n": "Posizione {n}",
+  "pos_1": "Missionario (sopra)",
+  "pos_2": "Missionario (sotto)",
+  "pos_3": "Amazzone (sopra)",
+  "pos_4": "Amazzone (sotto)",
+  "pos_5": "Da dietro",
+  "pos_6": "Cucchiaio",
+  "pos_7": "In piedi",
+  "pos_8": "Seduti",
+  "light": "Luce display",
+  "light_normal": "normale",
+  "light_on": "sempre accesa",
+  "light_pulse": "impulso col ritmo",
+  "light_desc": "Solo durante una sessione. «Impulso» fa lampeggiare lo schermo in rosso e vibrare brevemente a ogni movimento. Consuma più batteria."
 }

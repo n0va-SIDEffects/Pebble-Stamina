@@ -13,5 +13,21 @@
   "auto": "Démarrage automatique de session",
   "auto_off": "Désactivé",
   "auto_after": "Après {n} min",
-  "auto_desc": "En arrière-plan, la montre repère un mouvement rythmique prolongé et te demande s'il faut démarrer une session. Consomme un peu plus de batterie. Des mouvements similaires (p. ex. se brosser les dents) peuvent parfois la déclencher ; avec un sextoy, la détection est peu fiable."
+  "auto_desc": "En arrière-plan, la montre repère un mouvement rythmique prolongé et te demande s'il faut démarrer une session. Consomme un peu plus de batterie. Des mouvements similaires (p. ex. se brosser les dents) peuvent parfois la déclencher ; avec un sextoy, la détection est peu fiable.",
+  "positions": "Positions (à deux)",
+  "positions_desc": "Noms des positions que tu peux apprendre sur la montre (Calibrer > Positions). Laisse vide pour utiliser le nom par défaut.",
+  "pos_n": "Position {n}",
+  "pos_1": "Missionnaire dessus",
+  "pos_2": "Missionnaire dessous",
+  "pos_3": "Amazone (dessus)",
+  "pos_4": "Amazone (dessous)",
+  "pos_5": "Par derrière",
+  "pos_6": "Cuillère",
+  "pos_7": "Debout",
+  "pos_8": "Assis",
+  "light": "Éclairage",
+  "light_normal": "normal",
+  "light_on": "toujours allumé",
+  "light_pulse": "pulse au rythme",
+  "light_desc": "Uniquement pendant une session. « Pulse » fait clignoter l'écran en rouge et vibrer brièvement à chaque mouvement. Consomme plus de batterie."
 }

@@ -240,9 +240,14 @@ static void record_window_push(int which) {
 static Window *s_window;
 static MenuLayer *s_menu;
 
-static uint16_t menu_rows(MenuLayer *m, uint16_t section, void *ctx) { return CALIB_COUNT; }
+// Letzte Zeile führt zu den Stellungen
+static uint16_t menu_rows(MenuLayer *m, uint16_t section, void *ctx) { return CALIB_COUNT + 1; }
 
 static void menu_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ctx) {
+  if (index->row == CALIB_COUNT) {
+    menu_cell_basic_draw(g, cell, tr(S_POS_MENU), tr(S_POS_MENU_SUB), NULL);
+    return;
+  }
   Calib *c = storage_calib(index->row);
   char sub[48];
   if (c->valid) {
@@ -253,9 +258,16 @@ static void menu_draw(GContext *g, const Layer *cell, MenuIndex *index, void *ct
   menu_cell_basic_draw(g, cell, mode_name(CALIB_MODE[index->row]), sub, NULL);
 }
 
-static void menu_select(MenuLayer *m, MenuIndex *index, void *ctx) { record_window_push(index->row); }
+static void menu_select(MenuLayer *m, MenuIndex *index, void *ctx) {
+  if (index->row == CALIB_COUNT) {
+    positions_window_push();
+  } else {
+    record_window_push(index->row);
+  }
+}
 
 static void menu_select_long(MenuLayer *m, MenuIndex *index, void *ctx) {
+  if (index->row == CALIB_COUNT) return;
   Calib *c = storage_calib(index->row);
   if (!c->valid) return;
   *c = (Calib){0};

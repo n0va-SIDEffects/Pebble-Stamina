@@ -13,5 +13,21 @@
   "auto": "Automatyczny start sesji",
   "auto_off": "Wył.",
   "auto_after": "Po {n} min",
-  "auto_desc": "Zegarek w tle wykrywa dłuższy rytmiczny ruch i pyta, czy rozpocząć sesję. Zużywa trochę więcej baterii. Podobne ruchy (np. mycie zębów) mogą czasem go wywołać; z gadżetem wykrywanie jest zawodne."
+  "auto_desc": "Zegarek w tle wykrywa dłuższy rytmiczny ruch i pyta, czy rozpocząć sesję. Zużywa trochę więcej baterii. Podobne ruchy (np. mycie zębów) mogą czasem go wywołać; z gadżetem wykrywanie jest zawodne.",
+  "positions": "Pozycje (we dwoje)",
+  "positions_desc": "Nazwy pozycji, których możesz nauczyć zegarek (Kalibracja > Pozycje). Zostaw puste, by użyć nazwy domyślnej.",
+  "pos_n": "Pozycja {n}",
+  "pos_1": "Misjonarska (góra)",
+  "pos_2": "Misjonarska (dół)",
+  "pos_3": "Na jeźdźca (góra)",
+  "pos_4": "Na jeźdźca (dół)",
+  "pos_5": "Od tyłu",
+  "pos_6": "Na łyżeczkę",
+  "pos_7": "Na stojąco",
+  "pos_8": "Na siedząco",
+  "light": "Podświetlenie",
+  "light_normal": "normalne",
+  "light_on": "zawsze wł.",
+  "light_pulse": "pulsuje z ruchem",
+  "light_desc": "Tylko podczas sesji. „Pulsuje” błyska ekranem na czerwono i krótko wibruje przy każdym ruchu. Zużywa więcej baterii."
 }

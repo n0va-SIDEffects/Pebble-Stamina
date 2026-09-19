@@ -13,5 +13,21 @@
   "auto": "Início automático de sessão",
   "auto_off": "Desligado",
   "auto_after": "Após {n} min",
-  "auto_desc": "Em segundo plano, o relógio detecta movimentos rítmicos contínuos e pergunta se deve iniciar uma sessão. Gasta um pouco mais de bateria. Movimentos parecidos (ex.: escovar os dentes) podem disparar de vez em quando; com um brinquedo a detecção é pouco confiável."
+  "auto_desc": "Em segundo plano, o relógio detecta movimentos rítmicos contínuos e pergunta se deve iniciar uma sessão. Gasta um pouco mais de bateria. Movimentos parecidos (ex.: escovar os dentes) podem disparar de vez em quando; com um brinquedo a detecção é pouco confiável.",
+  "positions": "Posições (a dois)",
+  "positions_desc": "Nomes das posições que podes ensinar no relógio (Calibrar > Posições). Deixa vazio para usar o nome padrão.",
+  "pos_n": "Posição {n}",
+  "pos_1": "Missionário (cima)",
+  "pos_2": "Missionário (baixo)",
+  "pos_3": "Cavalgada (cima)",
+  "pos_4": "Cavalgada (baixo)",
+  "pos_5": "Por trás",
+  "pos_6": "Conchinha",
+  "pos_7": "Em pé",
+  "pos_8": "Sentados",
+  "light": "Luz da tela",
+  "light_normal": "normal",
+  "light_on": "sempre ligada",
+  "light_pulse": "pulsa com o ritmo",
+  "light_desc": "Só durante uma sessão. \"Pulsa\" faz a tela piscar em vermelho e vibrar rapidamente a cada movimento. Gasta mais bateria."
 }

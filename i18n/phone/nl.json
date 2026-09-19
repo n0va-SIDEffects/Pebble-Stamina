@@ -13,5 +13,21 @@
   "auto": "Automatisch sessie starten",
   "auto_off": "Uit",
   "auto_after": "Na {n} min",
-  "auto_desc": "Op de achtergrond let het horloge op aanhoudende ritmische beweging en vraagt of er een sessie moet starten. Kost iets meer batterij. Vergelijkbare bewegingen (bijv. tandenpoetsen) kunnen dit soms activeren; met een toy is de herkenning onbetrouwbaar."
+  "auto_desc": "Op de achtergrond let het horloge op aanhoudende ritmische beweging en vraagt of er een sessie moet starten. Kost iets meer batterij. Vergelijkbare bewegingen (bijv. tandenpoetsen) kunnen dit soms activeren; met een toy is de herkenning onbetrouwbaar.",
+  "positions": "Standjes (partner)",
+  "positions_desc": "Namen van de standjes die je op het horloge kunt aanleren (Kalibreren > Standjes). Laat leeg voor de standaardnaam.",
+  "pos_n": "Standje {n}",
+  "pos_1": "Missionaris (boven)",
+  "pos_2": "Missionaris (onder)",
+  "pos_3": "Amazone (boven)",
+  "pos_4": "Amazone (onder)",
+  "pos_5": "Van achteren",
+  "pos_6": "Lepeltje",
+  "pos_7": "Staand",
+  "pos_8": "Zittend",
+  "light": "Schermlicht",
+  "light_normal": "normaal",
+  "light_on": "altijd aan",
+  "light_pulse": "pulseert mee",
+  "light_desc": "Alleen tijdens een sessie. \"Pulseert\" laat het scherm bij elke beweging rood oplichten en kort trillen. Kost meer batterij."
 }

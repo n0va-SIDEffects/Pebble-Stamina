@@ -13,5 +13,21 @@
   "auto": "Istunnon automaattinen aloitus",
   "auto_off": "Pois",
   "auto_after": "{n} min jälkeen",
-  "auto_desc": "Kello tarkkailee taustalla pitkään jatkuvaa rytmistä liikettä ja kysyy, aloitetaanko istunto. Kuluttaa hieman enemmän akkua. Samankaltaiset liikkeet (esim. hampaiden harjaus) voivat joskus laukaista sen; lelun kanssa tunnistus on epäluotettava."
+  "auto_desc": "Kello tarkkailee taustalla pitkään jatkuvaa rytmistä liikettä ja kysyy, aloitetaanko istunto. Kuluttaa hieman enemmän akkua. Samankaltaiset liikkeet (esim. hampaiden harjaus) voivat joskus laukaista sen; lelun kanssa tunnistus on epäluotettava.",
+  "positions": "Asennot (partneritila)",
+  "positions_desc": "Asentojen nimet, joita voit opettaa kellolle (Kalibroi > Asennot). Jätä tyhjäksi, niin käytetään oletusnimeä.",
+  "pos_n": "Asento {n}",
+  "pos_1": "Perusasento (päällä)",
+  "pos_2": "Perusasento (alla)",
+  "pos_3": "Ratsastus (päällä)",
+  "pos_4": "Ratsastus (alla)",
+  "pos_5": "Takaa",
+  "pos_6": "Lusikka",
+  "pos_7": "Seisten",
+  "pos_8": "Istuen",
+  "light": "Näytön valo",
+  "light_normal": "normaali",
+  "light_on": "aina päällä",
+  "light_pulse": "sykkii tahdissa",
+  "light_desc": "Vain istunnon aikana. \"Sykkii\" välähdyttää näyttöä punaisena ja värisee lyhyesti jokaisella liikkeellä. Kuluttaa enemmän akkua."
 }

@@ -65,6 +65,17 @@ static void build_detail(char *buf, size_t n, int idx) {
   APPEND("\n");
   APPEND(tr(S_D_ENERGY_FMT), kcal);
 
+  // Stellungen (Partner-Modus)
+  int pos_total = 0;
+  for (int i = 0; i < POS_COUNT; i++) pos_total += s->pos_pct[i];
+  if (pos_total) {
+    APPEND("\n\n%s", tr(S_D_POS_HDR));
+    for (int i = 0; i < POS_COUNT; i++) {
+      if (s->pos_pct[i]) APPEND("\n%s %d%%", pos_name(i), s->pos_pct[i]);
+    }
+    if (pos_total < 100) APPEND("\n%s %d%%", tr(S_POS_UNKNOWN), 100 - pos_total);
+  }
+
   // Start in den Tag (nur Morgen-Sessions)
   if (s->day_state != DAY_NOT_MORNING) {
     APPEND("\n\n%s\n", tr(S_D_MORNING_HDR));
@@ -119,6 +130,7 @@ static void build_stats(char *buf, size_t n) {
   uint32_t dur = 0, strokes = 0, kcal = 0, hr_max = 0, hr_n = 0, climax = 0, climax_n = 0;
   int sleep_n = 0, lat = 0, delta = 0, deep_pct = 0;
   int day_n = 0, steps_pct = 0, hr_delta = 0, hr_delta_n = 0, mood = 0, mood_n = 0;
+  uint32_t pos_secs[POS_COUNT] = {0};
 
   for (int i = 0; i < count; i++) {
     Session *s = storage_get(i);
@@ -153,6 +165,7 @@ static void build_stats(char *buf, size_t n) {
       mood += s->mood;
       mood_n++;
     }
+    for (int p = 0; p < POS_COUNT; p++) pos_secs[p] += (uint32_t)s->pos_pct[p] * s->duration_s;
   }
 
   char avg_dur[12], total_kcal[20], avg_climax[12];
@@ -167,6 +180,11 @@ static void build_stats(char *buf, size_t n) {
     fmt_duration(avg_climax, sizeof(avg_climax), climax / climax_n);
     APPEND(tr(S_STATS_CLIMAX_FMT), avg_climax);
   }
+  int fav = -1;
+  for (int p = 0; p < POS_COUNT; p++) {
+    if (pos_secs[p] && (fav < 0 || pos_secs[p] > pos_secs[fav])) fav = p;
+  }
+  if (fav >= 0) APPEND(tr(S_STATS_POS_FMT), pos_name(fav));
   APPEND(tr(S_STATS_TOTAL_FMT), total_kcal);
   if (sleep_n) {
     APPEND(tr(S_STATS_SLEEP_FMT), sleep_n, lat / sleep_n, SIGN(delta), delta / sleep_n,
