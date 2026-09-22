@@ -2,6 +2,8 @@
 
 **Version 0.6 (Beta)**
 
+Projektstand, Entscheidungen und offene Punkte: [HANDOVER.md](HANDOVER.md)
+
 Diskret benannte Watchapp, die Masturbation und Sex wie ein Workout trackt.
 Alle Daten bleiben **nur auf der Uhr**. Es gibt keinen Upload, weder aufs Handy noch in eine Cloud.
 
